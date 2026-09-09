@@ -1,6 +1,6 @@
-# Check Garbage Collection Schedules and Request Pickup — Lapu-Lapu City
+# Check Garbage Collection Schedules and Request Pickup — Municipality of Tanza
 
-The City Government of Lapu-Lapu manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
+The Municipal Government of Tanza manages **regular garbage collection** through the **General Services Office (GSO)** and barangays. Residents and businesses are encouraged to follow the collection schedule and proper waste segregation rules.
 
 ---
 
@@ -8,30 +8,30 @@ The City Government of Lapu-Lapu manages **regular garbage collection** through 
 
 **How it works**
 
-- Collection schedules vary **by barangay** (usually **every other day** or **3 times per week**).
+- Collection schedules vary **by barangay** (usually every other day or 3 times per week; verify with your barangay).
 - Trucks assigned to barangays cover **household waste**, **biodegradable**, and **residual/non-recyclable** garbage.
-- Segregation at source is **mandatory** — separate biodegradable, recyclable, residual, and special/hazardous waste.
+- Segregation at source is **mandatory** under RA 9003 — separate biodegradable, recyclable, residual, and special/hazardous waste.
 
 **Where to check schedules**
 
 1. **Barangay Hall** — each barangay posts its official collection schedule.
 2. **Barangay Facebook Pages** — most update residents when trucks are delayed or rescheduled.
-3. **City Information Office (CIO)** or **CENRO** announcements for citywide advisories (e.g., during holidays or typhoon disruptions).
+3. **LGU Tanza Cavite Facebook** — for municipal-wide advisories, especially during typhoons or holidays.
 
-> Tip: Post the collection calendar on your fridge or gate to remind the household which days to take bins out.
+> Tip: Ask your Barangay Hall for the posted collection calendar and put it somewhere visible at home.
 
 ---
 
 ## 2) Special Garbage Pickup (Bulk or Non-Routine Waste)
 
-For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimmings), collection is not part of the regular schedule.
+For **bulk waste** (furniture, appliances, construction debris, yard trimmings), collection is not part of the regular schedule.
 
 **How to request**
 
 1. Visit your **Barangay Hall** or contact the **Barangay Environment Committee**.
 2. Provide details: type of waste, estimated volume, and address.
-3. Barangay coordinates with **CENRO** for scheduling a **special truck pickup**.
-4. Some barangays may require a **minimal fee** for bulk or special disposal.
+3. The barangay coordinates with the **Tanza General Services Office (GSO)** for scheduling a special truck pickup.
+4. Some barangays may require a minimal fee for bulk or special disposal.
 
 **Items usually needing special pickup**
 
@@ -41,34 +41,28 @@ For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimm
 
 ---
 
-## 3) Contact Information
+## 3) Quick Tips for Residents
 
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: via **City Information Office** FB page
-
-- **Barangay Halls** — each barangay has an Environment/ Solid Waste desk for local schedules and pickup requests.
-
----
-
-## 4) Quick Tips for Residents
-
-- Put garbage out **only on collection day**, early morning or night before.
+- Put garbage out **only on collection day**, early morning or the night before.
 - Use durable, closed containers to prevent animal scattering.
 - For recyclables, check if your barangay has a **Materials Recovery Facility (MRF)** or partner junkshop.
-- During **rainy season/typhoons**, expect **schedule adjustments** — follow CIO or barangay announcements.
-- Avoid burning waste (strictly prohibited under RA 9003 / Clean Air Act).
+- During **rainy season/typhoons**, expect schedule adjustments — follow LGU and barangay announcements.
+- Open burning of waste is **strictly prohibited** under RA 9003.
 
 ---
 
-## 5) Businesses & Establishments
+## 4) Businesses & Establishments
 
-- Businesses must comply with **segregation** and may need to contract **accredited private haulers** for bulk/industrial waste.
-- Keep proof of disposal (receipts/hauling contracts) for compliance inspections by CENRO.
+- Businesses must comply with **waste segregation** and may need to contract **accredited private haulers** for bulk/industrial waste.
+- Keep proof of disposal (receipts/hauling contracts) for compliance inspections.
 
 ---
 
-### Key Reminder
+## Contact
 
-Following your barangay’s **garbage collection schedule** and properly requesting **special pickups** keeps the city clean and prevents flooding, pests, and health risks.
+**Tanza General Services Office (GSO)**
+Municipal Hall Compound, Tanza, Cavite 4108
+**Phone:** (046) 432-0000
+**Facebook:** [facebook.com/LGUTanzaCavite](https://www.facebook.com/LGUTanzaCavite)
+
+> For barangay-specific collection schedules, contact your **Barangay Hall** directly.

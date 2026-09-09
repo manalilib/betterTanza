@@ -63,4 +63,10 @@ categories:
     slug: 'housing-land-use'
     description: 'How to apply for housing projects, what zoning and building permits are needed, and where relocation sites are available.'
     icon: 'Home'
+
+  # Tourism
+  - category: 'Tourism'
+    slug: 'tourism'
+    description: 'Explore the tourist spots, heritage sites, hotels, and resorts of Tanza, Cavite.'
+    icon: 'MapPin'
   

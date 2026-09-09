@@ -5,7 +5,9 @@
     "about": "Tungkol",
     "contact": "Makipag-ugnayan",
     "services": "Mga Serbisyo",
-    "language": "Wika"
+    "language": "Wika",
+    "site_name": "Munisipalidad ng Tanza",
+    "site_description": "Tanza, Cavite — Opisyal na Website ng Pamahalaan"
   },
   "navigation": {
     "home": "Tahanan",
@@ -15,14 +17,154 @@
     "login": "Mag-login",
     "register": "Magparehistro"
   },
+  "navbar": {
+    "services": "Mga Serbisyo",
+    "government": "Pamahalaan"
+  },
   "hero": {
-    "title": "Mas Mabuting Pamahalaang Lokal",
-    "subtitle": "Binabago ang mga komunidad sa pamamagitan ng digital na inobasyon",
-    "cta": "Magsimula"
+    "title": "Munisipalidad ng Tanza",
+    "subtitle": "Naglilingkod sa mga mamamayan ng Tanza, Cavite — ang inyong gabay sa mga serbisyo, impormasyon, at mapagkukunan ng pamayanan.",
+    "cta": "Tuklasin ang mga Serbisyo",
+    "browseServices": "Tingnan ang mga Serbisyo",
+    "contactUs": "Makipag-ugnayan",
+    "findService": "Maghanap ng Serbisyo",
+    "searchPlaceholder": "Maghanap ng serbisyo...",
+    "popular": "Sikat"
+  },
+  "services": {
+    "title": "Mga Serbisyo ng Pamahalaan",
+    "description": "I-access ang lahat ng serbisyong inaalok ng Munisipalidad ng Tanza. Hanapin ang kailangan mo para sa kalusugan, edukasyon, negosyo, at iba pa."
+  },
+  "governmentActivity": {
+    "title": "Lokal na Pamahalaan",
+    "description": "Manatiling updated sa mga departamento, balita, at aktibidad ng Munisipalidad ng Tanza."
   },
   "footer": {
-    "copyright": "© 2024 Mas Mabuting Pamahalaang Lokal. Lahat ng karapatan ay nakalaan.",
+    "copyright": "© 2025 Munisipalidad ng Tanza, Cavite. Lahat ng karapatan ay nakalaan.",
     "privacy": "Patakaran sa Privacy",
-    "terms": "Mga Tuntunin ng Serbisyo"
+    "terms": "Mga Tuntunin ng Serbisyo",
+    "mission": "Isang portal ng transparency para sa Munisipalidad ng Tanza, Cavite. I-access ang mga serbisyo ng pamahalaan, opisyales, badyet, at pampublikong impormasyon.",
+    "quickLinks": "Mabilis na mga Link",
+    "resources": "Mga Mapagkukunan",
+    "costLabel": "Gastos sa mga nagbabayad ng buwis:",
+    "volunteer": "Mag-volunteer",
+    "contribute": "Mag-ambag sa GitHub",
+    "attribution": "Portal na pinapanatili ng komunidad",
+    "builtBy": "Ginawa nang may ❤️ para sa Tanza"
+  },
+  "nav": {
+    "home": "Tahanan",
+    "services": "Mga Serbisyo",
+    "government": "Pamahalaan",
+    "departments": "Mga Departamento at Opisyales",
+    "legislative": "Sangguniang Bayan",
+    "localOfficials": "Mga Lokal na Opisyales",
+    "transparency": "Transparency",
+    "fullDisclosure": "Buong Pagbubunyag",
+    "annualBudget": "Taunang Badyet",
+    "saln": "SALN",
+    "foiReleases": "Mga Pahayag ng FOI",
+    "downloads": "Mga Dokumento at Download",
+    "statistics": "Mga Ulat at Estadistika",
+    "cityProfile": "Profil ng Munisipalidad",
+    "annualReport": "Taunang Ulat",
+    "infrastructureProjects": "Mga Proyektong Imprastraktura",
+    "development": "Mga Proyektong Paunlad",
+    "contact": "Makipag-ugnayan"
+  },
+  "stats": {
+    "population": { "label": "Populasyon", "desc": "2020 PSA census" },
+    "barangays": {
+      "label": "Mga Barangay",
+      "desc": "Mga administratibong dibisyon"
+    },
+    "classification": {
+      "label": "Munisipalidad",
+      "desc": "Lalawigan ng Cavite"
+    },
+    "area": { "label": "km² Lawak ng Lupa", "desc": "7,833 ektarya" },
+    "viewProfile": "Tingnan ang Buong Profil"
+  },
+  "history": {
+    "title": "Kasaysayan ng Tanza",
+    "events": {
+      "founded": {
+        "year": "1760",
+        "title": "Itinatag bilang Mission Town",
+        "text": "Ang Tanza ay itinatag bilang isang mission town ng mga misyonerong Augustinian noong 1760, na ginagawa itong isa sa mga pinakamatandang pamayanan sa Cavite."
+      },
+      "revolution": {
+        "year": "1896",
+        "title": "Rebolusyong Pilipino",
+        "text": "Ang Tanza ay may papel sa Rebolusyong Pilipino laban sa pananakop ng Espanya, nagbigay ng mga mandirigma at mapagkukunan sa kilusan ng Katipunan."
+      },
+      "independence": {
+        "year": "1898",
+        "title": "Kalayaan ng Pilipinas",
+        "text": "Kasunod ng deklarasyon ng kalayaan ng Pilipinas noong 1898, ang Tanza ay naging bahagi ng bagong itinatag na Republika ng Pilipinas."
+      },
+      "renamed": {
+        "year": "1901",
+        "title": "Muling Pag-oorganisa sa Panahon ng Amerika",
+        "text": "Sa panahon ng pananakop ng Amerika, ang Tanza ay muling inayos bilang isang munisipalidad sa loob ng Lalawigan ng Cavite."
+      },
+      "growth": {
+        "year": "1960s",
+        "title": "Paglaki Pagkatapos ng Digmaan",
+        "text": "Ang Tanza ay nakaranas ng malaking paglaki ng populasyon at ekonomiya sa panahon pagkatapos ng digmaan, dahil sa agrikultura at industriya ng pangingisda."
+      },
+      "cityhood": {
+        "year": "1990s",
+        "title": "Modernong Pag-unlad",
+        "text": "Nakita ng munisipalidad ang mabilis na urbanisasyon at paglaki ng industriya, na ginawang isa sa mahahalagang sentro ng ekonomiya ng Cavite."
+      },
+      "recognition": {
+        "year": "Kasalukuyan",
+        "title": "Umuusbong na Pamayanan",
+        "text": "Ngayon, ang Tanza ay isang umuusbong na munisipalidad na may higit sa 339,000 residente sa 41 barangay, patuloy na lumalaki bilang bahagi ng rehiyon ng CALABARZON."
+      }
+    },
+    "charteredYear": "Munisipalidad ng Tanza",
+    "charteredDesc": "Itinatag noong 1760, ang Tanza ay isa sa mga pinakamatandang munisipalidad sa Cavite na may mayamang kasaysayan na sumasaklaw ng mahigit 260 taon.",
+    "populationLabel": "339K+ Residente",
+    "populationDesc": "Isa sa pinakamabilis na lumalagong munisipalidad ng Cavite na may 41 barangay at lumalagong ekonomiya."
+  },
+  "leadership": {
+    "title": "Pamunuan ng Munisipalidad",
+    "municipalMayor": "Punong Bayan",
+    "municipalViceMayor": "Bise-Punong Bayan",
+    "cityMayor": "Punong Bayan",
+    "cityViceMayor": "Bise-Punong Bayan",
+    "electedMayor": "Inihalal na Punong Bayan",
+    "electedViceMayor": "Inihalal na Bise-Punong Bayan",
+    "viewAll": "Tingnan ang Lahat ng Opisyales",
+    "viewProfile": "Tingnan ang Profil"
+  },
+  "weatherMap": {
+    "title": "Kasalukuyang Panahon at Mapa",
+    "location": "Tanza, Cavite",
+    "clear": "Malinaw na langit",
+    "partlyCloudy": "Bahagyang maulap",
+    "foggy": "Maulap",
+    "rainy": "Maulan",
+    "showers": "May ulan",
+    "thunderstorm": "Bagyo",
+    "defaultCondition": "Naglo-load...",
+    "wind": "km/h Hangin",
+    "climate": "Klima",
+    "elevation": "Halumigmig",
+    "loading": "Kinukuha ang datos ng panahon...",
+    "mapTitle": "Mapa ng Tanza, Cavite"
+  },
+  "contact": {
+    "title": "Makipag-ugnayan",
+    "phone": "Telepono",
+    "phoneHours": "Lun–Biy 8:00 NG – 5:00 NH",
+    "email": "Email",
+    "emailResponse": "Sumasagot kami sa loob ng 3–5 araw ng trabaho",
+    "address": "Address",
+    "addressLine1": "Municipal Hall, Tanza, Cavite",
+    "addressLine2": "Tanza, Cavite 4108",
+    "viewAll": "Tingnan ang Lahat ng Opisina"
   }
 }

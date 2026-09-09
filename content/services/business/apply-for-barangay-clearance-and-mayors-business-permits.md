@@ -1,44 +1,57 @@
-# How to Set Up a Business Partnership
+# Apply for Barangay Clearance and Mayor's Business Permit — Municipality of Tanza
 
-## Step 1: Register with SEC
+Use this guide to apply for a **Barangay Clearance** and a **Mayor's/Business Permit** to legally operate your business in Tanza, Cavite.
 
-**Prepare documents:**
+---
 
-- Partnership name (check via [SEC eSPARC](https://espac.sec.gov.ph/))
-- Notarized Articles of Partnership
-- IDs/TINs of partners, office address, capital structure
+## Step 1: Secure a Barangay Clearance
 
-**File online** through [SEC eSPARC](https://espac.sec.gov.ph/) and pay fees.
-
-**Output:** SEC Certificate of Recording + Approved Business Name
-
-## Step 2: Apply for Business Permit
-
-Go to **Lapu-Lapu City BPLO** (Business Permit and Licensing Office).
+Go to the **Barangay Hall** where your business is located.
 
 **Requirements:**
 
-- Unified Application Form
-- SEC Certificate of Registration + Articles of Partnership
-- Occupancy Permit (if owner) OR Lease Contract (if renting)
+- Accomplished Barangay Clearance Application Form (available at the Barangay Hall)
+- Valid ID of owner
+- Proof of business address (lease contract or tax declaration)
+- Community Tax Certificate (CTC / Cedula)
+
+**Cost:** Minimal processing fee (varies per barangay)
+**Processing time:** Usually same day
+
+---
+
+## Step 2: Apply for Mayor's Business Permit (BPLO)
+
+Go to the **Business Permits and Licensing Office (BPLO)** at the Tanza Municipal Hall.
+
+**Requirements:**
+
+- Accomplished Unified Application Form (available at BPLO)
+- Barangay Clearance (for business)
+- DTI/SEC/CDA registration (as applicable)
+- Lease Contract OR Tax Declaration/Occupancy Permit
 - Community Tax Certificate (CTC)
+- Valid ID of owner or authorized representative
 
-Apply in person or online via [Lapu-Lapu Online Business Permit Portal](https://businesspermit.lapulapucity.gov.ph/).
+Additional clearances (routed during assessment):
 
-> Note: Inspections may include zoning, sanitary, and fire safety checks.
+- **Sanitary Permit** (Municipal Health Office)
+- **Fire Safety Inspection Certificate (FSIC)** (Bureau of Fire Protection)
+- **Zoning Clearance** (Municipal Planning and Development Office)
+
+> Note: Inspections may be required by zoning, health, and fire safety offices before the permit is issued.
+
+---
 
 ## Step 3: Register with BIR
 
-File at the **BIR Revenue District Office (RDO)** where your office is located.
+File at the **BIR Revenue District Office (RDO)** covering Tanza, Cavite.
 
-- Fill out [BIR Form 1903](https://www.bir.gov.ph/images/1903%20Jan%202024.pdf)
-- Submit SEC Certificate + Articles of Partnership + valid IDs
+- Fill out BIR Form 1901 (sole proprietorship) or 1903 (partnership/corporation)
+- Submit DTI/SEC registration + valid IDs
 - Pay registration fee + Documentary Stamp Tax (DST)
 
-**Within 30 days of receiving BIR Certificate:**
-
-- Apply for Authority to Print Receipts (Form 1906) OR enroll in e-invoicing
-- Register your Books of Accounts
+---
 
 ## Step 4: Register as Employer (if hiring)
 
@@ -48,18 +61,23 @@ Enroll with:
 - [PhilHealth](https://www.philhealth.gov.ph/)
 - [Pag-IBIG](https://www.pagibigfund.gov.ph/)
 
-## Process Flow
-
-1. SEC name check + register via [SEC eSPARC](https://espac.sec.gov.ph/)
-2. Secure Barangay Certification + site/lease documents
-3. Apply for Business Permit at [Lapu-Lapu BPLO](https://businesspermit.lapulapucity.gov.ph/)
-4. File BIR Form 1903 → apply ATP → register books
+---
 
 ## Document Checklist
 
-- [ ] SEC Articles of Partnership + SEC Certificate
-- [ ] Lease Contract OR Occupancy/Building docs
-- [ ] Lapu-Lapu BPLO Unified Application Form + CTC
-- [ ] BIR Form 1903, IDs, ATP/Books
+- [ ] Accomplished Unified Application Form
+- [ ] Barangay Clearance (for business)
+- [ ] DTI/SEC/CDA registration
+- [ ] Lease Contract or Occupancy Permit / Tax Declaration
+- [ ] Community Tax Certificate (CTC)
+- [ ] Sanitary Permit + FSIC
+- [ ] Valid ID + SPA/Board Resolution (for authorized representatives)
 
-With these steps, your partnership in Lapu-Lapu City will be fully compliant and ready to operate!
+---
+
+## Contact
+
+**Tanza Business Permits and Licensing Office (BPLO)**
+Municipal Hall Compound, Tanza, Cavite 4108
+**Phone:** (046) 432-0000
+**Facebook:** [facebook.com/LGUTanzaCavite](https://www.facebook.com/LGUTanzaCavite)

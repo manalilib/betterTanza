@@ -188,11 +188,11 @@ Department pages support `{PLACEHOLDER}` tokens that are automatically replaced 
 
 ```json
 {
-  "GOVERNMENT_NAME": "Lapu Lapu City",
-  "MAYOR": "Ma. Cynthia K. Chan",
-  "MAYOR_HE_SHE": "she",
+  "GOVERNMENT_NAME": "Municipality of Tanza",
+  "MAYOR": "Archangelo B. Matro",
+  "MAYOR_HE_SHE": "he",
   "HONORIFIC_TITLE": "Honorable",
-  "VICE_MAYOR": "Celedonio B. Sitoy",
+  "VICE_MAYOR": "Raymundo A. Del Rosario",
   "VICE_MAYOR_HE_SHE": "he",
   "YEAR_ELECTED": "2022"
 }

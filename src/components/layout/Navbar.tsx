@@ -1,272 +1,302 @@
 import React, { useState } from 'react';
-import {
-  X,
-  Menu,
-  ChevronDown,
-  Globe,
-  Search,
-  CheckCircle2,
-} from 'lucide-react';
+import { X, Menu, ChevronDown, Phone } from 'lucide-react';
 import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { LANGUAGES } from '../../i18n/languages';
+import InfoBar from './InfoBar';
+
+const HOTLINES = [
+  { label: 'Police', number: '(046) 706-2222', tel: '0467062222' },
+  { label: 'Fire', number: '(046) 706-3333', tel: '0467063333' },
+  { label: 'MDRRMO', number: '(046) 706-4444', tel: '0467064444' },
+  { label: 'Health Office', number: '(046) 706-5555', tel: '0467065555' },
+  { label: 'MSWD', number: '(046) 706-6666', tel: '0467066666' },
+  { label: 'Municipal Hall', number: '(046) 706-1111', tel: '0467061111' },
+];
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const { t, i18n } = useTranslation('common');
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      setActiveMenu(null);
+  const handleNavClick = (
+    e: React.MouseEvent,
+    href: string,
+    onClose?: () => void
+  ) => {
+    if (href === '/#contact') {
+      e.preventDefault();
+      onClose?.();
+      if (location.pathname === '/') {
+        document
+          .getElementById('contact')
+          ?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        navigate('/');
+        setTimeout(() => {
+          document
+            .getElementById('contact')
+            ?.scrollIntoView({ behavior: 'smooth' });
+        }, 300);
+      }
+    } else {
+      onClose?.();
     }
   };
 
+  const toggleMenu = () => {
+    setIsOpen(prev => !prev);
+    setActiveMenu(null);
+  };
   const closeMenu = () => {
     setIsOpen(false);
     setActiveMenu(null);
   };
-
   const toggleSubmenu = (label: string) => {
-    setActiveMenu(activeMenu === label ? null : label);
+    setActiveMenu(prev => (prev === label ? null : label));
   };
-
-  const changeLanguage = (newLanguage: LanguageType) => {
-    i18n.changeLanguage(newLanguage);
+  const changeLanguage = (lang: LanguageType) => {
+    i18n.changeLanguage(lang);
   };
+  const isActive = (href: string) =>
+    href === '/'
+      ? location.pathname === '/'
+      : location.pathname.startsWith(href);
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Top bar with language switcher and additional links */}
-      <div className="border-b border-gray-200">
-        <div className="container mx-auto px-4 flex justify-end items-center h-10">
-          <div className="flex items-center space-x-4">
-            <a
-              href="https://bettergov.ph/join-us"
-              className="text-xs text-primary-600 hover:text-primary-700 font-semibold transition-colors"
-              target="_blank"
-            >
-              🚀 Join Us
-            </a>
-            <a
-              href="https://bettergov.ph/about"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-            >
-              About BetterGov
-            </a>
-            <a
-              href="https://www.gov.ph"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-            >
-              Official Gov.ph
-            </a>
-
-            <a
-              href="https://bettergov.ph/philippines/hotlines"
-              className="text-xs text-gray-800 hover:text-primary-600 transition-colors"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Hotlines
-            </a>
-            <div className="hidden md:block">
-              <select
-                value={i18n.language}
-                onChange={e => changeLanguage(e.target.value as LanguageType)}
-                className="text-xs border border-gray-300 rounded px-2 py-1 bg-white text-gray-700 hover:border-primary-600 focus:outline-none focus:ring-1 focus:ring-primary-600 focus:border-primary-600"
-              >
-                {Object.entries(LANGUAGES).map(([code, lang]) => (
-                  <option key={code} value={code}>
-                    {lang.nativeName}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main navigation */}
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center">
-              <CheckCircle2 className="h-12 w-12 mr-3" />
-              {/* <img
-                src="/ph-logo.webp"
-                alt="Philippines Coat of Arms"
-                className="h-12 w-12 mr-3"
-              /> */}
-              <div>
-                <div className="text-black font-bold">
-                  {import.meta.env.VITE_GOVERNMENT_NAME}
-                </div>
-                <div className="text-xs text-gray-800">
-                  {t('site_description')}
-                </div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Desktop navigation */}
-          <div className="hidden lg:flex items-center space-x-8 pr-24">
-            {mainNavigation.map(item => (
-              <div key={item.label} className="relative group">
-                <a
-                  href={item.href}
-                  className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
-                >
-                  {t(`navbar.${item.label.replace(' ', '').toLowerCase()}`)}
-                  {item.children && (
-                    <ChevronDown className="ml-1 h-4 w-4 text-gray-800 group-hover:text-primary-600 transition-colors" />
-                  )}
-                </a>
-                {item.children && (
-                  <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div
-                      className="py-1"
-                      role="menu"
-                      aria-orientation="vertical"
-                    >
-                      {item.children.map(child => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className="text-left block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600"
-                          role="menuitem"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="hidden lg:flex items-center space-x-6">
-            <Link
-              to="/about"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              to="/search"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
-            >
-              <Search className="h-4 w-4 mr-1" />
-              Search
-            </Link>
-            {/* <Link
-              to="/sitemap"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
-            >
-              Sitemap
-            </Link> */}
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
+    <nav className="fixed top-0 left-0 right-0 z-50 w-full">
+      <InfoBar />
+      {/* Emergency Hotlines Bar — always visible */}
+      {/* < 1120px: marquee ticker */}
+      <div className="min-[1120px]:hidden bg-[#001044] text-white text-[11px] h-7 overflow-hidden flex items-center">
+        <style>{`
+          @keyframes hotline-ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+          .hotline-track { animation: hotline-ticker 28s linear infinite; display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+        `}</style>
+        <div className="hotline-track">
+          {[...HOTLINES, ...HOTLINES].map((h, i) => (
+            <React.Fragment key={`${h.tel}-${i}`}>
+              {i === 0 && (
+                <span className="flex items-center gap-1.5 shrink-0">
+                  <Phone className="h-2.5 w-2.5 text-blue-300" />
+                  <span className="text-blue-300 font-black uppercase tracking-wider text-[10px]">
+                    Emergency:
+                  </span>
+                </span>
               )}
-            </button>
-          </div>
+              {i === HOTLINES.length && (
+                <span className="flex items-center gap-1.5 shrink-0">
+                  <Phone className="h-2.5 w-2.5 text-blue-300" />
+                  <span className="text-blue-300 font-black uppercase tracking-wider text-[10px]">
+                    Emergency:
+                  </span>
+                </span>
+              )}
+              <span className="text-white/15 shrink-0">·</span>
+              <a href={`tel:${h.tel}`} className="shrink-0">
+                <span className="font-bold text-white/70">{h.label}</span>{' '}
+                <span className="text-white/50">{h.number}</span>
+              </a>
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+      {/* >= 1120px: static scrollable bar */}
+      <div className="hidden min-[1120px]:block bg-[#001044] text-white text-[11px] overflow-x-auto whitespace-nowrap">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-7 flex items-center gap-3 min-w-max">
+          <span className="flex items-center gap-1.5 shrink-0">
+            <Phone className="h-2.5 w-2.5 text-blue-300" />
+            <span className="text-blue-300 font-black uppercase tracking-wider text-[10px]">
+              Emergency Hotlines:
+            </span>
+          </span>
+          {HOTLINES.map((h, i) => (
+            <React.Fragment key={h.tel}>
+              {i > 0 && <span className="text-white/15">·</span>}
+              <a
+                href={`tel:${h.tel}`}
+                className="hover:text-white transition-colors shrink-0"
+              >
+                <span className="font-bold text-white/70">{h.label}</span>{' '}
+                <span className="text-white/50">{h.number}</span>
+              </a>
+            </React.Fragment>
+          ))}
         </div>
       </div>
 
-      {/* Mobile menu */}
-      <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="container mx-auto px-2 pt-2 pb-4 space-y-1 border-t border-gray-200 bg-white">
-          {mainNavigation.map(item => (
-            <div key={item.label}>
+      {/* Main Navbar — glossy glass */}
+      <div className="relative bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/50 shadow-lg shadow-black/10">
+        {/* Glossy shine line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="flex items-center justify-between py-5">
+            {/* Logo + Wordmark */}
+            <Link to="/" className="flex items-center gap-3 shrink-0">
+              <img
+                src="/tanza-seal.webp"
+                alt="Municipality of Tanza Seal"
+                style={{ height: '48px', width: 'auto' }}
+              />
+              <div className="flex flex-col leading-none">
+                <span className="text-[9px] sm:text-[10px] font-black text-primary-600 uppercase tracking-widest">
+                  Municipality
+                </span>
+                <span className="text-[13px] sm:text-[15px] font-black text-gray-900 leading-tight">
+                  of <span className="text-primary-600">Tanza</span>
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Nav */}
+            <div className="hidden lg:flex items-center gap-0.5">
+              {mainNavigation.map(item => (
+                <div key={item.label} className="relative group">
+                  {item.children ? (
+                    <>
+                      <button className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-700 rounded-md hover:bg-primary-50 transition-colors">
+                        {item.translationKey
+                          ? t(item.translationKey, item.label)
+                          : item.label}
+                        <ChevronDown className="h-3.5 w-3.5 opacity-60 group-hover:rotate-180 transition-transform duration-200" />
+                      </button>
+                      <div className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
+                        <div className="py-1.5">
+                          {item.children.map(child => (
+                            <Link
+                              key={child.label}
+                              to={child.href}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                            >
+                              {child.translationKey
+                                ? t(child.translationKey, child.label)
+                                : child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      onClick={e => handleNavClick(e, item.href)}
+                      className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                        isActive(item.href)
+                          ? 'text-primary-700 bg-primary-50'
+                          : 'text-gray-700 hover:text-primary-700 hover:bg-primary-50'
+                      }`}
+                    >
+                      {item.translationKey
+                        ? t(item.translationKey, item.label)
+                        : item.label}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Language + Mobile toggle */}
+            <div className="flex items-center gap-2">
+              <div className="hidden sm:flex items-center border border-gray-200 rounded-md overflow-hidden">
+                {(['en', 'fil'] as LanguageType[]).map((lang, idx) => (
+                  <button
+                    key={lang}
+                    onClick={() => changeLanguage(lang)}
+                    className={`px-3 py-1.5 text-xs font-bold uppercase transition-colors ${
+                      i18n.language === lang
+                        ? 'bg-primary-700 text-white'
+                        : 'bg-white text-gray-600 hover:bg-gray-50'
+                    } ${idx === 0 ? '' : 'border-l border-gray-200'}`}
+                  >
+                    {lang === 'en' ? 'EN' : 'FIL'}
+                  </button>
+                ))}
+              </div>
               <button
-                onClick={() => toggleSubmenu(item.label)}
-                className="w-full flex justify-between items-center px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
+                onClick={toggleMenu}
+                className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
+                aria-label="Toggle menu"
               >
-                {t(`navbar.${item.label.toLowerCase()}`)}
-                {item.children && (
-                  <ChevronDown
-                    className={`h-5 w-5 transition-transform ${
-                      activeMenu === item.label ? 'transform rotate-180' : ''
-                    }`}
-                  />
+                {isOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
                 )}
               </button>
-              {item.children && activeMenu === item.label && (
-                <div className="pl-6 py-2 space-y-1 bg-gray-50">
-                  {item.children.map(child => (
-                    <Link
-                      key={child.label}
-                      to={child.href}
-                      onClick={closeMenu}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-500"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-          <Link
-            to="/join-us"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-semibold text-primary-600 hover:bg-primary-50 hover:text-primary-700"
-          >
-            🚀 Join Us
-          </Link>
-          <Link
-            to="/about"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            About
-          </Link>
-          <Link
-            to="/search"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            Search
-          </Link>
-          <Link
-            to="/sitemap"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            Sitemap
-          </Link>
-          <div className="px-4 py-3 border-t border-gray-200">
-            <div className="flex items-center">
-              <Globe className="h-5 w-5 text-gray-800 mr-2" />
-              <select
-                value={i18n.language}
-                onChange={e => changeLanguage(e.target.value as LanguageType)}
-                className="text-sm border border-gray-300 rounded px-2 py-1 bg-white text-gray-700 hover:border-primary-600 focus:outline-none focus:ring-1 focus:ring-primary-600 focus:border-primary-600"
-              >
-                {Object.entries(LANGUAGES).map(([code, lang]) => (
-                  <option key={code} value={code}>
-                    {lang.nativeName}
-                  </option>
-                ))}
-              </select>
             </div>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden border-t border-gray-200/50 bg-white/90 backdrop-blur-xl">
+            <div className="px-4 py-3 space-y-1">
+              {mainNavigation.map(item => (
+                <div key={item.label}>
+                  {item.children ? (
+                    <>
+                      <button
+                        onClick={() => toggleSubmenu(item.label)}
+                        className="w-full flex justify-between items-center px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+                      >
+                        {item.translationKey
+                          ? t(item.translationKey, item.label)
+                          : item.label}
+                        <ChevronDown
+                          className={`h-4 w-4 transition-transform ${activeMenu === item.label ? 'rotate-180' : ''}`}
+                        />
+                      </button>
+                      {activeMenu === item.label && (
+                        <div className="ml-4 mt-1 space-y-0.5">
+                          {item.children.map(child => (
+                            <Link
+                              key={child.label}
+                              to={child.href}
+                              onClick={closeMenu}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
+                            >
+                              {child.translationKey
+                                ? t(child.translationKey, child.label)
+                                : child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      onClick={e => handleNavClick(e, item.href, closeMenu)}
+                      className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-md"
+                    >
+                      {item.translationKey
+                        ? t(item.translationKey, item.label)
+                        : item.label}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              <div className="pt-2 border-t border-gray-100 flex gap-2">
+                {(['en', 'fil'] as LanguageType[]).map(lang => (
+                  <button
+                    key={lang}
+                    onClick={() => changeLanguage(lang)}
+                    className={`px-4 py-1.5 text-xs font-bold uppercase rounded border transition-colors ${
+                      i18n.language === lang
+                        ? 'bg-primary-700 text-white border-primary-700'
+                        : 'bg-white text-gray-600 border-gray-300'
+                    }`}
+                  >
+                    {lang === 'en' ? 'EN' : 'FIL'}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

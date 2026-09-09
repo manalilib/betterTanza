@@ -1,6 +1,6 @@
-# Request Special Collection Services for Hazardous Waste & E-Waste — Lapu-Lapu City
+# Request Special Collection for Hazardous Waste & E-Waste — Municipality of Tanza
 
-Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The City Environment and Natural Resources Office (CENRO) and barangays coordinate **special collection drives** and drop-off services for these items.
+Hazardous and electronic wastes (e-waste) cannot be disposed of with regular garbage. The **Tanza General Services Office (GSO)** and barangays coordinate **special collection drives** and drop-off services for these items.
 
 ---
 
@@ -20,8 +20,8 @@ Hazardous and electronic wastes (e-waste) cannot be disposed of with regular gar
    - Ask for the **Barangay Environment Committee** or Solid Waste desk.
    - Provide details: type of waste, approximate volume, and your address.
 
-2. **Barangay forwards request to CENRO**
-   - CENRO schedules a **special truck pickup** or directs you to the next citywide collection event.
+2. **Barangay forwards request to Tanza GSO**
+   - GSO schedules a **special truck pickup** or directs you to the next municipal collection event.
    - Some barangays coordinate with **accredited junkshops/recyclers**.
 
 3. **Prepare items for pickup/drop-off**
@@ -29,30 +29,19 @@ Hazardous and electronic wastes (e-waste) cannot be disposed of with regular gar
    - Do not mix hazardous waste with household garbage.
 
 4. **Follow the scheduled collection**
-   - Place items outside only when instructed, or bring them to the barangay/CENRO drop-off point.
+   - Place items outside only when instructed, or bring them to the barangay/GSO drop-off point.
 
 ---
 
 ## 3) Other Disposal Options
 
 - **Barangay E-Waste Drives** — many barangays organize quarterly e-waste collection campaigns.
-- **School/NGO Drives** — occasionally schools or civic groups run e-waste donation drives in coordination with the City.
-- **Accredited Junkshops/Collectors** — some accept electronics for recycling; ask CENRO for the accredited list.
+- **School/NGO Drives** — occasionally schools or civic groups run e-waste drives in coordination with the LGU.
+- **Accredited Junkshops/Collectors** — some accept electronics for recycling; ask the Tanza GSO for the accredited list.
 
 ---
 
-## 4) Contact Information
-
-- **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
-  Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
-  Updates: [Lapu-Lapu City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
-
-- **Barangay Halls** — Environment/Solid Waste desk for barangay-level pickup scheduling.
-
----
-
-## 5) Tips for Households
+## 4) Tips for Households
 
 - Keep a **separate box** for batteries, bulbs, and small electronics.
 - Do not break bulbs or dismantle devices — this increases risk of contamination.
@@ -61,7 +50,11 @@ Hazardous and electronic wastes (e-waste) cannot be disposed of with regular gar
 
 ---
 
-### Reminder
+## Contact
 
-✅ Never dispose of hazardous waste or e-waste with your regular garbage.  
-✅ Always coordinate with your **Barangay Hall** or **CENRO** for proper and safe collection.
+**Tanza General Services Office (GSO)**
+Municipal Hall Compound, Tanza, Cavite 4108
+**Phone:** (046) 432-0000
+**Facebook:** [facebook.com/LGUTanzaCavite](https://www.facebook.com/LGUTanzaCavite)
+
+> For barangay-level pickup scheduling, contact your **Barangay Hall** directly.

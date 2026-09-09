@@ -5,7 +5,9 @@
     "about": "About",
     "contact": "Contact",
     "services": "Services",
-    "language": "Language"
+    "language": "Language",
+    "site_name": "Municipality of Tanza",
+    "site_description": "Tanza, Cavite — Official Government Website"
   },
   "navigation": {
     "home": "Home",
@@ -15,14 +17,151 @@
     "login": "Login",
     "register": "Register"
   },
+  "navbar": {
+    "services": "Services",
+    "government": "Government"
+  },
   "hero": {
-    "title": "Better Local Government",
-    "subtitle": "Transforming communities through digital innovation",
-    "cta": "Get Started"
+    "title": "Municipality of Tanza",
+    "subtitle": "Serving the people of Tanza, Cavite — your gateway to local government services, information, and community resources.",
+    "cta": "Explore Services",
+    "browseServices": "Browse Services",
+    "contactUs": "Contact Us",
+    "findService": "Find a Service",
+    "searchPlaceholder": "Search services...",
+    "popular": "Popular"
+  },
+  "services": {
+    "title": "Government Services",
+    "description": "Access all services offered by the Municipality of Tanza. Find what you need for health, education, business, and more."
+  },
+  "governmentActivity": {
+    "title": "Local Government",
+    "description": "Stay informed about the departments, news, and activities of the Municipality of Tanza."
   },
   "footer": {
-    "copyright": "© 2026 Better Local Government. All rights reserved.",
+    "copyright": "© 2025 Municipality of Tanza, Cavite. All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "mission": "A community transparency portal for the Municipality of Tanza, Cavite. Access government services, officials, budgets, and public information.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "costLabel": "Cost to taxpayers:",
+    "volunteer": "Volunteer",
+    "contribute": "Contribute on GitHub",
+    "attribution": "Community-maintained transparency portal",
+    "builtBy": "Built with ❤️ for Tanza"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "government": "Government",
+    "departments": "Departments & Officials",
+    "legislative": "Sangguniang Bayan",
+    "localOfficials": "Local Officials",
+    "transparency": "Transparency",
+    "fullDisclosure": "Full Disclosure",
+    "annualBudget": "Annual Budget",
+    "saln": "SALN",
+    "foiReleases": "FOI Releases",
+    "downloads": "Planning Docs & Downloads",
+    "statistics": "Reports & Statistics",
+    "cityProfile": "Municipality Profile",
+    "annualReport": "Annual Report",
+    "infrastructureProjects": "Infrastructure Projects",
+    "development": "Development Projects",
+    "contact": "Contact"
+  },
+  "stats": {
+    "population": { "label": "Population", "desc": "2020 PSA census" },
+    "barangays": { "label": "Barangays", "desc": "Administrative divisions" },
+    "classification": {
+      "label": "Component Municipality",
+      "desc": "Province of Cavite"
+    },
+    "area": { "label": "km² Land Area", "desc": "7,833 hectares" },
+    "viewProfile": "View Full Profile"
+  },
+  "history": {
+    "title": "History of Tanza",
+    "events": {
+      "founded": {
+        "year": "1760",
+        "title": "Founded as a Mission Town",
+        "text": "Tanza was established as a mission town by Augustinian missionaries in 1760, making it one of the oldest settlements in Cavite."
+      },
+      "revolution": {
+        "year": "1896",
+        "title": "Philippine Revolution",
+        "text": "Tanza played a role in the Philippine Revolution against Spanish colonial rule, contributing fighters and resources to the Katipunan movement."
+      },
+      "independence": {
+        "year": "1898",
+        "title": "Philippine Independence",
+        "text": "Following the declaration of Philippine independence in 1898, Tanza became part of the newly established Philippine Republic."
+      },
+      "renamed": {
+        "year": "1901",
+        "title": "American Era Reorganization",
+        "text": "During the American colonial period, Tanza was reorganized as a municipality within the Province of Cavite."
+      },
+      "growth": {
+        "year": "1960s",
+        "title": "Post-War Growth",
+        "text": "Tanza experienced significant population and economic growth in the post-war era, driven by agriculture and coastal fishing industries."
+      },
+      "cityhood": {
+        "year": "1990s",
+        "title": "Modern Development",
+        "text": "The municipality saw rapid urbanization and industrial growth, transforming into one of Cavite's important economic centers."
+      },
+      "recognition": {
+        "year": "Present",
+        "title": "Thriving Community",
+        "text": "Today, Tanza is a thriving municipality with a population of over 339,000 residents across 41 barangays, continuing to grow as part of the CALABARZON region."
+      }
+    },
+    "charteredYear": "Municipality of Tanza",
+    "charteredDesc": "Established in 1760, Tanza is one of the oldest municipalities in Cavite with a rich history spanning over 260 years.",
+    "populationLabel": "339K+ Residents",
+    "populationDesc": "One of Cavite's fastest-growing municipalities with 41 barangays and a growing economy."
+  },
+  "leadership": {
+    "title": "Municipal Leadership",
+    "municipalMayor": "Municipal Mayor",
+    "municipalViceMayor": "Municipal Vice Mayor",
+    "cityMayor": "Municipal Mayor",
+    "cityViceMayor": "Municipal Vice Mayor",
+    "electedMayor": "Elected Mayor",
+    "electedViceMayor": "Elected Vice Mayor",
+    "viewAll": "View All Officials",
+    "viewProfile": "View Profile"
+  },
+  "weatherMap": {
+    "title": "Live Weather & Map",
+    "location": "Tanza, Cavite",
+    "clear": "Clear sky",
+    "partlyCloudy": "Partly cloudy",
+    "foggy": "Foggy",
+    "rainy": "Rainy",
+    "showers": "Showers",
+    "thunderstorm": "Thunderstorm",
+    "defaultCondition": "Loading...",
+    "wind": "km/h Wind",
+    "climate": "Climate",
+    "elevation": "Humidity",
+    "loading": "Fetching weather data...",
+    "mapTitle": "Tanza, Cavite Map"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phone": "Phone",
+    "phoneHours": "Mon–Fri 8:00 AM – 5:00 PM",
+    "email": "Email",
+    "emailResponse": "We respond within 3–5 business days",
+    "address": "Address",
+    "addressLine1": "Municipal Hall, Tanza, Cavite",
+    "addressLine2": "Tanza, Cavite 4108",
+    "viewAll": "View All Offices"
   }
 }

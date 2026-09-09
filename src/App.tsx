@@ -1,5 +1,6 @@
 import { NuqsAdapter } from 'nuqs/adapters/react';
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
@@ -7,6 +8,18 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
+import Officials from './pages/Officials';
+import FullDisclosure from './pages/FullDisclosure';
+import AnnualBudget from './pages/AnnualBudget';
+import SALN from './pages/SALN';
+import FOIReleases from './pages/FOIReleases';
+import Downloads from './pages/Downloads';
+import CityProfile from './pages/CityProfile';
+import AnnualReport from './pages/AnnualReport';
+import InfrastructureProjects from './pages/InfrastructureProjects';
+import TouristSpots from './pages/TouristSpots';
+import WhereToStay from './pages/WhereToStay';
+import DevelopmentProjects from './pages/DevelopmentProjects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,27 +30,78 @@ function App() {
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services/:category" element={<Services />} />
-              <Route path="/services" element={<Services />} />
-              <Route
-                path="/services/:category/:documentSlug"
-                element={<Document categoryType="service" />}
-              />
-              <Route path="/government/:category" element={<Government />} />
-              <Route path="/government" element={<Government />} />
-              <Route
-                path="/government/:category/:documentSlug"
-                element={<Document categoryType="government" />}
-              />
-              <Route path="/:lang/:documentSlug" element={<Document />} />
-              <Route path="/:documentSlug" element={<Document />} />
-            </Routes>
+            <div className="flex-1 flex flex-col pt-[116px]">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/services/:category" element={<Services />} />
+                <Route path="/services" element={<Services />} />
+                <Route
+                  path="/services/:category/:documentSlug"
+                  element={<Document categoryType="service" />}
+                />
+                <Route path="/government/:category" element={<Government />} />
+                <Route path="/government" element={<Government />} />
+                <Route
+                  path="/government/departments/officials"
+                  element={<Officials />}
+                />
+                <Route
+                  path="/government/transparency-documents/full-disclosure"
+                  element={<FullDisclosure />}
+                />
+                <Route
+                  path="/government/transparency-documents/annual-budget"
+                  element={<AnnualBudget />}
+                />
+                <Route
+                  path="/government/transparency-documents/saln"
+                  element={<SALN />}
+                />
+                <Route
+                  path="/government/transparency-documents/foi-releases"
+                  element={<FOIReleases />}
+                />
+                <Route
+                  path="/government/transparency-documents/downloads"
+                  element={<Downloads />}
+                />
+                <Route
+                  path="/government/reports-and-statistics/city-profile"
+                  element={<CityProfile />}
+                />
+                <Route
+                  path="/government/reports-and-statistics/annual-report"
+                  element={<AnnualReport />}
+                />
+                <Route
+                  path="/government/reports-and-statistics/infrastructure-projects"
+                  element={<InfrastructureProjects />}
+                />
+                <Route
+                  path="/services/tourism/explore-tourist-spots"
+                  element={<TouristSpots />}
+                />
+                <Route
+                  path="/services/tourism/where-to-stay"
+                  element={<WhereToStay />}
+                />
+                <Route
+                  path="/development-projects"
+                  element={<DevelopmentProjects />}
+                />
+                <Route
+                  path="/government/:category/:documentSlug"
+                  element={<Document categoryType="government" />}
+                />
+                <Route path="/:lang/:documentSlug" element={<Document />} />
+                <Route path="/:documentSlug" element={<Document />} />
+              </Routes>
+            </div>
             <Footer />
           </div>
         </NuqsAdapter>
       </Router>
+      <Analytics />
     </HelmetProvider>
   );
 }

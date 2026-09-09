@@ -1,9 +1,10 @@
-# legislative Department Pages
-# This file contains all the pages/governments/departments/legislative available under the Department
-#
-layout: grid
-title: 'Legislative Department'
-description: 'Page Description'
+# Department Pages
+# This file contains all the pages/governments available under the Department
+
 pages:
-  - name: 'Councilor A'
-    description: 'Description'
+  - name: 'Executive'
+    slug: 'executive'
+    description: "Find out about the Mayor and Vice Mayor of Tanza, including upcoming events, the Mayor's Community Assistance Program, mayoral history, and information about other historic roles in the local government unit."
+  - name: 'Sangguniang Bayan'
+    slug: 'sangguniang-bayan'
+    description: 'The legislative body of the Municipality of Tanza, composed of elected councilors with the Vice Mayor as presiding officer.'

@@ -1,98 +1,76 @@
-# Go to the Local Hospital for Treatment or Confinement — Lapu-Lapu City
+# Go to the Local Hospital for Treatment or Confinement — Municipality of Tanza
 
-This guide covers **where to go**, **what to bring**, and **how admission works** at local hospitals in Lapu-Lapu City, including the city-run facility and nearby private hospitals.
-
----
-
-## A) Government Hospital (City-Run)
-
-### Sta. Rosa Community Hospital (Lapu-Lapu City)
-
-**Services & Hours**
-
-- **Emergency (Medical & Medico-legal):** 24/7
-- **Ward (In-patient confinement):** 24/7
-- **Out-Patient:** Mon–Fri, 8:00 AM–5:00 PM (except holidays)
-
-**Emergency (Medical cases) – Quick Steps**
-| Step | What you do | Hospital does | Typical time |
-|---|---|---|---|
-| 1 | Seek care at ER | Triage, vitals, initial MD orders | ~10–25 min |
-| 2 | Sign consent (treatment/admission if needed) | Prepare meds/tests; set for transfer to ward if admitted | ~20–25 min |
-| 3 | Transfer to ward (if for confinement) | ER endorses to Ward Nurse on duty | ~10 min |
-
-**Requirements (bring if available):** Registration data sheet (onsite), **PhilHealth ID/MDR (optional)**, doctor’s referral/admitting orders (if coming from clinic).
-
-**Ward (In-patient) – What to expect**
-
-- Follow doctor’s orders; nurses administer meds/tests; dietary issued as ordered.
-- For discharge: instructions & schedule for follow-ups are given; proceed to Billing for clearance; release at Ward/Nurse station.
-- **Fees:** Posted at Billing.
-- **Note:** If not enrolled in PhilHealth, staff will guide processing if a relative can provide documents.
+This guide covers **where to go**, **what to bring**, and **how admission works** for treatment or confinement at hospitals serving Tanza, Cavite residents.
 
 ---
 
-## B) Private Hospitals Nearby
+## A) Nearest Government Hospitals
 
-| Hospital                                     | Where                 | Beds/Notes                            | Admissions basics                                                                                                                     |
-| -------------------------------------------- | --------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mactan Doctors’ Hospital (CebuDoc Group)** | Basak, Lapu-Lapu City | **151-bed tertiary** private hospital | Bring valid ID; company/HMO authorization if applicable; PhilHealth forms; fill out admission forms and submit to Admissions/Billing. |
-| **ARC Hospitals**                            | Lapu-Lapu City        | **~100-bed** private hospital         | Standard private-hospital admission flow; coordinate with Admissions/HMO/PhilHealth desk.                                             |
+### Tanza Ospital ng Cavite (District Hospital)
 
-> Private hospitals typically require **initial deposits** (varies by case/room) unless fully covered by HMO/PhilHealth arrangements. Confirm at the **Billing/Admissions** desk.
+The nearest government hospital serving Tanza residents is the **Ospital ng Cavite** in Trece Martires City or the **Cavite Medical Center** — contact your **Tanza Municipal Health Office** for the current referral hospital designation.
+[UNVERIFIED — Tanza does not operate its own municipal hospital; the MHO manages referrals to provincial/district hospitals. Please confirm current referral hospital with MHO.]
+
+**For emergencies from any hospital:**
+
+- **Emergency (ER):** 24/7 — go straight to the ER
+- Triage, vitals, and initial treatment orders: ~10–25 minutes
+- If admitted: sign consent → transfer to ward → submit IDs/PhilHealth/HMO at Admissions/Billing
+
+---
+
+## B) PhilHealth Coverage
+
+- Bring your **PhilHealth ID and MDR** (Member Data Record) for all hospital admissions.
+- **No Balance Billing (NBB)** may apply for indigent/sponsored PhilHealth members in government hospitals.
+- If you are not yet enrolled in PhilHealth, the **Tanza MSWDO** can assist with indigent PhilHealth enrollment.
 
 ---
 
 ## C) What to Bring (All Hospitals)
 
 - **Valid ID** (with photo & signature)
-- **PhilHealth** ID and **MDR** (Member Data Record); if a dependent, bring proof of dependency
-- **Doctor’s referral/admitting order** (if elective admission)
-- **HMO/Company**: LOA/guarantee letter, membership/ID cards (if applicable)
-- **Personal necessities** (for confinement)
+- **PhilHealth ID and MDR**; if a dependent, bring proof of dependency
+- **Doctor's referral/admitting order** (if elective admission)
+- **HMO card and LOA/guarantee letter** (if applicable)
+- **Personal necessities** for confinement
 
 ---
 
-## D) Costs & PhilHealth Coverage
+## D) How to Avail
 
-- **City hospital:** Fees are posted at **Billing**; **PhilHealth** benefits may apply at admission/discharge processing.
-- **No Balance Billing (NBB):** For **indigent/sponsored**, **senior citizens**, and certain categories in **government hospitals**, no other fees beyond PhilHealth package should be charged during confinement (subject to policy and facility capacity).
+### Emergency (go straight to ER — 24/7)
 
----
+1. Proceed to the nearest hospital ER.
+2. Triage & initial treatment → stabilization/tests.
+3. If admitted: sign consent → transfer to ward → submit IDs/PhilHealth at Billing.
 
-## E) How to Avail — At a Glance
+### Elective Admission (planned procedure)
 
-### Emergency (any hospital)
-
-1. **Go straight to ER** (24/7).
-2. **Triage & initial orders** → stabilization/tests.
-3. **If admitted:** sign consent → transfer to ward → submit IDs/PhilHealth/HMO at Admissions/Billing.
-
-### Elective Admission (planned confinement/procedure)
-
-1. Obtain **doctor’s admitting order** & **referral**.
-2. Prepare **IDs, PhilHealth, HMO/LOA** (if any).
-3. Proceed to **Admissions** for room assignment, forms, and initial billing arrangements.
+1. Obtain **doctor's admitting order and referral**.
+2. Prepare IDs, PhilHealth, HMO/LOA (if any).
+3. Proceed to Admissions for room assignment, forms, and billing arrangements.
 
 ---
 
-## F) Useful Contacts
+## E) Free Indigency Referral Assistance
 
-- **Lapu-Lapu City Hospital / District Hospital (Gov’t)**
-  - A. Tumulak St., Gun-ob, Lapu-Lapu City
-  - **Tel:** (032) 340-0249 / 340-0248
-  - **Email:** lapulapucityhospital@yahoo.com
+If you cannot afford hospital fees, visit the **Tanza Municipal Social Welfare and Development Office (MSWDO)** for assistance, including:
 
-- **Mactan Doctors’ Hospital (Private, CebuDoc Group)**
-  - Basak, Lapu-Lapu City
-  - **Trunkline:** +63 (32) 239-7002 to 7016
-
-- **ARC Hospitals (Private)**
-  - Lapu-Lapu City (100-bed facility)
+- Medical Assistance Program (MAP)
+- PhilHealth indigent enrollment
+- Referral letters for government hospitals
 
 ---
 
-### Notes
+## Contact
 
-- Bring your **PhilHealth** documents even for emergencies; if unavailable, the hospital can guide you on follow-up submission.
-- Schedules and processes can change; confirm by calling the hospital **Admissions/Billing** desk before a planned confinement.
+**Tanza Municipal Health Office / Rural Health Unit (RHU)** — for referrals and health assistance
+Municipal Hall Compound, Tanza, Cavite 4108
+**Phone:** (046) 432-0000
+
+**Tanza Municipal Social Welfare and Development Office (MSWDO)** — for medical financial assistance
+Municipal Hall Compound, Tanza, Cavite 4108
+**Phone:** (046) 432-0000
+
+**Facebook:** [facebook.com/LGUTanzaCavite](https://www.facebook.com/LGUTanzaCavite)
