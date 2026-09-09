@@ -1,0 +1,8 @@
+# Tourism Pages
+pages:
+  - name: 'Must-See Places'
+    slug: 'explore-tourist-spots'
+    description: 'Discover the official tourist destinations of Tanza — heritage sites, parks, and landmarks.'
+  - name: 'Where to Stay'
+    slug: 'where-to-stay'
+    description: 'Hotels and private resorts in Tanza, Cavite for your visit.'

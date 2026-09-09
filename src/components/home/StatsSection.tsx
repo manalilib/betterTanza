@@ -1,0 +1,222 @@
+import {
+  Users,
+  MapPin,
+  Building2,
+  Map,
+  ArrowRight,
+  Wind,
+  Droplets,
+  CloudSun,
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useInView } from '../../hooks/useInView';
+import { useState, useEffect } from 'react';
+
+function weatherLabel(code: number): string {
+  if (code === 0) return 'Clear Sky';
+  if (code <= 2) return 'Partly Cloudy';
+  if (code === 3) return 'Overcast';
+  if (code <= 49) return 'Foggy';
+  if (code <= 59) return 'Drizzle';
+  if (code <= 69) return 'Rain';
+  if (code <= 84) return 'Rain Showers';
+  if (code <= 99) return 'Thunderstorm';
+  return 'Unknown';
+}
+
+function weatherEmoji(code: number): string {
+  if (code === 0) return '☀️';
+  if (code <= 2) return '⛅';
+  if (code === 3) return '☁️';
+  if (code <= 49) return '🌫️';
+  if (code <= 69) return '🌧️';
+  if (code <= 84) return '🌦️';
+  return '⛈️';
+}
+
+export default function StatsSection() {
+  const { t } = useTranslation('common');
+  const { ref, inView } = useInView<HTMLDivElement>();
+  const [weather, setWeather] = useState<{
+    temp: number;
+    humidity: number;
+    wind: number;
+    code: number;
+  } | null>(null);
+
+  useEffect(() => {
+    const cached = localStorage.getItem('tz_weather_home');
+    const cachedTime = localStorage.getItem('tz_weather_home_time');
+    if (cached && cachedTime && Date.now() - parseInt(cachedTime) < 1_800_000) {
+      setWeather(JSON.parse(cached));
+      return;
+    }
+    fetch(
+      'https://api.open-meteo.com/v1/forecast?latitude=14.6833&longitude=120.8833&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
+    )
+      .then(r => r.json())
+      .then(d => {
+        const w = {
+          temp: d.current.temperature_2m,
+          humidity: d.current.relative_humidity_2m,
+          wind: d.current.wind_speed_10m,
+          code: d.current.weather_code,
+        };
+        localStorage.setItem('tz_weather_home', JSON.stringify(w));
+        localStorage.setItem('tz_weather_home_time', String(Date.now()));
+        setWeather(w);
+      })
+      .catch(() => {});
+  }, []);
+
+  const STATS = [
+    {
+      icon: Users,
+      value: '339K+',
+      label: t('stats.population.label'),
+      description: t('stats.population.desc'),
+    },
+    {
+      icon: MapPin,
+      value: '41',
+      label: t('stats.barangays.label'),
+      description: t('stats.barangays.desc'),
+    },
+    {
+      icon: Building2,
+      value: t('stats.classification.label'),
+      label: '',
+      description: t('stats.classification.desc'),
+    },
+    {
+      icon: Map,
+      value: '78.33',
+      label: t('stats.area.label'),
+      description: t('stats.area.desc'),
+    },
+  ];
+
+  return (
+    <section
+      className="relative overflow-hidden"
+      style={{
+        background:
+          'linear-gradient(135deg, #001044 0%, #003087 50%, #0066eb 100%)',
+      }}
+    >
+      {/* Dot pattern */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.05]"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle, rgba(255,255,255,1) 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        {/* Weather — centered 3-column layout */}
+        <div className="mb-8">
+          <div className="bg-white/10 border border-white/20 rounded-2xl p-6 backdrop-blur-sm">
+            <div className="flex items-center justify-center gap-1.5 mb-5">
+              <CloudSun className="h-3.5 w-3.5 text-amber-300 shrink-0" />
+              <span className="text-xs font-bold text-blue-300 uppercase tracking-widest">
+                Current Weather · Tanza, Cavite
+              </span>
+            </div>
+            {weather ? (
+              <div className="flex items-center justify-center gap-6 sm:gap-12">
+                {/* Left details */}
+                <div className="flex flex-col items-center gap-3">
+                  <div className="flex flex-col items-center gap-1">
+                    <Droplets className="h-5 w-5 text-blue-300" />
+                    <span className="text-white font-black text-lg leading-none">
+                      {weather.humidity}%
+                    </span>
+                    <span className="text-blue-400 text-[10px] uppercase tracking-wide">
+                      Humidity
+                    </span>
+                  </div>
+                </div>
+
+                {/* Center — big icon + temp */}
+                <div className="flex flex-col items-center">
+                  <span className="text-6xl sm:text-7xl leading-none mb-2">
+                    {weatherEmoji(weather.code)}
+                  </span>
+                  <span className="text-5xl sm:text-6xl font-black text-white leading-none">
+                    {weather.temp}°C
+                  </span>
+                  <span className="text-blue-200 text-sm mt-2 font-medium">
+                    {weatherLabel(weather.code)}
+                  </span>
+                </div>
+
+                {/* Right details */}
+                <div className="flex flex-col items-center gap-3">
+                  <div className="flex flex-col items-center gap-1">
+                    <Wind className="h-5 w-5 text-blue-300" />
+                    <span className="text-white font-black text-lg leading-none">
+                      {weather.wind}
+                    </span>
+                    <span className="text-blue-400 text-[10px] uppercase tracking-wide">
+                      km/h Wind
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center h-24">
+                <div className="w-6 h-6 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Numbers */}
+        <div
+          ref={ref}
+          className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10 mb-6"
+        >
+          {STATS.map(({ icon: Icon, value, label, description }, idx) => (
+            <div
+              key={description}
+              className="flex flex-col items-center text-center px-6 py-8"
+              style={{
+                opacity: inView ? 1 : 0,
+                transform: inView ? 'translateY(0)' : 'translateY(20px)',
+                transition: `opacity 0.5s ease ${idx * 100}ms, transform 0.5s ease ${idx * 100}ms`,
+              }}
+            >
+              <div className="bg-white/10 rounded-xl p-2.5 mb-4">
+                <Icon className="h-5 w-5 text-blue-300" />
+              </div>
+              <div className="text-3xl sm:text-4xl font-black text-white leading-none mb-1">
+                {value}
+              </div>
+              {label && (
+                <div className="text-sm font-bold text-blue-200 mb-1">
+                  {label}
+                </div>
+              )}
+              <div className="text-xs text-blue-400 leading-relaxed">
+                {description}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-white/10 pt-4 pb-2 flex justify-center">
+          <Link
+            to="/government/reports-and-statistics/city-profile"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-300 hover:text-white transition-colors uppercase tracking-wide"
+          >
+            {t('stats.viewProfile')}
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
