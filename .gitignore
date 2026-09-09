@@ -1,3 +1,6 @@
+# Bob AI assistant rules (private)
+.bob/
+
 # Logs
 logs
 *.log
