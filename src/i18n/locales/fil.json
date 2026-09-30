@@ -14,14 +14,23 @@
     "contact": "Makipag-ugnayan"
   },
   "nav": {
+    "home": "Tahanan",
     "services": "Mga Serbisyo",
     "government": "Pamahalaan",
     "departments": "Mga Kagawaran at Opisyal",
+    "localOfficials": "Mga Lokal na Opisyal",
     "officials": "Mga Lokal na Opisyal",
+    "transparency": "Transparency",
     "fullDisclosure": "Buong Pagsisiwalat",
     "annualBudget": "Taunang Badyet",
+    "saln": "SALN",
     "foiReleases": "Mga Dokumento ng FOI",
+    "downloads": "Mga Dokumento sa Pagpaplano",
+    "statistics": "Mga Istatistika",
     "cityProfile": "Profil ng Munisipyo",
+    "annualReport": "Taunang Ulat",
+    "infrastructureProjects": "Mga Proyektong Imprastraktura",
+    "legislative": "Lehislatibo",
     "development": "Pagpapaunlad",
     "contact": "Makipag-ugnayan"
   },

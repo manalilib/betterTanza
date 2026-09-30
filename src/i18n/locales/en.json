@@ -14,14 +14,23 @@
     "contact": "Contact"
   },
   "nav": {
+    "home": "Home",
     "services": "Services",
     "government": "Government",
     "departments": "Departments & Officials",
+    "localOfficials": "Local Officials",
     "officials": "Local Officials",
+    "transparency": "Transparency",
     "fullDisclosure": "Full Disclosure",
     "annualBudget": "Annual Budget",
+    "saln": "SALN",
     "foiReleases": "FOI Releases",
+    "downloads": "Planning Docs & Downloads",
+    "statistics": "Statistics",
     "cityProfile": "Municipal Profile",
+    "annualReport": "Annual Report",
+    "infrastructureProjects": "Infrastructure Projects",
+    "legislative": "Legislative",
     "development": "Development",
     "contact": "Contact"
   },
