@@ -1,103 +1,31 @@
 import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import SEO from '../components/SEO';
-import { Phone, ExternalLink, Hotel, Trees } from 'lucide-react';
+import { Phone, ExternalLink, Hotel, Trees, AlertTriangle } from 'lucide-react';
+
+// ---------------------------------------------------------------------------
+// IMPORTANT — DATA INTEGRITY NOTICE
+// All previously listed hotel/resort entries were removed because they could
+// not be independently verified as real, operating establishments in Tanza.
+// Listing unverified businesses on a transparency-focused civic portal would
+// be misleading to residents and visitors.
+//
+// TO RESTORE LISTINGS: Add confirmed entries below using the Place interface.
+// Sources: Tanza LGU Facebook, Google Maps (tanza municipality), DILG directory.
+// ---------------------------------------------------------------------------
 
 interface Place {
   id: number;
   name: string;
   description: string;
   contact?: string;
+  website?: string;
   category: 'hotel' | 'resort';
   accent: string;
-  emoji: string;
 }
 
-const PLACES: Place[] = [
-  {
-    id: 1,
-    name: 'Tanza Bay Hotel',
-    description:
-      'A comfortable hotel in Tanza offering quality accommodations for business and leisure travelers visiting the municipality.',
-    contact: '(046) 432-0000',
-    category: 'hotel',
-    accent: 'from-blue-700 to-indigo-700',
-    emoji: '🏨',
-  },
-  {
-    id: 2,
-    name: 'PCG Guest House (Tanza)',
-    description:
-      'A clean and affordable guest house option in Tanza, convenient for travelers on a budget looking for a reliable overnight stay.',
-    category: 'hotel',
-    accent: 'from-slate-600 to-gray-700',
-    emoji: '🏩',
-  },
-  {
-    id: 3,
-    name: 'Cavite Transient House — Tanza',
-    description:
-      'A local transient accommodation option offering cozy, homey rooms at budget-friendly rates for short-term visitors.',
-    category: 'hotel',
-    accent: 'from-violet-600 to-purple-700',
-    emoji: '🏠',
-  },
-  {
-    id: 4,
-    name: 'Tanza Bed & Breakfast',
-    description:
-      'A cozy B&B option offering clean and comfortable rooms with home-cooked breakfast for guests visiting Tanza.',
-    category: 'hotel',
-    accent: 'from-teal-600 to-cyan-700',
-    emoji: '🛎️',
-  },
-  {
-    id: 5,
-    name: 'Dalahican Seaside Cottages',
-    description:
-      'Affordable coastal cottages near the Dalahican shoreline, perfect for a quick seaside escape with beautiful views of Manila Bay.',
-    contact: '0916-793-2511',
-    category: 'resort',
-    accent: 'from-cyan-600 to-blue-500',
-    emoji: '🌊',
-  },
-  {
-    id: 6,
-    name: 'Bucana Bayside Resort',
-    description:
-      'A relaxed bayside resort in Bucana offering picnic cottages and swimming facilities ideal for family outings and group events.',
-    category: 'resort',
-    accent: 'from-emerald-600 to-green-700',
-    emoji: '🏖️',
-  },
-  {
-    id: 7,
-    name: 'Amaya Private Pool Resort',
-    description:
-      'A private pool resort in Amaya, Tanza — perfect for family celebrations, reunions, and weekend getaways with pool amenities.',
-    contact: '0917-000-0000',
-    category: 'resort',
-    accent: 'from-orange-500 to-amber-600',
-    emoji: '💦',
-  },
-  {
-    id: 8,
-    name: 'Tanza Garden Resort',
-    description:
-      'A nature-inspired garden resort offering a peaceful retreat with event function rooms, ideal for intimate gatherings and picnics.',
-    category: 'resort',
-    accent: 'from-lime-600 to-green-600',
-    emoji: '🌸',
-  },
-];
-
-const CATEGORY_META: Record<
-  Place['category'],
-  { label: string; Icon: React.ComponentType<{ className?: string }> }
-> = {
-  hotel: { label: 'Hotels & Transients', Icon: Hotel },
-  resort: { label: 'Private Resorts', Icon: Trees },
-};
+// No verified listings yet — set to empty pending official sourcing.
+const PLACES: Place[] = [];
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -105,50 +33,6 @@ const BREADCRUMBS = [
   { label: 'Tourism', href: '/services/tourism' },
   { label: 'Where to Stay', href: '/services/tourism/where-to-stay' },
 ];
-
-function PlaceCard({ place, idx }: { place: Place; idx: number }) {
-  const meta = CATEGORY_META[place.category];
-  const Icon = meta.Icon;
-  return (
-    <div className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <div
-        className={`bg-gradient-to-r ${place.accent} p-5 flex items-start justify-between`}
-      >
-        <div>
-          <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full mb-2">
-            <Icon className="h-3 w-3" />
-            {meta.label}
-          </span>
-          <h3 className="text-white font-black text-lg leading-tight">
-            {place.name}
-          </h3>
-        </div>
-        <span className="text-4xl ml-4 shrink-0 select-none group-hover:scale-110 transition-transform duration-200">
-          {place.emoji}
-        </span>
-      </div>
-      <div className="p-5">
-        <p className="text-gray-600 text-sm leading-relaxed mb-4">
-          {place.description}
-        </p>
-        {place.contact && (
-          <a
-            href={`tel:${place.contact.replace(/[^0-9]/g, '')}`}
-            className="flex items-center gap-2 text-xs text-gray-500 hover:text-primary-700 transition-colors"
-          >
-            <Phone className="h-3.5 w-3.5 shrink-0 text-gray-400" />
-            <span>{place.contact}</span>
-          </a>
-        )}
-      </div>
-      <div className="px-5 pb-4">
-        <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest">
-          Place #{String(idx + 1).padStart(2, '0')}
-        </span>
-      </div>
-    </div>
-  );
-}
 
 export default function WhereToStay() {
   const hotels = PLACES.filter(p => p.category === 'hotel');
@@ -185,28 +69,11 @@ export default function WhereToStay() {
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Where to Stay
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-blue-100 text-base max-w-lg leading-relaxed">
             Comfortable accommodations in Tanza — from transient houses and
             budget hotels to private resorts perfect for family getaways by the
             bay.
           </p>
-          <div className="flex flex-wrap gap-2">
-            {Object.entries(CATEGORY_META).map(([key, meta]) => {
-              const count = PLACES.filter(p => p.category === key).length;
-              return (
-                <span
-                  key={key}
-                  className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full"
-                >
-                  <meta.Icon className="h-3 w-3" />
-                  {meta.label}
-                  <span className="bg-white/20 rounded-full px-1.5 py-0.5 text-[10px] font-bold">
-                    {count}
-                  </span>
-                </span>
-              );
-            })}
-          </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
           <svg
@@ -226,41 +93,63 @@ export default function WhereToStay() {
         <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
-          {/* Hotels */}
-          <div className="mb-10">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-black text-gray-900 flex items-center gap-2">
-                <Hotel className="h-5 w-5 text-primary-600" />
-                Hotels &amp; Transients
-              </h2>
-              <span className="text-xs text-gray-400 font-medium">
-                {hotels.length} options
-              </span>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {hotels.map((place, idx) => (
-                <PlaceCard key={place.id} place={place} idx={idx} />
-              ))}
+          {/* Pending verification notice */}
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-10 flex gap-4">
+            <AlertTriangle className="h-6 w-6 text-amber-500 shrink-0 mt-0.5" />
+            <div>
+              <p className="font-black text-amber-900 mb-1">
+                Accommodation listings pending verification
+              </p>
+              <p className="text-sm text-amber-800 leading-relaxed mb-3">
+                This portal is committed to publishing only verified, accurate
+                information. All previously listed hotels and resorts were
+                removed because their existence as operating establishments in
+                Tanza could not be independently confirmed. Listings will be
+                restored once officially sourced.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://www.facebook.com/TanzaMunicipalityOfficial"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-900 underline underline-offset-2 transition-colors"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                  Check LGU Facebook for updates
+                </a>
+                <a
+                  href="https://www.tanza.gov.ph"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-900 underline underline-offset-2 transition-colors"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" />
+                  Official LGU Website
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Resorts */}
-          <div className="mb-10">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-black text-gray-900 flex items-center gap-2">
+          {/* Sections — only rendered when listings exist */}
+          {hotels.length > 0 && (
+            <div className="mb-10">
+              <h2 className="text-lg font-black text-gray-900 flex items-center gap-2 mb-6">
+                <Hotel className="h-5 w-5 text-primary-600" />
+                Hotels &amp; Transients
+              </h2>
+              {/* PlaceCard grid goes here once data is populated */}
+            </div>
+          )}
+
+          {resorts.length > 0 && (
+            <div className="mb-10">
+              <h2 className="text-lg font-black text-gray-900 flex items-center gap-2 mb-6">
                 <Trees className="h-5 w-5 text-primary-600" />
                 Private Resorts
               </h2>
-              <span className="text-xs text-gray-400 font-medium">
-                {resorts.length} options
-              </span>
+              {/* PlaceCard grid goes here once data is populated */}
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {resorts.map((place, idx) => (
-                <PlaceCard key={place.id} place={place} idx={idx} />
-              ))}
-            </div>
-          </div>
+          )}
 
           {/* CTA footer */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col sm:flex-row items-center gap-4 justify-between">
