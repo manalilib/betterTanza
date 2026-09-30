@@ -73,6 +73,12 @@ const EX_OFFICIO = [
   },
 ];
 
+// ---------------------------------------------------------------------------
+// DEPARTMENT CONTACTS
+// Direct-line numbers per department are not publicly available from official
+// sources. All offices are reachable via the Municipal Hall switchboard below.
+// Update individual entries once confirmed from official LGU publications.
+// ---------------------------------------------------------------------------
 const DEPARTMENTS = [
   { office: 'Office of the Municipal Mayor', tel: '(046) 432-0000' },
   { office: 'Office of the Municipal Vice Mayor', tel: '(046) 432-0000' },
@@ -84,8 +90,9 @@ const DEPARTMENTS = [
     tel: '(046) 432-0000',
   },
   { office: 'Municipal DRRMO', tel: '(046) 432-0000' },
+  // BFP and PNP direct lines unconfirmed — showing switchboard as fallback
   { office: 'Bureau of Fire Protection (BFP) — Tanza', tel: '(046) 432-0000' },
-  { office: 'Tanza Municipal PNP', tel: '(046) 432-0000' },
+  { office: 'Tanza Municipal Police Station (MPS)', tel: '(046) 432-0000' },
 ];
 
 export default function Officials() {
@@ -313,7 +320,11 @@ export default function Officials() {
               <Building2 className="h-5 w-5 text-primary-600" /> Municipal
               Government Offices
             </h2>
-            <div className="h-1 w-10 bg-primary-600 rounded-full mb-5" />
+            <div className="h-1 w-10 bg-primary-600 rounded-full mb-3" />
+            <p className="text-xs text-gray-400 mb-5">
+              All offices reachable via Municipal Hall switchboard. Direct-line
+              numbers pending official confirmation.
+            </p>
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
               {DEPARTMENTS.map((d, i) => (
                 <div
