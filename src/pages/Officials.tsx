@@ -50,23 +50,22 @@ const EXECUTIVES = [
   },
 ];
 
-const COUNCILORS = [
-  'Councilor 1 (to be updated)',
-  'Councilor 2 (to be updated)',
-  'Councilor 3 (to be updated)',
-  'Councilor 4 (to be updated)',
-  'Councilor 5 (to be updated)',
-  'Councilor 6 (to be updated)',
-  'Councilor 7 (to be updated)',
-  'Councilor 8 (to be updated)',
+// TODO: Replace with real 2022–2025 Sangguniang Bayan members.
+// Source from: https://www.facebook.com/LGUTanzaCavite or https://www.tanza.gov.ph
+const COUNCILORS: string[] = [
+  // Add the 8 elected councilors here once verified
 ];
 
 const EX_OFFICIO = [
-  { position: 'LNB President', full: 'Liga ng mga Barangay', name: 'TBA' },
+  {
+    position: 'LNB President',
+    full: 'Liga ng mga Barangay',
+    name: 'To be updated — source from LGU official channels',
+  },
   {
     position: 'SK Federation President',
     full: 'Sangguniang Kabataan',
-    name: 'TBA',
+    name: 'To be updated — source from LGU official channels',
   },
 ];
 
@@ -220,21 +219,47 @@ export default function Officials() {
               8 elected councilors presided over by the Vice Mayor — 2022–2025
               term
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {COUNCILORS.map((name, i) => (
-                <div
-                  key={name}
-                  className="bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 flex items-center gap-3"
-                >
-                  <span className="text-[10px] font-black text-blue-400 w-6 shrink-0">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <span className="text-sm font-semibold text-gray-800">
-                    Hon. {name}
-                  </span>
+            {COUNCILORS.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {COUNCILORS.map((name, i) => (
+                  <div
+                    key={name}
+                    className="bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 flex items-center gap-3"
+                  >
+                    <span className="text-[10px] font-black text-blue-400 w-6 shrink-0">
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+                    <span className="text-sm font-semibold text-gray-800">
+                      Hon. {name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <Users className="h-4 w-4 text-white" />
                 </div>
-              ))}
-            </div>
+                <div>
+                  <p className="text-sm font-bold text-amber-800">
+                    Councilor list pending verification
+                  </p>
+                  <p className="text-xs text-amber-600 mt-0.5">
+                    The 2022–2025 Sangguniang Bayan members are being verified
+                    from official LGU sources. Visit{' '}
+                    <a
+                      href="https://www.facebook.com/LGUTanzaCavite"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline hover:text-amber-800"
+                    >
+                      the official LGU Facebook page
+                    </a>{' '}
+                    for the current list.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Ex-Officio */}
