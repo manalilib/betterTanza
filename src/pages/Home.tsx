@@ -2,6 +2,7 @@ import Hero from '../components/sections/Hero';
 import HomeInfoBar from '../components/home/InfoBar';
 import ServicesSection from '../components/home/ServicesSection';
 import StatsSection from '../components/home/StatsSection';
+import WeatherMapSection from '../components/home/WeatherMapSection';
 import GovernmentQuickLinks from '../components/home/GovernmentQuickLinks';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
 import HistorySection from '../components/home/HistorySection';
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
         <HomeInfoBar />
         <ServicesSection />
         <StatsSection />
+        <WeatherMapSection />
         <GovernmentQuickLinks />
         <GovernmentActivitySection />
         <HistorySection />
