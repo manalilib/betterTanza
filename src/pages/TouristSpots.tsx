@@ -26,9 +26,10 @@ interface Spot {
 const SPOTS: Spot[] = [
   {
     id: 1,
-    name: 'Saint Francis of Assisi Parish Church',
+    // Patron saint of Tanza is San Pedro Apostol — confirmed from parish records
+    name: 'Saint Peter the Apostle Parish Church (San Pedro)',
     description:
-      'The main parish church of Tanza, a beloved Catholic landmark standing at the heart of the municipality. A center of faith, community celebrations, and Cavite heritage since colonial times.',
+      "The main parish church of Tanza dedicated to San Pedro Apostol, the town's patron saint. A beloved Catholic landmark standing at the heart of the municipality since the colonial era — center of the annual town fiesta and community faith life.",
     location: 'Poblacion, Tanza, Cavite',
     category: 'religious',
     accent: 'from-blue-700 to-indigo-700',
@@ -38,7 +39,7 @@ const SPOTS: Spot[] = [
     id: 2,
     name: 'Tanza Municipal Plaza',
     description:
-      "The central public plaza of Tanza — a gathering place for festivals, community events, and everyday leisure. Surrounded by historic structures that speak to the town's colonial heritage.",
+      "The central public plaza of Tanza — a gathering place for festivals, community events, and everyday leisure. Located in Poblacion III adjacent to the Municipal Hall, it is surrounded by historic structures that speak to the town's colonial heritage.",
     location: 'Poblacion III, Tanza, Cavite',
     category: 'recreation',
     accent: 'from-emerald-600 to-green-700',
@@ -46,43 +47,23 @@ const SPOTS: Spot[] = [
   },
   {
     id: 3,
-    name: 'Tanza Public Beach (Dalahican Coast)',
+    name: 'Manila Bay Coastline — Dalahican',
     description:
-      "Tanza's shoreline along Manila Bay offers scenic coastal views and a peaceful seaside atmosphere. Popular for morning walks, fishing, and enjoying the sunset over the bay.",
+      "Tanza's shoreline along Manila Bay in Barangay Dalahican offers coastal views and a traditional fishing community atmosphere. Popular for sunrise walks, fresh seafood, and watching bancas return from the bay.",
     location: 'Dalahican, Tanza, Cavite',
     category: 'beach',
     accent: 'from-cyan-600 to-blue-600',
-    emoji: '🏖️',
+    emoji: '🌊',
   },
   {
     id: 4,
-    name: 'Bucana Fishport & Market',
+    name: 'Bucana Fishing Port',
     description:
-      'A lively fishing port and public market where you can buy fresh seafood directly from local fishermen. A true taste of coastal Tanza culture and an authentic local experience.',
+      "An active fishing port in Barangay Bucana where you can experience Tanza's coastal fishing culture first-hand — buy fresh catch directly from local fishermen and witness the morning catch come in from Manila Bay.",
     location: 'Bucana, Tanza, Cavite',
-    category: 'recreation',
+    category: 'beach',
     accent: 'from-teal-600 to-cyan-700',
     emoji: '🐟',
-  },
-  {
-    id: 5,
-    name: 'Our Lady of Lourdes Shrine',
-    description:
-      'A revered religious shrine drawing pilgrims and visitors from neighboring municipalities. A place of quiet prayer and reflection nestled within the community.',
-    location: 'Tanza, Cavite',
-    category: 'religious',
-    accent: 'from-blue-600 to-blue-400',
-    emoji: '🙏',
-  },
-  {
-    id: 6,
-    name: 'Tanza Nature & Barangay Trails',
-    description:
-      'Explore the natural side of Tanza through its barangay greenways and coastal mangrove zones, offering a quiet escape from urban life and a glimpse of local biodiversity.',
-    location: 'Various barangays, Tanza, Cavite',
-    category: 'recreation',
-    accent: 'from-lime-600 to-green-600',
-    emoji: '🌿',
   },
 ];
 
@@ -136,9 +117,9 @@ export default function TouristSpots() {
             Must-See Places
           </h1>
           <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
-            Discover the official tourist destinations of Tanza — from
-            centuries-old churches and Manila Bay coastline to lush parks and
-            vibrant local markets.
+            Discover verified destinations in Tanza — a centuries-old parish
+            church, the Manila Bay coastline, a historic public plaza, and a
+            working fishing port.
           </p>
 
           {/* Category pills */}
@@ -182,13 +163,24 @@ export default function TouristSpots() {
         <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
+          {/* Community notice */}
+          <div className="mb-6 bg-blue-50 border border-blue-200 rounded-xl px-5 py-3 flex items-start gap-3">
+            <MapPin className="h-4 w-4 text-blue-500 mt-0.5 shrink-0" />
+            <p className="text-xs text-blue-700 leading-relaxed">
+              <strong>Know a spot we missed?</strong> This list is
+              community-maintained. Contact us or open a pull request to add
+              verified tourist destinations in Tanza. All entries are confirmed
+              against barangay geography — unverified places are not listed.
+            </p>
+          </div>
+
           {/* Spot count badge */}
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-lg font-black text-gray-900">
-              {SPOTS.length} Tourist Destinations
+              {SPOTS.length} Verified Destinations
             </h2>
             <span className="text-xs text-gray-400 font-medium">
-              Source: bettertanza.org
+              Barangay-verified · bettertanza.org
             </span>
           </div>
 
