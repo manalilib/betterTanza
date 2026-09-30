@@ -58,8 +58,8 @@ export default function Footer() {
           <div>
             <div className="mb-3 flex items-center gap-2">
               <img
-                src="/tanza-seal.webp"
-                alt="betterTanza.org"
+                src="/tanza-seal.png"
+                alt="Tanza Municipal Seal"
                 className="h-9 w-auto brightness-0 invert"
               />
               <span className="text-white font-black text-lg">

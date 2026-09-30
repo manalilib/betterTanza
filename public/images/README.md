@@ -7,22 +7,14 @@ The code already references these paths — dropping in the files activates them
 
 ## Municipal Seal
 
-**File:** `tanza-seal.png` (or `.svg`)
-**Path:** `/public/images/tanza-seal.png`
-
-**Where to source:**
-
-1. Wikipedia: https://en.wikipedia.org/wiki/Tanza,_Cavite — check the infobox image
-2. Official LGU Facebook: https://www.facebook.com/LGUTanzaCavite — profile photo / cover photo
-3. Official website: https://www.tanza.gov.ph
-4. Wikimedia Commons: search "Tanza Cavite seal"
+**File:** `tanza-seal.png` ✅ **EXISTS** — converted from `Tanza,_Cavite_Seal.svg`
+**Path:** `/public/tanza-seal.png` (400×400 RGBA PNG)
+**Source SVG:** `/public/images/Tanza,_Cavite_Seal.svg`
 
 **Usage in code:**
 
-- `src/components/layout/Navbar.tsx` — beside the "betterTanza" brand text
-- `src/components/layout/Footer.tsx` — brand column
-
-**Recommended size:** 128×128px minimum, PNG with transparent background or SVG
+- `src/components/layout/Navbar.tsx` — beside the "betterTanza" brand text (48px height)
+- `src/components/layout/Footer.tsx` — brand column (36px height, inverted white)
 
 ---
 
