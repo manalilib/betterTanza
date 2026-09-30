@@ -18,6 +18,8 @@ import Downloads from './pages/Downloads';
 import CityProfile from './pages/CityProfile';
 import AnnualReport from './pages/AnnualReport';
 import InfrastructureProjects from './pages/InfrastructureProjects';
+import TouristSpots from './pages/TouristSpots';
+import WhereToStay from './pages/WhereToStay';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -85,6 +87,16 @@ function App() {
                     <Route
                       path="/government/reports-and-statistics/infrastructure-projects"
                       element={<InfrastructureProjects />}
+                    />
+
+                    {/* Tourism pages */}
+                    <Route
+                      path="/services/tourism/explore-tourist-spots"
+                      element={<TouristSpots />}
+                    />
+                    <Route
+                      path="/services/tourism/where-to-stay"
+                      element={<WhereToStay />}
                     />
 
                     <Route path="/:lang/:documentSlug" element={<Document />} />
