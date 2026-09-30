@@ -20,6 +20,7 @@ import AnnualReport from './pages/AnnualReport';
 import InfrastructureProjects from './pages/InfrastructureProjects';
 import TouristSpots from './pages/TouristSpots';
 import WhereToStay from './pages/WhereToStay';
+import DevelopmentProjects from './pages/DevelopmentProjects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -97,6 +98,12 @@ function App() {
                     <Route
                       path="/services/tourism/where-to-stay"
                       element={<WhereToStay />}
+                    />
+
+                    {/* Development Projects */}
+                    <Route
+                      path="/development-projects"
+                      element={<DevelopmentProjects />}
                     />
 
                     <Route path="/:lang/:documentSlug" element={<Document />} />
