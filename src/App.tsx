@@ -15,6 +15,9 @@ import AnnualBudget from './pages/AnnualBudget';
 import SALN from './pages/SALN';
 import FOIReleases from './pages/FOIReleases';
 import Downloads from './pages/Downloads';
+import CityProfile from './pages/CityProfile';
+import AnnualReport from './pages/AnnualReport';
+import InfrastructureProjects from './pages/InfrastructureProjects';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -70,6 +73,20 @@ function App() {
                       path="/government/transparency-documents/downloads"
                       element={<Downloads />}
                     />
+                    {/* Reports & Statistics pages */}
+                    <Route
+                      path="/government/reports-and-statistics/city-profile"
+                      element={<CityProfile />}
+                    />
+                    <Route
+                      path="/government/reports-and-statistics/annual-report"
+                      element={<AnnualReport />}
+                    />
+                    <Route
+                      path="/government/reports-and-statistics/infrastructure-projects"
+                      element={<InfrastructureProjects />}
+                    />
+
                     <Route path="/:lang/:documentSlug" element={<Document />} />
                     <Route path="/:documentSlug" element={<Document />} />
                   </Routes>
