@@ -71,7 +71,7 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
   },
   {
     id: 3,
-    name: 'SM-Anchored Commercial Corridor',
+    name: "Governor's Drive Commercial Corridor",
     developer: 'Multiple private developers',
     location: "Governor's Drive / Molino–Paliparan–Tanza corridor, Cavite",
     status: 'announced',
@@ -83,9 +83,9 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
       "The Governor's Drive commercial corridor connecting Bacoor, Dasmariñas, General Trias, and Tanza is attracting commercial investment from major developers. Tanza's position along this corridor makes it a prime target for retail and mixed-use developments in the near term.",
     highlights: [
       "Prime location along the high-traffic Governor's Drive corridor",
-      'Growing residential base of 300K+ population driving retail demand',
+      'Growing residential base (278K+ per PSA 2020) driving retail demand',
       'Multiple commercial lots along the national road being developed',
-      'Proximity to CALAX interchange increases commercial viability',
+      'Proximity to planned CALAX interchange increases commercial viability',
     ],
     estimatedCompletion: 'TBA',
   },
