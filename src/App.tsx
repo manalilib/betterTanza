@@ -19,23 +19,28 @@ function App() {
             <div className="min-h-screen flex flex-col">
               <Navbar />
               <ScrollToTop />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/services/:category" element={<Services />} />
-                <Route path="/services" element={<Services />} />
-                <Route
-                  path="/services/:category/:documentSlug"
-                  element={<Document categoryType="service" />}
-                />
-                <Route path="/government/:category" element={<Government />} />
-                <Route path="/government" element={<Government />} />
-                <Route
-                  path="/government/:category/:documentSlug"
-                  element={<Document categoryType="government" />}
-                />
-                <Route path="/:lang/:documentSlug" element={<Document />} />
-                <Route path="/:documentSlug" element={<Document />} />
-              </Routes>
+              <div className="flex-1 flex flex-col pt-[116px]">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/services/:category" element={<Services />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route
+                    path="/services/:category/:documentSlug"
+                    element={<Document categoryType="service" />}
+                  />
+                  <Route
+                    path="/government/:category"
+                    element={<Government />}
+                  />
+                  <Route path="/government" element={<Government />} />
+                  <Route
+                    path="/government/:category/:documentSlug"
+                    element={<Document categoryType="government" />}
+                  />
+                  <Route path="/:lang/:documentSlug" element={<Document />} />
+                  <Route path="/:documentSlug" element={<Document />} />
+                </Routes>
+              </div>
               <Footer />
             </div>
           </NuqsAdapter>

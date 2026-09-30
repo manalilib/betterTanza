@@ -16,6 +16,7 @@ export const mainNavigation: NavigationItem[] = [
   {
     label: 'Services',
     href: '/services',
+    translationKey: 'nav.services',
     children: (servicesData.categories as Category[]).map(category => ({
       label: category.category,
       href: `/services/${category.slug}`,
@@ -23,7 +24,50 @@ export const mainNavigation: NavigationItem[] = [
   },
   {
     label: 'Government',
-    href: '/government/departments',
+    href: '/government',
+    translationKey: 'nav.government',
+    children: [
+      {
+        label: 'Departments & Officials',
+        href: '/government/departments',
+        translationKey: 'nav.departments',
+      },
+      {
+        label: 'Local Officials',
+        href: '/government/departments/officials',
+        translationKey: 'nav.officials',
+      },
+      {
+        label: 'Full Disclosure',
+        href: '/government/transparency-documents/full-disclosure',
+        translationKey: 'nav.fullDisclosure',
+      },
+      {
+        label: 'Annual Budget',
+        href: '/government/transparency-documents/annual-budget',
+        translationKey: 'nav.annualBudget',
+      },
+      {
+        label: 'FOI Releases',
+        href: '/government/transparency-documents/foi-releases',
+        translationKey: 'nav.foiReleases',
+      },
+      {
+        label: 'Municipal Profile',
+        href: '/government/reports-and-statistics/city-profile',
+        translationKey: 'nav.cityProfile',
+      },
+    ],
+  },
+  {
+    label: 'Development',
+    href: '/development-projects',
+    translationKey: 'nav.development',
+  },
+  {
+    label: 'Contact',
+    href: '/#contact',
+    translationKey: 'nav.contact',
   },
 ];
 
