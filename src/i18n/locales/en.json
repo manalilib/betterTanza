@@ -11,18 +11,198 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "contact": "Contact",
-    "login": "Login",
-    "register": "Register"
+    "contact": "Contact"
+  },
+  "nav": {
+    "services": "Services",
+    "government": "Government",
+    "departments": "Departments & Officials",
+    "officials": "Local Officials",
+    "fullDisclosure": "Full Disclosure",
+    "annualBudget": "Annual Budget",
+    "foiReleases": "FOI Releases",
+    "cityProfile": "Municipal Profile",
+    "development": "Development",
+    "contact": "Contact"
   },
   "hero": {
-    "title": "Better Local Government",
-    "subtitle": "Transforming communities through digital innovation",
+    "title": "Better Tanza",
+    "subtitle": "Your community transparency portal for the Municipality of Tanza, Cavite — access services, officials, and public information.",
+    "browseServices": "Browse Services",
+    "contactUs": "Contact Us",
+    "findService": "Search Services",
+    "searchPlaceholder": "Search for a service...",
+    "popular": "Popular Services",
     "cta": "Get Started"
   },
+  "services": {
+    "title": "Municipal Services",
+    "description": "Access the full range of government services provided by the Municipality of Tanza.",
+    "viewAll": "View All Services",
+    "categories": {
+      "health-services": {
+        "name": "Health Services",
+        "description": "Free check-ups, medicines, vaccines, maternal care, and hospital services."
+      },
+      "education": {
+        "name": "Education",
+        "description": "Daycare, scholarships, and educational support programs."
+      },
+      "business": {
+        "name": "Business",
+        "description": "Business permits, taxes, and trade fair support."
+      },
+      "social-welfare": {
+        "name": "Social Welfare",
+        "description": "Support for seniors, PWDs, and vulnerable families."
+      },
+      "agriculture-fisheries": {
+        "name": "Agriculture & Fisheries",
+        "description": "Seeds, training, veterinary, and equipment support."
+      },
+      "infrastructure-public-works": {
+        "name": "Infrastructure",
+        "description": "Roads, water systems, and public facilities."
+      },
+      "garbage-waste-disposal": {
+        "name": "Waste Disposal",
+        "description": "Collection schedules, segregation, and reporting violations."
+      },
+      "environment": {
+        "name": "Environment",
+        "description": "Clean-ups, reforestation, and environmental compliance."
+      },
+      "disaster-preparedness": {
+        "name": "Disaster Preparedness",
+        "description": "MDRRMO, drills, evacuation routes, and early warning systems."
+      },
+      "housing-land-use": {
+        "name": "Housing & Land Use",
+        "description": "Zoning, housing programs, and permits."
+      },
+      "tourism": {
+        "name": "Tourism",
+        "description": "Tourist spots, lodging, products, and tourism permits."
+      }
+    }
+  },
+  "governmentActivity": {
+    "title": "Government Activities",
+    "description": "Navigate the different areas of your local government.",
+    "categories": {
+      "departments": {
+        "name": "Departments",
+        "description": "Municipal departments and offices."
+      },
+      "legislative": {
+        "name": "Legislative",
+        "description": "Sangguniang Bayan, ordinances, and resolutions."
+      },
+      "transparency-documents": {
+        "name": "Transparency",
+        "description": "Full disclosure, budget, and FOI documents."
+      },
+      "reports-and-statistics": {
+        "name": "Reports & Statistics",
+        "description": "Annual reports, city profile, and infrastructure."
+      },
+      "guides-and-regulations": {
+        "name": "Guides & Regulations",
+        "description": "Citizens charter, forms, and ordinances."
+      }
+    }
+  },
+  "stats": {
+    "population": {
+      "label": "Residents",
+      "desc": "Estimated 2024 population"
+    },
+    "barangays": {
+      "label": "Barangays",
+      "desc": "Administrative divisions"
+    },
+    "classification": {
+      "label": "Municipality",
+      "desc": "Province of Cavite, Region IV-A"
+    },
+    "area": {
+      "label": "km² Land Area",
+      "desc": "7,833 hectares total"
+    },
+    "viewProfile": "View Full Municipal Profile"
+  },
+  "history": {
+    "title": "History of Tanza",
+    "charteredYear": "Year Founded",
+    "charteredDesc": "Originally known as Santa Cruz de Malabon, Tanza was founded in 1760 and renamed on February 28, 1914.",
+    "populationLabel": "Growing Municipality",
+    "populationDesc": "One of Cavite's fastest-growing municipalities with 41 barangays and a growing economy.",
+    "events": {
+      "founded": {
+        "year": "1760",
+        "title": "Founded as Santa Cruz de Malabon",
+        "text": "The town of Santa Cruz de Malabon is established, becoming one of the earliest settlements in the Cavite coast."
+      },
+      "revolution": {
+        "year": "1896",
+        "title": "Role in the Philippine Revolution",
+        "text": "Tanza plays a significant role in the Philippine Revolution against Spanish colonial rule."
+      },
+      "independence": {
+        "year": "1898",
+        "title": "Philippine Independence",
+        "text": "The Philippines declares independence; Tanza forms part of the newly established government."
+      },
+      "renamed": {
+        "year": "1914",
+        "title": "Renamed to Tanza",
+        "text": "The municipality is officially renamed Tanza on February 28, 1914, the name it carries to this day."
+      },
+      "growth": {
+        "year": "1970s–1990s",
+        "title": "Urban and Agricultural Growth",
+        "text": "Tanza experiences significant growth in agriculture and early industrialization, attracting more residents to the Cavite coast."
+      },
+      "modernization": {
+        "year": "2000s",
+        "title": "Modernization and Rapid Urbanization",
+        "text": "Infrastructure investments and industrial zone expansions accelerate population growth and economic development."
+      },
+      "recognition": {
+        "year": "2022–present",
+        "title": "Awards and Recognition",
+        "text": "Tanza receives national recognition for good governance, financial housekeeping, and local competitiveness under the current administration."
+      }
+    }
+  },
+  "leadership": {
+    "title": "Municipal Leadership",
+    "municipalMayor": "Municipal Mayor",
+    "municipalViceMayor": "Municipal Vice Mayor",
+    "electedMayor": "2022–2025 Term",
+    "electedViceMayor": "2022–2025 Term",
+    "viewAll": "View All Officials",
+    "viewProfile": "View Profile"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phone": "Phone",
+    "phoneHours": "Monday–Friday, 8:00 AM – 5:00 PM",
+    "email": "Email",
+    "emailResponse": "Responses within 1–3 business days",
+    "address": "Address",
+    "addressLine1": "Tanza Municipal Hall, Tanza, Cavite",
+    "addressLine2": "Poblacion III, Tanza, Cavite 4108",
+    "viewAll": "All Contact Info"
+  },
   "footer": {
-    "copyright": "© 2026 Better Local Government. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "mission": "A community-built transparency portal for the Municipality of Tanza, Cavite. Not an official government website.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "costLabel": "This site is free",
+    "volunteer": "Volunteer",
+    "contribute": "Contribute on GitHub",
+    "attribution": "Built with ❤️ for Tanza residents",
+    "builtBy": "betterTanza.org is not affiliated with the official LGU of Tanza."
   }
 }

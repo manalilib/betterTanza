@@ -1,20 +1,29 @@
 import Hero from '../components/sections/Hero';
 import ServicesSection from '../components/home/ServicesSection';
+import StatsSection from '../components/home/StatsSection';
+import GovernmentQuickLinks from '../components/home/GovernmentQuickLinks';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
+import HistorySection from '../components/home/HistorySection';
+import LeadershipSection from '../components/home/LeadershipSection';
+import ContactSection from '../components/home/ContactSection';
 import SEO from '../components/SEO';
 
 const Home: React.FC = () => {
   return (
     <>
       <SEO
-        title="Home"
-        description="Official website of your local government. Access government services, information, and resources."
-        keywords="government, local government, services, public services, civic services"
+        description="betterTanza.org — a community transparency portal for the Municipality of Tanza, Cavite. Access government services, officials, budgets, and public information."
+        keywords="Tanza, Cavite, Municipality of Tanza, LGU Tanza, government, services, transparency, officials, budget"
       />
-      <main className="flex-grow">
+      <main>
         <Hero />
         <ServicesSection />
+        <StatsSection />
+        <GovernmentQuickLinks />
         <GovernmentActivitySection />
+        <HistorySection />
+        <LeadershipSection />
+        <ContactSection />
       </main>
     </>
   );
