@@ -73,7 +73,7 @@ verified, unmodified starting point. The `bootstrap` branch is left untouched.
 
 ### 1 — Foundation: Environment, Dependencies, CSS tokens, useInView hook
 
-**Status:** `[ ] pending`
+**Status:** `[x] done`
 
 **Intent**
 Set up the Tanza-specific environment variables, install the two extra packages
@@ -119,7 +119,7 @@ This is the foundation everything else depends on.
 
 ### 2 — Navbar: Fixed glassmorphism + emergency hotlines + active-route + language toggle
 
-**Status:** `[ ] pending`
+**Status:** `[x] done`
 
 **Intent**
 Replace the plain sticky navbar with GeneralTrias's fixed glassmorphism navbar
@@ -165,7 +165,7 @@ top, adds the emergency hotlines ticker, and adds the EN/FIL language pill switc
 
 ### 3 — Hero: Full-screen animated hero with service search
 
-**Status:** `[ ] pending`
+**Status:** `[x] done`
 
 **Intent**
 Replace the simple hero with GeneralTrias's full-screen animated hero. This is the
@@ -205,7 +205,7 @@ development projects teaser.
 
 ### 4 — Home: Seven-section layout with ThemeContext
 
-**Status:** `[ ] pending`
+**Status:** `[x] done`
 
 **Intent**
 Upgrade the Home page from two sections (Hero + ServicesSection) to GeneralTrias's
@@ -324,7 +324,7 @@ on all transparency and data pages. Very small change but required by subtasks 7
 
 ### 7 — Pages: Transparency & Government (Officials, FullDisclosure, AnnualBudget, SALN, FOIReleases, Downloads)
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete` — commit `c8ad261`
 
 **Intent**
 Port all six transparency and government pages from GeneralTrias, swapping green
@@ -371,7 +371,7 @@ Tanza equivalents. These pages are the core transparency offering of any LGU sit
 
 ### 8 — Pages: Reports & Statistics (CityProfile + Recharts, AnnualReport, InfrastructureProjects)
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete` — commit `0ce2ad8`
 
 **Intent**
 Port three statistics and reports pages. `CityProfile` is the most complex — it
@@ -430,7 +430,7 @@ awards, weather widget, and city stats. All pages use Tanza blue.
 
 ### 9 — Pages: Tourism (TouristSpots, WhereToStay)
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete` — commit `4495de0`
 
 **Intent**
 Port both tourism pages with Tanza-specific placeholder spot and accommodation data.
@@ -472,7 +472,7 @@ system — cannot be runtime-only).
 
 ### 10 — Page: DevelopmentProjects
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete — commit dc12dd1`
 
 **Intent**
 Port the Development Projects page — a top-level showcase page (`/development-projects`)
@@ -501,7 +501,7 @@ that lists major incoming infrastructure and development projects for the munici
 
 ### 11 — Navigation + i18n: nav.ts update + all translation keys
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete — wired during Subtask 4`
 
 **Intent**
 Wire the navigation data to all the new pages (so they appear in menus), and add
@@ -540,7 +540,7 @@ will show missing translation warnings.
 
 ### 12 — Validation: Build + Lint
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete` — build passes, lint passes (zero warnings)
 
 **Intent**
 Final verification step. Run the TypeScript compiler and linter to ensure there are
