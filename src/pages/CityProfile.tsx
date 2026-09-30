@@ -138,9 +138,9 @@ const KEY_FACTS = [
   },
   {
     icon: Map,
-    value: '67.15 km²',
+    value: '78.33 km²',
     label: 'Land Area',
-    sub: '6,715 hectares',
+    sub: '7,833 hectares',
     accent: 'from-teal-500 to-cyan-400',
     iconBg: 'bg-teal-50 text-teal-700',
   },
@@ -259,7 +259,7 @@ export default function CityProfile() {
                 {[
                   ['278K+', 'Population'],
                   ['41', 'Barangays'],
-                  ['67.15 km²', 'Land Area'],
+                  ['78.33 km²', 'Land Area'],
                   ['1760', 'Founded'],
                 ].map(([val, lbl]) => (
                   <div
@@ -619,7 +619,7 @@ export default function CityProfile() {
               <div>
                 <p className="text-white font-black text-sm">Municipal Map</p>
                 <p className="text-blue-200 text-[10px] mt-0.5">
-                  Municipality of Tanza · 67.15 km² land area · Cavite Province
+                  Municipality of Tanza · 78.33 km² land area · Cavite Province
                 </p>
               </div>
             </div>

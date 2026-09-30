@@ -73,7 +73,7 @@ export default function StatsSection() {
   const STATS = [
     {
       icon: Users,
-      value: '339K+',
+      value: '278K+',
       label: t('stats.population.label'),
       description: t('stats.population.desc'),
     },
