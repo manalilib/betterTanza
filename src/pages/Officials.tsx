@@ -19,12 +19,15 @@ const BREADCRUMBS = [
   { label: 'Local Officials', href: '/government/departments/officials' },
 ];
 
+// Official photos: drop files into /public/images/officials/ to activate
+// Sources: https://www.facebook.com/LGUTanzaCavite or https://www.tanza.gov.ph
 const EXECUTIVES = [
   {
     name: 'Hon. Archangelo "SM" B. Matro',
     position: 'Municipal Mayor',
     badge: '2022–2025 Term',
     initials: 'AM',
+    photo: '/images/officials/mayor-matro.jpg',
     accentFrom: 'from-blue-900',
     accentTo: 'to-blue-700',
     ring: 'ring-blue-200',
@@ -39,6 +42,7 @@ const EXECUTIVES = [
     position: 'Municipal Vice Mayor',
     badge: '2022–2025 Term',
     initials: 'RD',
+    photo: '/images/officials/vm-del-rosario.jpg',
     accentFrom: 'from-blue-700',
     accentTo: 'to-indigo-600',
     ring: 'ring-indigo-200',
@@ -175,9 +179,24 @@ export default function Officials() {
                     <div className="p-6">
                       <div className="flex items-start gap-5">
                         <div
-                          className={`bg-gradient-to-br ${e.accentFrom} ${e.accentTo} text-white w-16 h-16 rounded-2xl flex items-center justify-center text-xl font-black shrink-0 shadow-md`}
+                          className={`bg-gradient-to-br ${e.accentFrom} ${e.accentTo} w-16 h-16 rounded-2xl overflow-hidden shrink-0 shadow-md flex items-center justify-center`}
                         >
-                          {e.initials}
+                          <img
+                            src={e.photo}
+                            alt={e.name}
+                            className="w-full h-full object-cover object-top"
+                            onError={ev => {
+                              (
+                                ev.currentTarget as HTMLImageElement
+                              ).style.display = 'none';
+                              (
+                                ev.currentTarget.nextSibling as HTMLElement
+                              ).style.display = 'flex';
+                            }}
+                          />
+                          <span className="hidden text-white text-xl font-black w-full h-full items-center justify-center">
+                            {e.initials}
+                          </span>
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-2 mb-0.5">

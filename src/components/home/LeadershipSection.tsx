@@ -7,9 +7,12 @@ export default function LeadershipSection() {
   const { t } = useTranslation('common');
   const { ref, inView } = useInView<HTMLDivElement>();
 
+  // Official photos: drop files into /public/images/officials/ to activate
+  // Sources: https://www.facebook.com/LGUTanzaCavite or https://www.tanza.gov.ph
   const OFFICIALS = [
     {
       initials: 'AM',
+      photo: '/images/officials/mayor-matro.jpg',
       name: 'Hon. Archangelo "SM" B. Matro',
       titleKey: 'leadership.municipalMayor',
       badgeKey: 'leadership.electedMayor',
@@ -18,6 +21,7 @@ export default function LeadershipSection() {
     },
     {
       initials: 'RD',
+      photo: '/images/officials/vm-del-rosario.jpg',
       name: 'Hon. Raymundo "Munding" A. Del Rosario',
       titleKey: 'leadership.municipalViceMayor',
       badgeKey: 'leadership.electedViceMayor',
@@ -67,8 +71,22 @@ export default function LeadershipSection() {
                     'linear-gradient(135deg, #001044 0%, #003087 100%)',
                 }}
               >
-                <div className="w-16 h-16 rounded-2xl bg-white/15 border-2 border-white/25 flex items-center justify-center font-black text-2xl text-white shrink-0">
-                  {official.initials}
+                <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-white/25 shrink-0 bg-white/15 flex items-center justify-center">
+                  <img
+                    src={official.photo}
+                    alt={official.name}
+                    className="w-full h-full object-cover object-top"
+                    onError={e => {
+                      (e.currentTarget as HTMLImageElement).style.display =
+                        'none';
+                      (
+                        e.currentTarget.nextSibling as HTMLElement
+                      ).style.display = 'flex';
+                    }}
+                  />
+                  <span className="hidden font-black text-2xl text-white w-full h-full items-center justify-center">
+                    {official.initials}
+                  </span>
                 </div>
                 <div>
                   <span className="inline-block text-[10px] font-bold text-blue-300 bg-white/15 px-2.5 py-1 rounded-full mb-1.5 uppercase tracking-wide">
