@@ -185,6 +185,11 @@ function weatherEmoji(code: number): string {
   return '⛈️';
 }
 
+// Tanza, Cavite coordinates: 14.3667°N, 120.8500°E
+const WEATHER_CACHE_KEY = 'tz_weather_profile';
+const WEATHER_CACHE_TIME_KEY = 'tz_weather_profile_time';
+const THIRTY_MIN = 1_800_000;
+
 function useWeather() {
   const [weather, setWeather] = useState<{
     temp: number;
@@ -194,18 +199,32 @@ function useWeather() {
   } | null>(null);
 
   useEffect(() => {
+    const cached = localStorage.getItem(WEATHER_CACHE_KEY);
+    const cachedTime = localStorage.getItem(WEATHER_CACHE_TIME_KEY);
+    if (
+      cached &&
+      cachedTime &&
+      Date.now() - parseInt(cachedTime) < THIRTY_MIN
+    ) {
+      setWeather(JSON.parse(cached));
+      return;
+    }
+
     fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=14.6833&longitude=120.8833&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
+      'https://api.open-meteo.com/v1/forecast?latitude=14.3667&longitude=120.8500&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
     )
       .then(r => r.json())
-      .then(d =>
-        setWeather({
+      .then(d => {
+        const w = {
           temp: d.current.temperature_2m,
           humidity: d.current.relative_humidity_2m,
           wind: d.current.wind_speed_10m,
           code: d.current.weather_code,
-        })
-      )
+        };
+        localStorage.setItem(WEATHER_CACHE_KEY, JSON.stringify(w));
+        localStorage.setItem(WEATHER_CACHE_TIME_KEY, String(Date.now()));
+        setWeather(w);
+      })
       .catch(() => {});
   }, []);
 
