@@ -123,7 +123,7 @@ export default function HistorySection() {
 
             <div className="rounded-2xl p-7 bg-gray-50 border border-gray-100">
               <div className="text-5xl font-black text-primary-700 mb-2 tracking-tight">
-                278K+
+                339K+
               </div>
               <div className="text-gray-900 font-bold text-lg mb-2">
                 {t('history.populationLabel')}

@@ -124,7 +124,7 @@
   "stats": {
     "population": {
       "label": "Residents",
-      "desc": "2020 PSA Census (278,139)"
+      "desc": "2024 PSA Census (339,308)"
     },
     "barangays": {
       "label": "Barangays",
@@ -188,8 +188,8 @@
     "title": "Municipal Leadership",
     "municipalMayor": "Municipal Mayor",
     "municipalViceMayor": "Municipal Vice Mayor",
-    "electedMayor": "2022–2025 Term",
-    "electedViceMayor": "2022–2025 Term",
+    "electedMayor": "2025–2028 Term",
+    "electedViceMayor": "2025–2028 Term",
     "viewAll": "View All Officials",
     "viewProfile": "View Profile"
   },

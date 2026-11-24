@@ -45,11 +45,12 @@ const BREADCRUMBS = [
   },
 ];
 
+// Source: PSA census results (as tabulated on Wikipedia — Tanza, Cavite)
 const POPULATION_DATA = [
-  { year: '2010', population: 219092 },
-  { year: '2015', population: 262481 },
-  { year: '2020', population: 278139 },
-  { year: '2023*', population: 305000 },
+  { year: '2010', population: 188755 },
+  { year: '2015', population: 226188 },
+  { year: '2020', population: 312116 },
+  { year: '2024', population: 339308 },
 ];
 
 const ECONOMY_DATA = [
@@ -59,72 +60,76 @@ const ECONOMY_DATA = [
   { name: 'Agriculture', value: 12, color: '#dbeafe' },
 ];
 
+// Source: Wikipedia — Tanza, Cavite (awards section, citing DILG / NCC)
 const AWARDS = [
-  { year: '2024', title: 'Seal of Good Local Governance — DILG' },
-  { year: '2023', title: 'Good Financial Housekeeping Passer — DILG-R4A' },
-  { year: '2023', title: 'Transparency Seal Holder — DILG' },
-  { year: '2022', title: 'Child-Friendly Municipality Award' },
-  { year: '2022', title: 'Green Banner Seal of Compliance — DOH' },
+  { year: '2021', title: 'Seal of Good Financial Housekeeping — DILG' },
+  { year: '2019', title: 'Seal of Good Financial Housekeeping — DILG' },
+  { year: '2018', title: 'Seal of Good Financial Housekeeping — DILG' },
+  { year: '2016', title: 'Seal of Good Local Governance — DILG' },
+  { year: '2014', title: 'Most Competitive in Economic Dynamism — NCC' },
+  { year: '2012', title: 'Seal of Good Financial Housekeeping — DILG' },
+  { year: '2011', title: 'Seal of Good Financial Housekeeping — DILG' },
 ];
 
+// Source: Wikipedia — Tanza, Cavite / PSGC (41 barangays)
 const BARANGAYS = [
-  'Amaya',
+  'Amaya 1',
+  'Amaya 2',
+  'Amaya 3',
+  'Amaya 4',
+  'Amaya 5',
+  'Amaya 6',
+  'Amaya 7',
   'Bagtas',
-  'Balsahan',
-  'Bancal',
   'Biga',
-  'Bobon',
-  'Bucana',
-  'Buhay na Tubig',
-  'Burol',
+  'Biwas',
+  'Bucal',
+  'Bunga',
   'Calibuyo',
   'Capipisa',
-  'Daang Amaya I',
-  'Daang Amaya II',
-  'Daang Amaya III',
-  'Daan Tambo',
-  'Dalahican',
-  'Dampalit',
-  'Gandus',
-  'Julugan',
+  'Daang Amaya 1',
+  'Daang Amaya 2',
+  'Daang Amaya 3',
+  'Halayhay',
+  'Julugan 1',
+  'Julugan 2',
+  'Julugan 3',
+  'Julugan 4',
+  'Julugan 5',
+  'Julugan 6',
+  'Julugan 7',
+  'Julugan 8',
   'Lambingan',
-  'Luyos',
-  'Mabiga',
-  'Makabayan',
-  'Mambog',
   'Mulawin',
-  'Pag-asa',
-  'Pahinga Norte',
-  'Pahinga Sur',
-  'Pilapil',
-  'Poblacion I',
-  'Poblacion II',
-  'Poblacion III',
+  'Paradahan 1',
+  'Paradahan 2',
+  'Poblacion 1',
+  'Poblacion 2',
+  'Poblacion 3',
+  'Poblacion 4',
+  'Punta 1',
+  'Punta 2',
   'Sahud Ulan',
   'Sanja Mayor',
   'Santol',
   'Tanauan',
   'Tres Cruses',
-  'Tugatog',
-  'Ulango',
-  'Wawa',
-  'Bagong Pook',
 ];
 
 const KEY_FACTS = [
   {
     icon: Users,
-    value: '278,139',
+    value: '339,308',
     label: 'Population',
-    sub: '2020 PSA Census',
+    sub: '2024 PSA Census',
     accent: 'from-blue-500 to-blue-400',
     iconBg: 'bg-blue-50 text-blue-600',
   },
   {
     icon: TrendingUp,
-    value: '~305K',
-    label: 'Est. 2023',
-    sub: 'Projected from CLUP data',
+    value: '312,116',
+    label: '2020 Census',
+    sub: '+2.03% annual growth to 2024',
     accent: 'from-indigo-500 to-blue-400',
     iconBg: 'bg-indigo-50 text-indigo-700',
   },
@@ -276,7 +281,7 @@ export default function CityProfile() {
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
-                  ['278K+', 'Population'],
+                  ['339K+', 'Population'],
                   ['41', 'Barangays'],
                   ['78.33 km²', 'Land Area'],
                   ['1760', 'Founded'],
@@ -423,7 +428,7 @@ export default function CityProfile() {
                   Population Growth
                 </p>
                 <p className="text-blue-200 text-[10px] mt-0.5">
-                  PSA Census data (*2023 estimated)
+                  PSA census results, 2010–2024
                 </p>
               </div>
               <div className="bg-white p-5">
@@ -518,10 +523,11 @@ export default function CityProfile() {
           <div className="rounded-2xl overflow-hidden shadow-sm border border-teal-100 mb-10">
             <div className="bg-gradient-to-r from-teal-600 to-cyan-500 px-5 py-4">
               <p className="text-white font-black text-sm">
-                Population Trend (2010–2023)
+                Population Trend (2010–2024)
               </p>
               <p className="text-teal-100 text-[10px] mt-0.5">
-                Steady growth driven by industrial and residential development
+                Growth driven by industrial, commercial, and residential
+                development
               </p>
             </div>
             <div className="bg-white p-5">
@@ -645,14 +651,14 @@ export default function CityProfile() {
             <div className="min-h-[320px]">
               <iframe
                 title="Tanza Municipality Map"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=120.8283%2C14.6333%2C120.9383%2C14.7333&layer=mapnik&marker=14.6833%2C120.8833"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.8000%2C14.3333%2C120.9000%2C14.4500&layer=mapnik&marker=14.3667%2C120.8500"
                 className="w-full min-h-[320px] border-0"
                 loading="lazy"
               />
             </div>
             <div className="bg-white px-5 py-3 border-t border-gray-100">
               <a
-                href="https://www.openstreetmap.org/?mlat=14.6833&mlon=120.8833#map=13/14.6833/120.8833"
+                href="https://www.openstreetmap.org/?mlat=14.3667&mlon=120.8500#map=13/14.3667/120.8500"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 hover:text-primary-800 transition-colors"

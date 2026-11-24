@@ -124,7 +124,7 @@
   "stats": {
     "population": {
       "label": "Mga Residente",
-      "desc": "Senso ng PSA 2020 (278,139)"
+      "desc": "Senso ng PSA 2024 (339,308)"
     },
     "barangays": {
       "label": "Mga Barangay",
@@ -188,8 +188,8 @@
     "title": "Pamunuan ng Munisipyo",
     "municipalMayor": "Alkalde ng Munisipyo",
     "municipalViceMayor": "Bise-Alkalde ng Munisipyo",
-    "electedMayor": "Termino 2022–2025",
-    "electedViceMayor": "Termino 2022–2025",
+    "electedMayor": "Termino 2025–2028",
+    "electedViceMayor": "Termino 2025–2028",
     "viewAll": "Tingnan Lahat ng Opisyal",
     "viewProfile": "Tingnan ang Profil"
   },

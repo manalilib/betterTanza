@@ -53,7 +53,7 @@ export default function StatsSection() {
       return;
     }
     fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=14.6833&longitude=120.8833&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
+      'https://api.open-meteo.com/v1/forecast?latitude=14.3667&longitude=120.8500&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
     )
       .then(r => r.json())
       .then(d => {
@@ -73,7 +73,7 @@ export default function StatsSection() {
   const STATS = [
     {
       icon: Users,
-      value: '278K+',
+      value: '339K+',
       label: t('stats.population.label'),
       description: t('stats.population.desc'),
     },
