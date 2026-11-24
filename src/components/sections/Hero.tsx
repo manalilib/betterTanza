@@ -189,6 +189,13 @@ export default function Hero() {
           'linear-gradient(135deg, #001044 0%, #003087 40%, #0052e0 100%)',
       }}
     >
+      {/* Collage background */}
+      <img
+        src="/images/hero-collage.webp"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity pointer-events-none"
+      />
       {/* Decorative radial blobs */}
       <div
         className="absolute inset-0 pointer-events-none"
