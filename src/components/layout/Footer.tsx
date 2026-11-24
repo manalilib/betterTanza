@@ -45,6 +45,10 @@ export default function Footer() {
       label: 'Official Tanza Website',
       href: 'https://www.tanza.gov.ph',
     },
+    {
+      label: 'Tanza Public Service System',
+      href: 'https://tanzapublicservice.site',
+    },
     { label: 'DILG FDP Portal', href: 'https://fdpp.blgs.gov.ph' },
     { label: 'PhilGEPS', href: 'https://www.philgeps.gov.ph' },
     { label: 'Official Gov.ph', href: 'https://www.gov.ph' },
