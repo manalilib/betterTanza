@@ -22,10 +22,10 @@ The code already references these paths — dropping in the files activates them
 
 **Directory:** `/public/images/officials/`
 
-| Filename             | Official                                            | Source                                |
-| -------------------- | --------------------------------------------------- | ------------------------------------- |
-| `mayor-matro.jpg`    | Hon. Archangelo "SM" B. Matro — Municipal Mayor     | LGU Facebook, official press releases |
-| `vm-del-rosario.jpg` | Hon. Raymundo "Munding" A. Del Rosario — Vice Mayor | LGU Facebook, official press releases |
+| Filename             | Official                                            | Source                                                     |
+| -------------------- | --------------------------------------------------- | ---------------------------------------------------------- |
+| `mayor-matro.jpg`    | Hon. Archangelo "SM" B. Matro — Municipal Mayor     | ✅ Cropped from image on tanza.gov.ph homepage (400×400)   |
+| `vm-del-rosario.jpg` | Hon. Raymundo "Munding" A. Del Rosario — Vice Mayor | ❌ MISSING — UI shows initials "RD" until a photo is added |
 
 **Where to source:**
 
@@ -42,9 +42,16 @@ The code already references these paths — dropping in the files activates them
 
 ---
 
+## Place Photos
+
+**Directory:** `/public/images/places/` — used by `src/pages/TouristSpots.tsx`.
+All five are from Wikimedia Commons, CC BY-SA 4.0, by Ralffralff (July 2023); keep the attribution line on the page.
+
+---
+
 ## Notes
 
-- All images must be from official or public domain sources
+- Official-person photos must come from official LGU channels; place photos may be openly licensed (with attribution)
 - Do NOT use Google Images or unofficial social media reposts
 - Preferred format: WebP for photos, SVG for logos/seals
 - After adding images, run `npm run build` to verify no broken paths

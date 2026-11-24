@@ -25,7 +25,7 @@ const EXECUTIVES = [
   {
     name: 'Hon. Archangelo "SM" B. Matro',
     position: 'Municipal Mayor',
-    badge: '2022–2025 Term',
+    badge: '2025–2028 Term',
     initials: 'AM',
     photo: '/images/officials/mayor-matro.jpg',
     accentFrom: 'from-blue-900',
@@ -40,7 +40,7 @@ const EXECUTIVES = [
   {
     name: 'Hon. Raymundo "Munding" A. Del Rosario',
     position: 'Municipal Vice Mayor',
-    badge: '2022–2025 Term',
+    badge: '2025–2028 Term',
     initials: 'RD',
     photo: '/images/officials/vm-del-rosario.jpg',
     accentFrom: 'from-blue-700',
@@ -54,10 +54,18 @@ const EXECUTIVES = [
   },
 ];
 
-// TODO: Replace with real 2022–2025 Sangguniang Bayan members.
-// Source from: https://www.facebook.com/LGUTanzaCavite or https://www.tanza.gov.ph
+// Sangguniang Bayan members as listed on Wikipedia (Tanza, Cavite — Government).
+// Mayor/Vice Mayor are confirmed by the May 12, 2025 election results; the
+// councilor roster is NOT confirmed against an official LGU/COMELEC source.
 const COUNCILORS: string[] = [
-  // Add the 8 elected councilors here once verified
+  'Niño Federico B. Matro',
+  'Alexis B. Dones',
+  'Myron S. Ner',
+  'Ryan G. Mintu',
+  'Antonio A. Del Rosario Jr.',
+  'Concepcion Jocelyn D. Pangan',
+  'Sheryl Lyn L. Gervacio',
+  'Joselito P. Arca',
 ];
 
 const EX_OFFICIO = [
@@ -100,7 +108,7 @@ export default function Officials() {
     <>
       <SEO
         title="Local Officials Directory — Municipality of Tanza"
-        description="Elected officials, municipal council members, and department directory of the Municipality of Tanza, Cavite for the 2022–2025 term."
+        description="Elected officials, municipal council members, and department directory of the Municipality of Tanza, Cavite for the 2025–2028 term."
       />
 
       {/* Hero */}
@@ -129,14 +137,14 @@ export default function Officials() {
           </h1>
           <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
             Elected officials and department contacts of the Municipality of
-            Tanza — 2022–2025 term.
+            Tanza — 2025–2028 term.
           </p>
           <div className="flex flex-wrap gap-3">
             {[
               ['2', 'Executives'],
               ['8', 'Councilors'],
               ['2', 'Ex-Officio'],
-              ['2022–2025', 'Current Term'],
+              ['2025–2028', 'Current Term'],
             ].map(([val, lbl]) => (
               <div
                 key={lbl}
@@ -242,25 +250,38 @@ export default function Officials() {
             </h2>
             <div className="h-1 w-10 bg-primary-600 rounded-full mb-2" />
             <p className="text-sm text-gray-500 mb-5">
-              8 elected councilors presided over by the Vice Mayor — 2022–2025
-              term
+              8 councilors presided over by the Vice Mayor — 2025–2028 term
             </p>
             {COUNCILORS.length > 0 ? (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {COUNCILORS.map((name, i) => (
-                  <div
-                    key={name}
-                    className="bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 flex items-center gap-3"
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {COUNCILORS.map((name, i) => (
+                    <div
+                      key={name}
+                      className="bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 flex items-center gap-3"
+                    >
+                      <span className="text-[10px] font-black text-blue-400 w-6 shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm font-semibold text-gray-800">
+                        Hon. {name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-400 mt-3">
+                  Roster compiled from public sources; confirm against the{' '}
+                  <a
+                    href="https://www.facebook.com/ph.MunicipalityofTanza"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline hover:text-gray-600"
                   >
-                    <span className="text-[10px] font-black text-blue-400 w-6 shrink-0">
-                      {String(i + 1).padStart(2, '0')}
-                    </span>
-                    <span className="text-sm font-semibold text-gray-800">
-                      Hon. {name}
-                    </span>
-                  </div>
-                ))}
-              </div>
+                    official LGU Facebook page
+                  </a>
+                  .
+                </p>
+              </>
             ) : (
               <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 flex items-start gap-3">
                 <div className="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center shrink-0 mt-0.5">

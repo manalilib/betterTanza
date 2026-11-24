@@ -15,6 +15,7 @@ interface Spot {
   name: string;
   description: string;
   location: string;
+  image?: string;
   contact?: string;
   website?: string;
   facebook?: string;
@@ -23,47 +24,62 @@ interface Spot {
   emoji: string;
 }
 
+// Photos: Wikimedia Commons, CC BY-SA 4.0, by Ralffralff (July 2023).
 const SPOTS: Spot[] = [
   {
     id: 1,
-    // Patron saint of Tanza is San Pedro Apostol — confirmed from parish records
-    name: 'Saint Peter the Apostle Parish Church (San Pedro)',
+    name: 'Diocesan Shrine of Saint Augustine (Tanza Church)',
     description:
-      "The main parish church of Tanza dedicated to San Pedro Apostol, the town's patron saint. A beloved Catholic landmark standing at the heart of the municipality since the colonial era — center of the annual town fiesta and community faith life.",
+      "The main Catholic parish church of Tanza, under the Diocese of Imus, dedicated to Saint Augustine of Hippo, the town's patron saint. It stands in front of the ancient Santa Cruz (Holy Cross), where Emilio Aguinaldo took his oath as president of the revolutionary government after the 1897 Tejeros Convention.",
     location: 'Poblacion, Tanza, Cavite',
+    image: '/images/places/tanza-church.jpg',
     category: 'religious',
     accent: 'from-blue-700 to-indigo-700',
     emoji: '⛪',
   },
   {
     id: 2,
-    name: 'Tanza Municipal Plaza',
+    name: 'Plaza de San Agustin',
     description:
-      "The central public plaza of Tanza — a gathering place for festivals, community events, and everyday leisure. Located in Poblacion III adjacent to the Municipal Hall, it is surrounded by historic structures that speak to the town's colonial heritage.",
-    location: 'Poblacion III, Tanza, Cavite',
+      "The town plaza fronting the church — a gathering place for fiestas, community events, and everyday leisure, and part of Tanza's historic center.",
+    location: 'Poblacion, Tanza, Cavite',
+    image: '/images/places/plaza-de-san-agustin.jpg',
     category: 'recreation',
     accent: 'from-emerald-600 to-green-700',
     emoji: '🌳',
   },
   {
     id: 3,
-    name: 'Manila Bay Coastline — Dalahican',
+    name: 'Bantayog ng Kasaysayan (Historical Marker)',
     description:
-      "Tanza's shoreline along Manila Bay in Barangay Dalahican offers coastal views and a traditional fishing community atmosphere. Popular for sunrise walks, fresh seafood, and watching bancas return from the bay.",
-    location: 'Dalahican, Tanza, Cavite',
-    category: 'beach',
-    accent: 'from-cyan-600 to-blue-600',
-    emoji: '🌊',
+      "A memorial marker commemorating Tanza's role in Philippine history, including the oath-taking of Emilio Aguinaldo and the other officials elected at the Tejeros Convention, among them Mariano Trias. Tanza is also the birthplace of Felipe G. Calderon, who drafted the Malolos Constitution.",
+    location: 'Poblacion, Tanza, Cavite',
+    image: '/images/places/bantayog-ng-kasaysayan.jpg',
+    category: 'museum',
+    accent: 'from-amber-600 to-orange-700',
+    emoji: '🏛️',
   },
   {
     id: 4,
-    name: 'Bucana Fishing Port',
+    name: 'Tanza Public Market',
     description:
-      "An active fishing port in Barangay Bucana where you can experience Tanza's coastal fishing culture first-hand — buy fresh catch directly from local fishermen and witness the morning catch come in from Manila Bay.",
-    location: 'Bucana, Tanza, Cavite',
-    category: 'beach',
+      "The municipal public market, the center of Tanza's daily trade in fresh produce, seafood, and household goods.",
+    location: 'Poblacion, Tanza, Cavite',
+    image: '/images/places/tanza-public-market.jpg',
+    category: 'recreation',
     accent: 'from-teal-600 to-cyan-700',
-    emoji: '🐟',
+    emoji: '🛒',
+  },
+  {
+    id: 5,
+    name: 'SM City Tanza',
+    description:
+      "SM Supermalls' 80th mall in the Philippines, opened in October 2022 along Antero Soriano Highway in Barangay Daang Amaya 2.",
+    location: 'Antero Soriano Highway, Daang Amaya 2, Tanza, Cavite',
+    image: '/images/places/sm-city-tanza.jpg',
+    category: 'recreation',
+    accent: 'from-indigo-600 to-violet-700',
+    emoji: '🏬',
   },
 ];
 
@@ -89,8 +105,8 @@ export default function TouristSpots() {
     <>
       <SEO
         title="Must-See Places in Tanza, Cavite"
-        description="Explore the official tourist spots of the Municipality of Tanza, Cavite — from historic churches and the coastal bay to public parks and local markets."
-        keywords="Tanza tourist spots, Tanza Cavite tourism, Dalahican coast, Tanza church, where to visit Tanza"
+        description="Explore the official tourist spots of the Municipality of Tanza, Cavite — the historic church and plaza, the Bantayog ng Kasaysayan marker, the public market, and SM City Tanza."
+        keywords="Tanza tourist spots, Tanza Cavite tourism, Tanza church, Plaza de San Agustin, SM City Tanza, where to visit Tanza"
       />
 
       {/* Hero */}
@@ -117,9 +133,9 @@ export default function TouristSpots() {
             Must-See Places
           </h1>
           <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
-            Discover verified destinations in Tanza — a centuries-old parish
-            church, the Manila Bay coastline, a historic public plaza, and a
-            working fishing port.
+            Discover destinations in Tanza — a historic parish church and plaza,
+            the site where Aguinaldo took his oath of office, the public market,
+            and SM City Tanza.
           </p>
 
           {/* Category pills */}
@@ -169,18 +185,17 @@ export default function TouristSpots() {
             <p className="text-xs text-blue-700 leading-relaxed">
               <strong>Know a spot we missed?</strong> This list is
               community-maintained. Contact us or open a pull request to add
-              verified tourist destinations in Tanza. All entries are confirmed
-              against barangay geography — unverified places are not listed.
+              tourist destinations in Tanza.
             </p>
           </div>
 
           {/* Spot count badge */}
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-lg font-black text-gray-900">
-              {SPOTS.length} Verified Destinations
+              {SPOTS.length} Destinations
             </h2>
             <span className="text-xs text-gray-400 font-medium">
-              Barangay-verified · bettertanza.org
+              Photos: Wikimedia Commons, CC BY-SA 4.0 (Ralffralff)
             </span>
           </div>
 
@@ -211,6 +226,15 @@ export default function TouristSpots() {
                       {spot.emoji}
                     </span>
                   </div>
+
+                  {spot.image && (
+                    <img
+                      src={spot.image}
+                      alt={spot.name}
+                      loading="lazy"
+                      className="w-full h-48 object-cover"
+                    />
+                  )}
 
                   {/* Body */}
                   <div className="p-5">
