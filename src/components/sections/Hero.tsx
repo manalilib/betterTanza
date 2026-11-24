@@ -186,7 +186,7 @@ export default function Hero() {
       className="relative text-white overflow-x-hidden -mt-[116px] min-h-screen flex flex-col"
       style={{
         background:
-          'linear-gradient(135deg, #001044 0%, #003087 40%, #0052e0 100%)',
+          'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
       }}
     >
       {/* Collage background */}
@@ -201,7 +201,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(ellipse at 10% 60%, rgba(0,82,224,0.18) 0%, transparent 55%), radial-gradient(ellipse at 85% 15%, rgba(0,48,135,0.25) 0%, transparent 50%), radial-gradient(ellipse at 60% 90%, rgba(0,16,68,0.3) 0%, transparent 45%)',
+            'radial-gradient(ellipse at 10% 60%, rgba(0,82,224,0.18) 0%, transparent 55%), radial-gradient(ellipse at 85% 15%, rgba(31,162,74,0.25) 0%, transparent 50%), radial-gradient(ellipse at 60% 90%, rgba(0,16,68,0.3) 0%, transparent 45%)',
         }}
       />
       {/* Subtle grid lines */}
