@@ -2,9 +2,9 @@
 
 Fact-check notes from 24 Nov 2026. "Verified" means I found it on `tanza.gov.ph`, `tanzapublicservice.site` or Wikipedia. Facebook, OWWA/DOH sites and search engines blocked or returned nothing for scripted requests, and OpenStreetMap was down, so those items are listed as **not found**, not as wrong.
 
-## 1. Pages that still describe Lapu-Lapu City (14 files, plus 1 empty file)
+## 1. Draft pages that need Tanza facts (14 files, plus 1 empty file)
 
-Every item below needs a Tanza source (call the office, or take it from its official Facebook page). Nothing here could be confirmed online.
+The Lapu-Lapu names, links, hospitals and phone numbers have been removed from these drafts in `content/_drafts/services/`. They are not published. Each still carries generic process text from the original template and `[to be confirmed]` markers where Tanza facts are missing. Each needs a Tanza source (call the office, or take it from its official Facebook page) before it moves into `content/services/`.
 
 | Page                                               | Lapu-Lapu facts to replace                                                                                                          | What Tanza must supply                                                                                                      |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
