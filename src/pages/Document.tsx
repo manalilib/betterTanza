@@ -3,7 +3,7 @@ import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Heading } from '../components/ui/Heading';
 import { Text } from '../components/ui/Text';
 import { Banner } from '@bettergov/kapwa/banner';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -23,6 +23,7 @@ import {
   type CategoryIndex,
 } from '../data/yamlLoader';
 import SEO from '../components/SEO';
+import EmptyNotice from '../components/ui/EmptyNotice';
 
 interface DocumentProps {
   theme?: string;
@@ -136,6 +137,7 @@ export default function Document({
           description={error}
           icon
         />
+        <EmptyNotice className="mt-6" title="This page isn't available yet" />
       </Section>
     );
   }
@@ -192,6 +194,14 @@ export default function Document({
                 </Card>
               ))}
             </div>
+          )}
+          {nestedPages.length === 0 && (
+            <Link
+              to="/government/departments/officials"
+              className="inline-block mt-2 text-sm font-semibold text-primary-700 underline underline-offset-2"
+            >
+              View the Sangguniang Bayan roster on the Local Officials page
+            </Link>
           )}
         </Section>
       </>

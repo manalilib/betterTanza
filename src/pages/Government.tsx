@@ -12,6 +12,7 @@ import * as LucideIcons from 'lucide-react';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
 import SEO from '../components/SEO';
+import EmptyNotice from '../components/ui/EmptyNotice';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useState, useEffect } from 'react';
@@ -69,6 +70,7 @@ const Government: React.FC = () => {
           description="The category you are looking for does not exist."
           icon
         />
+        <EmptyNotice className="mt-6" title="Let's get you back on track" />
       </Section>
     );
   }
@@ -154,6 +156,7 @@ const Government: React.FC = () => {
                 ))}
               </div>
             )}
+            {subcategories.length === 0 && <EmptyNotice />}
           </>
         )}
       </Section>

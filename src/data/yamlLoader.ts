@@ -45,6 +45,23 @@ import housingLandUseIndex from '../../content/services/housing-land-use/index.y
 import governmentDepartmentsIndex from '../../content/government/departments/index.yaml?raw';
 import governmentDepartmentsLegislativeIndex from '../../content/government/departments/legislative/index.yaml?raw';
 
+// Only list pages whose markdown file exists, so menus never link to a
+// "Document Not Found" page. Add the .md file and the entry appears.
+const contentFiles = Object.keys(
+  import.meta.glob([
+    '../../content/services/**/*.md',
+    '../../content/government/**/*.md',
+  ])
+);
+
+function hasContent(categorySlug: string, pageSlug: string): boolean {
+  return contentFiles.some(
+    f =>
+      f.endsWith(`/${categorySlug}/${pageSlug}.md`) ||
+      pageSlug in categoryIndexMap
+  );
+}
+
 // Create a mapping of category slugs to their YAML content
 const categoryIndexMap: { [key: string]: string } = {
   'health-services': healthServicesIndex,
@@ -93,7 +110,9 @@ export async function loadCategoryIndex(
       title: indexData.title,
       description: indexData.description,
       layout: indexData.layout ?? 'list',
-      pages: indexData.pages || [],
+      pages: (indexData.pages || []).filter(
+        page => !page.slug || hasContent(categorySlug, page.slug)
+      ),
     };
   } catch (parseError) {
     console.warn(

@@ -1,9 +1,6 @@
-# legislative Department Pages
-# This file contains all the pages/governments/departments/legislative available under the Department
-#
-layout: grid
-title: 'Legislative Department'
-description: 'Page Description'
-pages:
-  - name: 'Councilor A'
-    description: 'Description'
+# Legislative Department Pages
+# The Sangguniang Bayan roster is listed on the Local Officials page.
+layout: list
+title: 'Sangguniang Bayan (Municipal Council)'
+description: 'The Sangguniang Bayan of Tanza is the legislative body of the municipality, presided over by the Vice Mayor. See the Local Officials page for the council roster.'
+pages: []
