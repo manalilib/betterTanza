@@ -41,6 +41,7 @@
     "contactUs": "Contact Us",
     "findService": "Search Services",
     "searchPlaceholder": "Search for a service...",
+    "searchLabel": "Search for a service",
     "popular": "Popular Services",
     "cta": "Get Started"
   },
