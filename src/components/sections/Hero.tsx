@@ -225,7 +225,15 @@ export default function Hero() {
         src="/images/hero-collage.webp"
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-25 mix-blend-luminosity pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity pointer-events-none"
+      />
+      {/* Left scrim keeps headline copy clear of the collage artwork */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(90deg, rgba(0,16,68,0.75) 0%, rgba(0,16,68,0.35) 45%, rgba(0,16,68,0) 75%)',
+        }}
       />
       {/* Decorative radial blobs */}
       <div
@@ -278,8 +286,12 @@ export default function Hero() {
                 <span
                   className="block"
                   style={{
-                    WebkitTextStroke: '2px rgba(255,255,255,0.15)',
-                    color: '#7ab8f5',
+                    backgroundImage:
+                      'linear-gradient(90deg, #a5d8ff 0%, #86efac 100%)',
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    color: 'transparent',
                   }}
                 >
                   Tanza.org
@@ -362,15 +374,26 @@ export default function Hero() {
                   'opacity 0.7s ease 200ms, transform 0.7s ease 200ms',
               }}
             >
-              <div className="bg-white rounded-2xl shadow-2xl shadow-black/30 overflow-hidden w-full max-w-full">
+              <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl shadow-black/30 ring-1 ring-white/40 overflow-hidden w-full max-w-full">
                 {/* Card header */}
-                <div className="bg-gray-900 px-6 py-4">
-                  <p className="text-white font-bold text-sm">
-                    {t('hero.findService', 'Search Services')}
-                  </p>
-                  <p className="text-gray-400 text-xs mt-0.5">
-                    Access government services instantly
-                  </p>
+                <div
+                  className="px-6 py-4 flex items-center gap-3"
+                  style={{
+                    background:
+                      'linear-gradient(135deg, #003087 0%, #0a6e5a 60%, #1fa24a 100%)',
+                  }}
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/25">
+                    <Search className="h-4 w-4 text-white" />
+                  </span>
+                  <div>
+                    <p className="text-white font-bold text-sm leading-tight">
+                      {t('hero.findService', 'Search Services')}
+                    </p>
+                    <p className="text-white/75 text-xs mt-0.5">
+                      Access government services instantly
+                    </p>
+                  </div>
                 </div>
 
                 <div className="p-5">
@@ -553,17 +576,10 @@ export default function Hero() {
                       <Link
                         key={p.name}
                         to="/development-projects"
-                        className={`shrink-0 border rounded-xl px-4 py-3 hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 ${p.pill}`}
+                        className={`shrink-0 w-44 border rounded-xl px-4 py-3 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 ${p.pill}`}
                       >
                         <span className="text-2xl leading-none">{p.emoji}</span>
-                        <p
-                          className="text-xs font-bold text-white mt-2 whitespace-nowrap"
-                          style={{
-                            maxWidth: '140px',
-                            overflow: 'hidden',
-                            textOverflow: 'ellipsis',
-                          }}
-                        >
+                        <p className="text-xs font-bold text-white mt-2 leading-snug line-clamp-2 min-h-[2.25rem]">
                           {p.name}
                         </p>
                         <span className="flex items-center gap-1 text-[10px] text-blue-300 font-medium mt-0.5">
