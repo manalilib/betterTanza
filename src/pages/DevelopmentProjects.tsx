@@ -55,7 +55,7 @@ export default function DevelopmentProjects() {
         className="relative text-white overflow-hidden"
         style={{
           background:
-            'linear-gradient(135deg, #001044 0%, #003087 50%, #0052e0 100%)',
+            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
         }}
       >
         <div
