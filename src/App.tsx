@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import Document from './pages/Document';
 import Government from './pages/Government';
 import Officials from './pages/Officials';
+import Executive from './pages/Executive';
 import FullDisclosure from './pages/FullDisclosure';
 import AnnualBudget from './pages/AnnualBudget';
 import SALN from './pages/SALN';
@@ -41,6 +42,10 @@ function App() {
                     <Route
                       path="/services/:category/:documentSlug"
                       element={<Document categoryType="service" />}
+                    />
+                    <Route
+                      path="/government/departments/executive"
+                      element={<Executive />}
                     />
                     <Route
                       path="/government/:category"
