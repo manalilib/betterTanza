@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { DEVELOPMENT_PROJECTS } from '../../data/developmentProjects';
+import type { ProjectStatus } from '../../data/developmentProjects';
 import { serviceCategories, loadCategoryIndex } from '../../data/yamlLoader';
 
 interface ServicePage {
@@ -102,9 +104,17 @@ function highlight(text: string, query: string) {
   );
 }
 
+const STATUS_PILL: Record<ProjectStatus, string> = {
+  'under-construction': 'bg-orange-500/20 border-orange-400/30',
+  ongoing: 'bg-emerald-500/20 border-emerald-400/30',
+  announced: 'bg-indigo-500/20 border-indigo-400/30',
+  operational: 'bg-blue-500/20 border-blue-400/30',
+};
+
 export default function Hero() {
   const [query, setQuery] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const [allServices, setAllServices] = useState<ServicePage[]>([]);
   const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -166,6 +176,27 @@ export default function Hero() {
         )
         .slice(0, 8)
     : [];
+
+  const listOpen = showDropdown && results.length > 0;
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Escape') {
+      setShowDropdown(false);
+      setActiveIndex(-1);
+      return;
+    }
+    if (!listOpen) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveIndex(i => (i + 1) % results.length);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveIndex(i => (i <= 0 ? results.length - 1 : i - 1));
+    } else if (e.key === 'Enter' && activeIndex >= 0) {
+      e.preventDefault();
+      handleSelect(results[activeIndex]);
+    }
+  };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -355,8 +386,23 @@ export default function Hero() {
                           onChange={e => {
                             setQuery(e.target.value);
                             setShowDropdown(true);
+                            setActiveIndex(-1);
                           }}
                           onFocus={() => setShowDropdown(true)}
+                          onKeyDown={handleKeyDown}
+                          role="combobox"
+                          aria-label={t(
+                            'hero.searchLabel',
+                            'Search for a service'
+                          )}
+                          aria-expanded={listOpen}
+                          aria-controls="hero-search-results"
+                          aria-autocomplete="list"
+                          aria-activedescendant={
+                            activeIndex >= 0
+                              ? `hero-search-option-${activeIndex}`
+                              : undefined
+                          }
                           placeholder={t(
                             'hero.searchPlaceholder',
                             'Search for a service...'
@@ -366,19 +412,25 @@ export default function Hero() {
                       </div>
                     </form>
 
-                    {showDropdown && results.length > 0 && (
+                    {listOpen && (
                       <div
                         ref={dropdownRef}
+                        id="hero-search-results"
+                        role="listbox"
                         className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-xl z-50 overflow-hidden"
                       >
-                        {results.map(page => (
+                        {results.map((page, idx) => (
                           <button
+                            type="button"
+                            role="option"
+                            id={`hero-search-option-${idx}`}
+                            aria-selected={idx === activeIndex}
                             key={`${page.categorySlug}/${page.slug}`}
                             onMouseDown={e => {
                               e.preventDefault();
                               handleSelect(page);
                             }}
-                            className="w-full text-left px-4 py-2.5 text-sm hover:bg-primary-50 transition-colors flex items-center gap-2"
+                            className={`w-full text-left px-4 py-2.5 text-sm hover:bg-primary-50 transition-colors flex items-center gap-2 ${idx === activeIndex ? 'bg-primary-50' : ''}`}
                           >
                             <Search className="h-3.5 w-3.5 text-primary-400 shrink-0" />
                             <span className="text-gray-800 flex-1">
@@ -452,32 +504,12 @@ export default function Hero() {
             </div>
 
             {(() => {
-              const projects = [
-                {
-                  emoji: '🛣️',
-                  name: 'CALAX Tanza Interchange',
-                  status: 'Under Construction',
-                  pill: 'bg-orange-500/20 border-orange-400/30',
-                },
-                {
-                  emoji: '🏗️',
-                  name: 'New Public Market',
-                  status: 'Planned',
-                  pill: 'bg-blue-500/20 border-blue-400/30',
-                },
-                {
-                  emoji: '🏥',
-                  name: 'Municipal Hospital Expansion',
-                  status: 'Active Development',
-                  pill: 'bg-emerald-500/20 border-emerald-400/30',
-                },
-                {
-                  emoji: '🌿',
-                  name: 'Eco-Park & Linear Park',
-                  status: 'Announced',
-                  pill: 'bg-indigo-500/20 border-indigo-400/30',
-                },
-              ];
+              const projects = DEVELOPMENT_PROJECTS.slice(0, 4).map(p => ({
+                emoji: p.emoji,
+                name: p.name,
+                status: p.statusLabel,
+                pill: STATUS_PILL[p.status],
+              }));
               return (
                 <>
                   {/* Mobile: 2-col grid, first 2 cards only */}
