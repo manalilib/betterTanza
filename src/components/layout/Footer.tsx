@@ -70,6 +70,15 @@ export default function Footer() {
                 betterTanza<span className="text-primary-400">.org</span>
               </span>
             </div>
+            <div className="inline-block bg-white rounded-lg px-3 py-2 mb-4">
+              <img
+                src="/images/tanza-logo.webp"
+                alt="Tanza — Serbisyo sa Mamamayan, Malasakit sa Bayan"
+                width={1200}
+                height={364}
+                className="h-10 w-auto"
+              />
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               {t('footer.mission')}
             </p>
