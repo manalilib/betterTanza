@@ -19,7 +19,7 @@ variable "tags" {
   description = "Tags to apply to AWS resources"
   type        = map(string)
   default = {
-    Project     = "BetterLocalGov"
+    Project     = "BetterTanza"
     Environment = "production"
     ManagedBy   = "Terraform"
   }

@@ -6,17 +6,17 @@ aws_region = "ap-southeast-1"
 
 # Globally unique S3 bucket name
 # Must be lowercase, no spaces, 3-63 characters
-bucket_name = "naga-city-albay-website"
+bucket_name = "bettertanza-website"
 
 # Path to your built dist folder (relative to terraform directory)
 dist_folder_path = "../dist"
 
 # Optional: Custom tags for your resources
 tags = {
-  Project     = "BetterLocalGov"
+  Project     = "BetterTanza"
   Environment = "production"
   ManagedBy   = "Terraform"
-  LGU         = "Naga City"
-  Region      = "Bicol Region"
-  Province    = "Albay"
+  LGU         = "Tanza"
+  Region      = "CALABARZON"
+  Province    = "Cavite"
 }

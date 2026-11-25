@@ -30,7 +30,7 @@ This guide helps content contributors create clear, helpful, and accessible cont
 ### Department/Office Page Template
 
 ```markdown
-# [Department/Office Name] — [Your City Name]
+# [Department/Office Name] — Tanza
 
 Brief description of the department, its mandate, and who it serves.
 
@@ -81,7 +81,7 @@ Short description of the program and who benefits from it.
 ### Service Page Template
 
 ```markdown
-# [Service Name] — [Your City Name]
+# [Service Name] — Tanza
 
 Brief, clear description of what this service is and who it's for.
 
