@@ -12,11 +12,19 @@ import {
   MapPin,
   TrendingUp,
   Zap,
+  Store,
+  Route as RouteIcon,
+  Building2,
+  School,
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { DEVELOPMENT_PROJECTS } from '../../data/developmentProjects';
-import type { ProjectStatus } from '../../data/developmentProjects';
+import type {
+  ProjectCategory,
+  ProjectStatus,
+} from '../../data/developmentProjects';
 import { serviceCategories, loadCategoryIndex } from '../../data/yamlLoader';
 
 interface ServicePage {
@@ -103,6 +111,13 @@ function highlight(text: string, query: string) {
     </>
   );
 }
+
+const CATEGORY_ICON: Record<ProjectCategory, LucideIcon> = {
+  commercial: Store,
+  infrastructure: RouteIcon,
+  township: Building2,
+  education: School,
+};
 
 const STATUS_PILL: Record<ProjectStatus, string> = {
   'under-construction': 'bg-orange-500/20 border-orange-400/30',
@@ -321,23 +336,23 @@ export default function Hero() {
               >
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-800 font-bold text-sm rounded-xl hover:bg-blue-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg shadow-black/20"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-800 font-bold text-sm rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:bg-blue-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg shadow-black/20"
                 >
                   <ArrowRight className="h-4 w-4" />
                   {t('hero.browseServices', 'Browse Services')}
                 </Link>
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-xl hover:border-white/70 hover:bg-white/10 transition-all duration-200"
+                  className="inline-flex items-center gap-2 px-6 py-3 border-2 border-white/40 text-white font-bold text-sm rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:border-white/70 hover:bg-white/10 transition-all duration-200"
                 >
                   <Users className="h-4 w-4" />
                   {t('hero.contactUs', 'Contact Us')}
                 </a>
               </div>
 
-              {/* Stat chips */}
-              <div
-                className="flex flex-wrap gap-3"
+              {/* Stat strip */}
+              <dl
+                className="grid grid-cols-2 sm:grid-cols-4 max-w-xl divide-x divide-white/15 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md overflow-hidden"
                 style={{
                   opacity: mounted ? 1 : 0,
                   transition: 'opacity 0.6s ease 380ms',
@@ -347,21 +362,21 @@ export default function Hero() {
                   { value: '339K+', label: 'Residents (2024)' },
                   { value: '41', label: 'Barangays' },
                   { value: '78.33 km²', label: 'Land Area' },
-                  { value: '1760', label: 'Year Founded' },
-                ].map(chip => (
+                  { value: '1760', label: 'Founded' },
+                ].map((chip, i) => (
                   <div
                     key={chip.label}
-                    className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
+                    className={`flex flex-col px-4 py-3 ${i > 1 ? 'max-sm:border-t max-sm:border-white/15' : ''}`}
                   >
-                    <span className="text-sm font-black text-white">
-                      {chip.value}
-                    </span>
-                    <span className="text-xs text-blue-300 font-medium">
+                    <dt className="order-2 text-[11px] text-blue-100/80 font-medium mt-0.5">
                       {chip.label}
-                    </span>
+                    </dt>
+                    <dd className="order-1 text-base font-black text-white leading-tight">
+                      {chip.value}
+                    </dd>
                   </div>
                 ))}
-              </div>
+              </dl>
             </div>
 
             {/* Right — search card */}
@@ -528,7 +543,7 @@ export default function Hero() {
 
             {(() => {
               const projects = DEVELOPMENT_PROJECTS.slice(0, 4).map(p => ({
-                emoji: p.emoji,
+                Icon: CATEGORY_ICON[p.category],
                 name: p.name,
                 status: p.statusLabel,
                 pill: STATUS_PILL[p.status],
@@ -543,7 +558,9 @@ export default function Hero() {
                         to="/development-projects"
                         className={`border rounded-xl px-4 py-3 hover:bg-white/10 transition-all duration-200 ${p.pill}`}
                       >
-                        <span className="text-2xl leading-none">{p.emoji}</span>
+                        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 ring-1 ring-white/20">
+                          <p.Icon className="h-[18px] w-[18px] text-white" />
+                        </span>
                         <p className="text-xs font-bold text-white mt-2 truncate">
                           {p.name}
                         </p>
@@ -578,7 +595,9 @@ export default function Hero() {
                         to="/development-projects"
                         className={`shrink-0 w-44 border rounded-xl px-4 py-3 backdrop-blur-sm hover:bg-white/10 hover:-translate-y-0.5 transition-all duration-200 ${p.pill}`}
                       >
-                        <span className="text-2xl leading-none">{p.emoji}</span>
+                        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 ring-1 ring-white/20">
+                          <p.Icon className="h-[18px] w-[18px] text-white" />
+                        </span>
                         <p className="text-xs font-bold text-white mt-2 leading-snug line-clamp-2 min-h-[2.25rem]">
                           {p.name}
                         </p>

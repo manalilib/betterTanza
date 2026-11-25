@@ -139,7 +139,7 @@ const Navbar: React.FC = () => {
                 alt="Tanza — Serbisyo sa Mamamayan, Malasakit sa Bayan"
                 width={1200}
                 height={364}
-                className="h-10 sm:h-11 w-auto"
+                className="h-11 sm:h-14 w-auto"
               />
               <div className="flex flex-col leading-none">
                 <span className="text-[9px] sm:text-[10px] font-black text-primary-600 uppercase tracking-widest">
