@@ -6,6 +6,7 @@ import {
   Map,
   ExternalLink,
   FolderOpen,
+  AlertTriangle,
 } from 'lucide-react';
 import Section from '../components/ui/Section';
 import DisclaimerBar from '../components/ui/DisclaimerBar';
@@ -22,6 +23,11 @@ const BREADCRUMBS = [
     href: '/government/transparency-documents/downloads',
   },
 ];
+
+// Files that actually exist in /public/files/. Add a filename here after
+// uploading the PDF; documents not listed show "Awaiting upload" instead of a
+// link that would 404.
+const AVAILABLE_FILES = new Set<string>([]);
 
 const CLUP_DOCS = [
   {
@@ -85,6 +91,9 @@ const MAP_DOCS = [
   { name: 'Zoning Map — Tanza', file: 'Tanza-Zoning-Map.pdf' },
 ];
 
+const TOTAL_DOCS =
+  CLUP_DOCS.length + CDP_DOCS.length + ELA_DOCS.length + MAP_DOCS.length;
+
 function DocSection({
   title,
   subtitle,
@@ -127,15 +136,21 @@ function DocSection({
               <FileText className="h-4 w-4 text-gray-300 shrink-0" />
               <span className="text-sm text-gray-700 truncate">{doc.name}</span>
             </div>
-            <a
-              href={`/files/${doc.file}`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-1.5 rounded-lg transition-colors shrink-0"
-            >
-              <Download className="h-3 w-3" />
-              PDF
-            </a>
+            {AVAILABLE_FILES.has(doc.file) ? (
+              <a
+                href={`/files/${doc.file}`}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-1.5 rounded-lg transition-colors shrink-0"
+              >
+                <Download className="h-3 w-3" />
+                PDF
+              </a>
+            ) : (
+              <span className="inline-flex items-center text-xs font-bold text-gray-500 bg-gray-100 px-3 py-1.5 rounded-lg shrink-0">
+                Awaiting upload
+              </span>
+            )}
           </div>
         ))}
       </div>
@@ -155,7 +170,7 @@ export default function Downloads() {
         className="relative text-white overflow-hidden"
         style={{
           background:
-            'linear-gradient(135deg, #001044 0%, #003087 50%, #0052e0 100%)',
+            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
         }}
       >
         <div
@@ -180,7 +195,7 @@ export default function Downloads() {
           </p>
           <div className="flex flex-wrap gap-3">
             {[
-              ['28', 'Documents'],
+              [String(TOTAL_DOCS), 'Documents'],
               ['3', 'Plan Categories'],
               ['2022–2030', 'Plan Period'],
             ].map(([val, lbl]) => (
@@ -212,6 +227,33 @@ export default function Downloads() {
         <Section className="py-10">
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-8 flex gap-4">
+            <AlertTriangle className="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
+            <p className="text-sm text-amber-800 leading-relaxed">
+              These planning documents have not been uploaded to this portal
+              yet. Request the latest versions from the Municipal Planning and
+              Development Office, through the{' '}
+              <a
+                href="https://www.tanza.gov.ph"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold underline underline-offset-2"
+              >
+                official Tanza website
+              </a>{' '}
+              or an{' '}
+              <a
+                href="https://www.foi.gov.ph"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold underline underline-offset-2"
+              >
+                FOI request
+              </a>
+              .
+            </p>
+          </div>
+
           <DocSection
             title="Comprehensive Land Use Plan (CLUP)"
             subtitle="Primary land use policy document guiding how land is allocated across all zones in Tanza"
@@ -232,7 +274,7 @@ export default function Downloads() {
 
           <DocSection
             title="Executive-Legislative Agenda (ELA) 2022–2025"
-            subtitle="Joint program of work of the Mayor and Municipal Council for the current term"
+            subtitle="Joint program of work of the Mayor and Municipal Council for the previous (2022–2025) term"
             accent="from-violet-600 to-purple-700"
             emoji="📜"
             icon={FileText}
