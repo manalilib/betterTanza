@@ -11,7 +11,6 @@ npm run lint         # Run ESLint
 npm run lint:fix     # Auto-fix ESLint issues
 npm run format       # Format with Prettier
 npm run dev:yaml     # Convert YAML to JSON, then start dev server
-npm run setup        # Interactive setup script for new installations
 ```
 
 Pre-commit hook runs `lint-staged` automatically (ESLint + Prettier on staged files).
