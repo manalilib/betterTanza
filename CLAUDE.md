@@ -11,14 +11,13 @@ npm run lint         # Run ESLint
 npm run lint:fix     # Auto-fix ESLint issues
 npm run format       # Format with Prettier
 npm run dev:yaml     # Convert YAML to JSON, then start dev server
-npm run setup        # Interactive setup script for new installations
 ```
 
 Pre-commit hook runs `lint-staged` automatically (ESLint + Prettier on staged files).
 
 ## Architecture
 
-This is a React 19 + TypeScript + Vite app for Philippine Local Government Units (LGUs). It uses React Router, Tailwind CSS, i18next for multilingual support, and a YAML-based content system.
+This is a React 19 + TypeScript + Vite app for the Municipality of Tanza, Cavite. It uses React Router, Tailwind CSS, i18next for multilingual support, and a YAML-based content system.
 
 ### Routing
 

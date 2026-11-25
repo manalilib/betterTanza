@@ -12,6 +12,7 @@ import * as LucideIcons from 'lucide-react';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import ServicesSection from '../components/home/ServicesSection';
 import SEO from '../components/SEO';
+import EmptyNotice from '../components/ui/EmptyNotice';
 import { Card, CardContent } from '@bettergov/kapwa/card';
 import { Banner } from '@bettergov/kapwa/banner';
 import { useState, useEffect } from 'react';
@@ -52,6 +53,7 @@ const Services: React.FC = () => {
           description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
           keywords="government services, public services, local government, civic services"
         />
+        <h1 className="sr-only">Services of the Municipality of Tanza</h1>
         <ServicesSection
           title={`All local government services`}
           description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
@@ -69,6 +71,7 @@ const Services: React.FC = () => {
           description="The category you are looking for does not exist."
           icon
         />
+        <EmptyNotice className="mt-6" title="Let's get you back on track" />
       </Section>
     );
   }
@@ -154,6 +157,7 @@ const Services: React.FC = () => {
                 ))}
               </div>
             )}
+            {subcategories.length === 0 && <EmptyNotice />}
           </>
         )}
       </Section>

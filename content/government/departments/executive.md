@@ -8,7 +8,7 @@ Find out about your Mayor and Vice Mayor, including upcoming events, the Mayor's
 
 The **Mayor** is the chief executive official of the **Local Government Unit of {GOVERNMENT_NAME}**. The Mayor is elected by residents during the **Philippine National and Local Elections**, which are held every three years.
 
-The Mayor serves as the head of the local government and is responsible for implementing programs, policies, and development initiatives approved by the **Sangguniang Panlungsod / Sangguniang Bayan (City or Municipal Council)**.
+The Mayor serves as the head of the local government and is responsible for implementing programs, policies, and development initiatives approved by the **Sangguniang Bayan (Municipal Council)**.
 
 The Mayor’s duties include representing the LGU during official functions, leading local development programs, overseeing city or municipal services, and ensuring that public services are effectively delivered to residents.
 
@@ -20,8 +20,6 @@ The **current Mayor is {MAYOR}.**
 
 ## Mayor of {GOVERNMENT_NAME}
 
-**Image Caption**
-
 Mayor of **{GOVERNMENT_NAME}**, **{MAYOR}**
 
 ---
@@ -30,28 +28,7 @@ Mayor of **{GOVERNMENT_NAME}**, **{MAYOR}**
 
 Mayor **{MAYOR}** has been serving the people of **{GOVERNMENT_NAME}** since **{YEAR_ELECTED}**.
 
-Mayor **{MAYOR}** is known for championing initiatives related to:
-
-- Local economic development
-- Public health and social services
-- Infrastructure and urban development
-- Community empowerment and participation
-
-Outside of official duties, Mayor **{MAYOR}** works closely with barangay leaders, civic organizations, and private sector partners to support programs that benefit the community.
-
----
-
-### Mayor's Community Assistance Program
-
-During the current term, Mayor **{MAYOR}** supports several initiatives aimed at improving the welfare of residents under the theme **"[PROGRAM THEME]"**.
-
-Programs supported include:
-
-- **[PROGRAM NAME 1]** – Supporting education and youth development
-- **[PROGRAM NAME 2]** – Providing livelihood assistance to families
-- **[PROGRAM NAME 3]** – Strengthening disaster preparedness and community resilience
-
-You can read more about these initiatives on the **Mayor's Community Programs page**.
+For the Mayor's programs, announcements, and activities, follow the official channels listed under **Contact the Mayor's Office** below.
 
 ---
 
@@ -63,25 +40,19 @@ You can read more about these initiatives on the **Mayor's Community Programs pa
 
 **{VICE_MAYOR}** currently serves as the **Vice Mayor of {GOVERNMENT_NAME}**.
 
-The Vice Mayor presides over the **Sangguniang Panlungsod / Sangguniang Bayan**, ensuring legislative sessions run properly and that ordinances and resolutions support the development goals of the local government.
+The Vice Mayor presides over the **Sangguniang Bayan**, ensuring legislative sessions run properly and that ordinances and resolutions support the development goals of the local government.
 
 Vice Mayor **{VICE_MAYOR}** was elected during the **{YEAR_ELECTED} National and Local Elections**.
-
-Vice Mayor **{VICE_MAYOR}** supports initiatives focused on:
-
-- community welfare
-- legislative development
-- economic and social progress
 
 ---
 
 # About the Office of the Vice Mayor
 
-The **Vice Mayor** performs legislative functions and presides over meetings of the **City or Municipal Council**.
+The **Vice Mayor** performs legislative functions and presides over meetings of the **Sangguniang Bayan**.
 
 When the Mayor is unable to perform official duties due to travel, illness, or other official commitments, the **Vice Mayor assumes responsibilities as Acting Mayor**, in accordance with Philippine local government laws.
 
-The Vice Mayor may also represent the city or municipality in official functions, civic ceremonies, and community events when designated by the Mayor.
+The Vice Mayor may also represent the municipality in official functions, civic ceremonies, and community events when designated by the Mayor.
 
 ---
 
@@ -130,36 +101,17 @@ Key responsibilities include:
 - managing emergency and disaster response
 - representing the LGU in regional and national engagements
 
-A historical list of previous mayors and key milestones of the city or municipality can be found on the **Mayoral History page**.
-
----
-
-# Other Historic Roles in the LGU
-
-The local government also recognizes other important civic and ceremonial roles that have contributed to the history of **{GOVERNMENT_NAME}**, including:
-
-- former municipal presidents
-- distinguished public servants
-- honorary community leaders
-
-These roles reflect the legacy of leadership and public service within the community.
-
 ---
 
 # Contact the Mayor's Office
 
 **Office of the Mayor**
-City/Municipal Hall of **{GOVERNMENT_NAME}**
+Municipal Hall of **{GOVERNMENT_NAME}**, Cavite
 
-**Address:**
-[STREET ADDRESS]
-[CITY / PROVINCE / POSTAL CODE]
+**Official website:** [www.tanza.gov.ph](https://www.tanza.gov.ph)
 
-**Telephone:**
-[PHONE NUMBER]
+**Facebook:** [Municipality of Tanza](https://www.facebook.com/ph.MunicipalityofTanza)
 
-**Email:**
-[EMAIL ADDRESS]
+**Online requests:** [Tanza Public Service System](https://tanzapublicservice.site)
 
-**Website:**
-[OFFICIAL WEBSITE URL]
+_Direct telephone and email contacts for the Mayor's Office have not been confirmed against an official source. Please use the channels above._

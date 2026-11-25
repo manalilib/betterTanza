@@ -1,0 +1,400 @@
+import SEO from '../components/SEO';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
+import Section from '../components/ui/Section';
+import { Link } from 'react-router-dom';
+import {
+  Users,
+  Phone,
+  ExternalLink,
+  Building2,
+  Crown,
+  Shield,
+  Star,
+} from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
+
+const BREADCRUMBS = [
+  { label: 'Home', href: '/' },
+  { label: 'Government', href: '/government' },
+  { label: 'Departments & Officials', href: '/government/departments' },
+  { label: 'Local Officials', href: '/government/departments/officials' },
+];
+
+// Official photos: drop files into /public/images/officials/ to activate
+// Sources: https://www.facebook.com/ph.MunicipalityofTanza or https://www.tanza.gov.ph
+const EXECUTIVES = [
+  {
+    name: 'Hon. Archangelo "SM" B. Matro',
+    position: 'Municipal Mayor',
+    badge: '2025–2028 Term',
+    initials: 'AM',
+    photo: '/images/officials/mayor-matro.jpg',
+    accentFrom: 'from-primary-900',
+    accentTo: 'to-primary-700',
+    ring: 'ring-primary-200',
+    badgeColor: 'bg-primary-50 text-primary-700 border-primary-200',
+    icon: Crown,
+    iconColor: 'text-amber-400',
+    description:
+      'Chief Executive of the Municipality of Tanza, responsible for overall governance and administration.',
+  },
+  {
+    name: 'Hon. Raymundo "Munding" A. Del Rosario',
+    position: 'Municipal Vice Mayor',
+    badge: '2025–2028 Term',
+    initials: 'RD',
+    photo: '/images/officials/vm-del-rosario.jpg',
+    accentFrom: 'from-primary-700',
+    accentTo: 'to-primary-600',
+    ring: 'ring-primary-200',
+    badgeColor: 'bg-primary-50 text-primary-700 border-primary-200',
+    icon: Star,
+    iconColor: 'text-primary-300',
+    description:
+      'Presides over the Sangguniang Bayan and assists the Mayor in municipal governance.',
+  },
+];
+
+// Sangguniang Bayan members as listed on Wikipedia (Tanza, Cavite — Government).
+// Mayor/Vice Mayor are confirmed by the May 12, 2025 election results; the
+// councilor roster is NOT confirmed against an official LGU/COMELEC source.
+const COUNCILORS: string[] = [
+  'Niño Federico B. Matro',
+  'Alexis B. Dones',
+  'Myron S. Ner',
+  'Ryan G. Mintu',
+  'Antonio A. Del Rosario Jr.',
+  'Concepcion Jocelyn D. Pangan',
+  'Sheryl Lyn L. Gervacio',
+  'Joselito P. Arca',
+];
+
+const EX_OFFICIO = [
+  {
+    position: 'LNB President',
+    full: 'Liga ng mga Barangay',
+    name: 'To be updated — source from LGU official channels',
+  },
+  {
+    position: 'SK Federation President',
+    full: 'Sangguniang Kabataan',
+    name: 'To be updated — source from LGU official channels',
+  },
+];
+
+// ---------------------------------------------------------------------------
+// DEPARTMENT CONTACTS
+// Direct-line numbers per department are not publicly available from official
+// sources. All offices are reachable via the Municipal Hall switchboard below.
+// Update individual entries once confirmed from official LGU publications.
+// ---------------------------------------------------------------------------
+const DEPARTMENTS = [
+  { office: 'Office of the Municipal Mayor', tel: '(046) 432-0000' },
+  { office: 'Office of the Municipal Vice Mayor', tel: '(046) 432-0000' },
+  { office: 'Sangguniang Bayan (Municipal Council)', tel: '(046) 432-0000' },
+  { office: 'Municipal Administrator', tel: '(046) 432-0000' },
+  { office: 'Municipal Health Office (MHO)', tel: '(046) 432-0000' },
+  {
+    office: 'Municipal Social Welfare & Development Office (MSWDO)',
+    tel: '(046) 432-0000',
+  },
+  { office: 'Municipal DRRMO', tel: '(046) 432-0000' },
+  // BFP and PNP direct lines unconfirmed — showing switchboard as fallback
+  { office: 'Bureau of Fire Protection (BFP) — Tanza', tel: '(046) 432-0000' },
+  { office: 'Tanza Municipal Police Station (MPS)', tel: '(046) 432-0000' },
+];
+
+export default function Officials() {
+  return (
+    <>
+      <SEO
+        title="Local Officials Directory — Municipality of Tanza"
+        description="Elected officials, municipal council members, and department directory of the Municipality of Tanza, Cavite for the 2025–2028 term."
+      />
+
+      {/* Hero */}
+      <div
+        className="relative text-white overflow-hidden"
+        style={{
+          background: HERO_GRADIENT,
+        }}
+      >
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.04]"
+          style={{
+            backgroundImage:
+              'linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
+            <Users className="h-3.5 w-3.5" />
+            Government · Departments
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
+            Local Officials Directory
+          </h1>
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
+            Elected officials and department contacts of the Municipality of
+            Tanza — 2025–2028 term.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {[
+              ['2', 'Executives'],
+              ['8', 'Councilors'],
+              ['2', 'Ex-Officio'],
+              ['2025–2028', 'Current Term'],
+            ].map(([val, lbl]) => (
+              <div
+                key={lbl}
+                className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
+              >
+                <span className="text-sm font-black text-white">{val}</span>
+                <span className="text-xs text-primary-300 font-medium">
+                  {lbl}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            viewBox="0 0 1440 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 40 C360 0 1080 0 1440 40 L1440 40 L0 40Z"
+              fill="#f9fafb"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div className="bg-gray-50 min-h-screen">
+        <Section className="py-10">
+          <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
+
+          {/* Executive Branch */}
+          <div className="mb-12">
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Crown className="h-5 w-5 text-amber-500" /> Executive Branch
+            </h2>
+            <div className="h-1 w-10 bg-primary-600 rounded-full mb-6" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {EXECUTIVES.map(e => {
+                const RoleIcon = e.icon;
+                return (
+                  <div
+                    key={e.name}
+                    className={`bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden ring-1 ${e.ring}`}
+                  >
+                    <div
+                      className={`h-2 bg-gradient-to-r ${e.accentFrom} ${e.accentTo}`}
+                    />
+                    <div className="p-6">
+                      <div className="flex items-start gap-5">
+                        <div
+                          className={`bg-gradient-to-br ${e.accentFrom} ${e.accentTo} w-16 h-16 rounded-2xl overflow-hidden shrink-0 shadow-md flex items-center justify-center`}
+                        >
+                          <img
+                            src={e.photo}
+                            alt={e.name}
+                            className="w-full h-full object-cover object-top"
+                            onError={ev => {
+                              (
+                                ev.currentTarget as HTMLImageElement
+                              ).style.display = 'none';
+                              (
+                                ev.currentTarget.nextSibling as HTMLElement
+                              ).style.display = 'flex';
+                            }}
+                          />
+                          <span className="hidden text-white text-xl font-black w-full h-full items-center justify-center">
+                            {e.initials}
+                          </span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <RoleIcon
+                              className={`h-4 w-4 ${e.iconColor} shrink-0`}
+                            />
+                            <span className="text-sm font-black text-primary-700">
+                              {e.position}
+                            </span>
+                          </div>
+                          <div className="text-base font-black text-gray-900 leading-tight mb-2">
+                            {e.name}
+                          </div>
+                          <span
+                            className={`inline-block text-[10px] font-bold border px-2 py-0.5 rounded-full ${e.badgeColor}`}
+                          >
+                            Elected · {e.badge}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="mt-4 text-xs text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
+                        {e.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Municipal Council */}
+          <div className="mb-12">
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Users className="h-5 w-5 text-primary-500" /> Sangguniang Bayan
+              (Municipal Council)
+            </h2>
+            <div className="h-1 w-10 bg-primary-600 rounded-full mb-2" />
+            <p className="text-sm text-gray-500 mb-5">
+              8 councilors presided over by the Vice Mayor — 2025–2028 term
+            </p>
+            {COUNCILORS.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {COUNCILORS.map((name, i) => (
+                    <div
+                      key={name}
+                      className="bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 flex items-center gap-3"
+                    >
+                      <span className="text-[10px] font-black text-primary-400 w-6 shrink-0">
+                        {String(i + 1).padStart(2, '0')}
+                      </span>
+                      <span className="text-sm font-semibold text-gray-800">
+                        Hon. {name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-xs text-gray-400 mt-3">
+                  Roster compiled from public sources; confirm against the{' '}
+                  <a
+                    href="https://www.facebook.com/ph.MunicipalityofTanza"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline hover:text-gray-600"
+                  >
+                    official LGU Facebook page
+                  </a>
+                  .
+                </p>
+              </>
+            ) : (
+              <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-4 flex items-start gap-3">
+                <div className="w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <Users className="h-4 w-4 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-amber-800">
+                    Councilor list pending verification
+                  </p>
+                  <p className="text-xs text-amber-600 mt-0.5">
+                    The 2022–2025 Sangguniang Bayan members are being verified
+                    from official LGU sources. Visit{' '}
+                    <a
+                      href="https://www.facebook.com/ph.MunicipalityofTanza"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline hover:text-amber-800"
+                    >
+                      the official LGU Facebook page
+                    </a>{' '}
+                    for the current list.
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Ex-Officio */}
+          <div className="mb-12">
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Shield className="h-5 w-5 text-brand-500" /> Ex-Officio Members
+            </h2>
+            <div className="h-1 w-10 bg-primary-600 rounded-full mb-5" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+              {EX_OFFICIO.map(m => (
+                <div
+                  key={m.position}
+                  className="bg-white rounded-xl border border-gray-100 shadow-sm p-4"
+                >
+                  <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wide mb-0.5">
+                    {m.full}
+                  </div>
+                  <div className="text-xs font-bold text-brand-600 mb-1.5">
+                    {m.position}
+                  </div>
+                  <div className="text-sm font-semibold text-gray-800">
+                    {m.name}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Department Directory */}
+          <div className="mb-10">
+            <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
+              <Building2 className="h-5 w-5 text-primary-600" /> Municipal
+              Government Offices
+            </h2>
+            <div className="h-1 w-10 bg-primary-600 rounded-full mb-3" />
+            <p className="text-xs text-gray-400 mb-5">
+              All offices reachable via Municipal Hall switchboard. Direct-line
+              numbers pending official confirmation.
+            </p>
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              {DEPARTMENTS.map((d, i) => (
+                <div
+                  key={d.office}
+                  className={`flex items-center justify-between px-5 py-3.5 ${i < DEPARTMENTS.length - 1 ? 'border-b border-gray-50' : ''}`}
+                >
+                  <span className="text-sm text-gray-700 font-medium">
+                    {d.office}
+                  </span>
+                  <a
+                    href={`tel:${d.tel.replace(/[^0-9]/g, '')}`}
+                    className="flex items-center gap-1.5 text-sm font-bold text-primary-700 hover:text-primary-900 transition-colors"
+                  >
+                    <Phone className="h-3.5 w-3.5" />
+                    {d.tel}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer links */}
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p className="text-sm text-gray-600">
+              For a complete employee directory, visit Municipal Hall or file an
+              FOI request.
+            </p>
+            <div className="flex gap-2 shrink-0">
+              <a
+                href="https://www.foi.gov.ph"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-2 rounded-lg transition-colors"
+              >
+                <ExternalLink className="h-3 w-3" />
+                FOI Portal
+              </a>
+              <Link
+                to="/government/departments"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-2 rounded-lg transition-colors"
+              >
+                All Departments
+              </Link>
+            </div>
+          </div>
+        </Section>
+      </div>
+    </>
+  );
+}

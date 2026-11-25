@@ -37,8 +37,8 @@ import { TypographyTheme } from './typographyThemes';
 const customTheme: TypographyTheme = {
   name: 'custom',
   components: {
-    h1: 'text-4xl font-bold text-blue-900 mb-6',
-    h2: 'text-3xl font-semibold text-blue-800 mb-4',
+    h1: 'text-4xl font-bold text-primary-900 mb-6',
+    h2: 'text-3xl font-semibold text-primary-800 mb-4',
     p: 'text-gray-700 mb-4 leading-relaxed',
     // ... other components
   },

@@ -13,8 +13,7 @@
     "preview": "vite preview",
     "prepare": "husky",
     "convert-yaml": "node scripts/yaml-to-json.js",
-    "dev:yaml": "npm run convert-yaml && npm run dev",
-    "setup": "node scripts/setup-starter-kit.js"
+    "dev:yaml": "npm run convert-yaml && npm run dev"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -29,11 +28,11 @@
     "@bettergov/kapwa": "^1.2.4",
     "@tailwindcss/typography": "^0.5.18",
     "@types/js-yaml": "^4.0.9",
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "dotenv": "^17.2.2",
     "i18next": "^25.5.2",
     "i18next-browser-languagedetector": "^8.2.0",
-    "i18next-http-backend": "^3.0.2",
     "js-yaml": "^4.1.0",
     "lucide-react": "^0.575.0",
     "nuqs": "^2.6.0",
@@ -43,6 +42,8 @@
     "react-i18next": "^15.7.3",
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.9.2",
+    "react-websitecarbon-badge": "^1.0.6",
+    "recharts": "^3.10.1",
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.3.1"
   },
@@ -52,6 +53,7 @@
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "@vercel/node": "^5.10.2",
     "@vitejs/plugin-react": "^5.0.2",
     "eslint": "^9.35.0",
     "eslint-plugin-react-hooks": "^5.2.0",

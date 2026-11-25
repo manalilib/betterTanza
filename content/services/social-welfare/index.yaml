@@ -2,6 +2,14 @@
 # This file contains all the pages/services available under the Social Welfare category
 
 pages:
+  - name: 'Apply for financial assistance (medical, burial, sports)'
+    slug: 'apply-for-financial-assistance'
+    description: 'Requirements, online application steps, tracking, and release for the Municipality of Tanza financial assistance program.'
+
+  - name: 'Use the Tanza Public Service System (online portal)'
+    slug: 'use-the-tanza-public-service-portal'
+    description: 'Register for the resident portal and see which municipal services can be requested online.'
+
   - name: 'Apply for senior citizen, solo parent, or PWD assistance'
     slug: 'apply-for-senior-citizen-solo-parent-or-pwd-assistance'
     description: 'Information about applying for assistance programs for senior citizens, solo parents, and persons with disabilities.'

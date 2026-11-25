@@ -1,4 +1,7 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+
+const DEFAULT_SITE_URL = 'https://www.bettertanza.org';
 
 interface SEOProps {
   title?: string;
@@ -17,22 +20,26 @@ export default function SEO({
   image,
   url,
   type = 'website',
-  siteName = import.meta.env.VITE_GOVERNMENT_NAME || 'Local Government Website',
+  siteName = import.meta.env.VITE_SITE_NAME || 'BetterTanza.org',
 }: SEOProps) {
-  const defaultTitle = `${siteName} - Official Government Website`;
+  const defaultTitle = `${siteName} | Community Portal for the Municipality of Tanza, Cavite`;
   const defaultDescription =
     import.meta.env.VITE_SITE_DESCRIPTION ||
-    `Official website of ${siteName}. Access government services, information, and resources.`;
+    'Community-built portal for the Municipality of Tanza, Cavite. Find local services, officials, transparency documents, and development projects. Not an official government website.';
   const defaultKeywords =
     import.meta.env.VITE_SITE_KEYWORDS ||
-    'government, local government, services, public services, civic services';
+    'Tanza, Cavite, Municipality of Tanza, LGU Tanza, local government, government services, CALABARZON';
 
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const fullDescription = description || defaultDescription;
   const fullKeywords = keywords || defaultKeywords;
-  const fullUrl = url || import.meta.env.VITE_WEBSITE_URL || '';
+  const { pathname } = useLocation();
+  const siteUrl = (
+    import.meta.env.VITE_WEBSITE_URL || DEFAULT_SITE_URL
+  ).replace(/\/$/, '');
+  const fullUrl = url || `${siteUrl}${pathname === '/' ? '' : pathname}`;
   const fullImage =
-    image || import.meta.env.VITE_OG_IMAGE_URL || `${fullUrl}/og-image.jpg`;
+    image || import.meta.env.VITE_OG_IMAGE_URL || `${siteUrl}/og-image.jpg`;
   const twitterHandle = import.meta.env.VITE_TWITTER_HANDLE || '';
 
   return (
@@ -68,7 +75,7 @@ export default function SEO({
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta name="theme-color" content="#0066eb" />
+      <meta name="theme-color" content="#004c97" />
 
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />

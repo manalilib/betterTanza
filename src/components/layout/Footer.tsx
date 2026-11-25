@@ -1,131 +1,212 @@
-import React from 'react';
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  CheckCircle2,
-} from 'lucide-react';
-import { footerNavigation } from '../../data/navigation';
+import { Eye, Facebook, Github, Heart } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
 
-const Footer: React.FC = () => {
+function useVisitCounter() {
+  const [count, setCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch('/api/visits')
+      .then(r => r.json())
+      .then(d => {
+        if (typeof d?.count === 'number') setCount(d.count);
+      })
+      .catch(() => {});
+  }, []);
+
+  return count;
+}
+
+export default function Footer() {
   const { t } = useTranslation('common');
+  const visitCount = useVisitCounter();
 
-  const getSocialIcon = (label: string) => {
-    switch (label) {
-      case 'Facebook':
-        return <Facebook className="h-5 w-5" />;
-      case 'Twitter':
-        return <Twitter className="h-5 w-5" />;
-      case 'Instagram':
-        return <Instagram className="h-5 w-5" />;
-      case 'YouTube':
-        return <Youtube className="h-5 w-5" />;
-      default:
-        return null;
-    }
-  };
+  const QUICK_LINKS = [
+    { labelKey: 'nav.services', href: '/services' },
+    { labelKey: 'nav.government', href: '/government' },
+    {
+      labelKey: 'nav.fullDisclosure',
+      href: '/government/transparency-documents/full-disclosure',
+    },
+    {
+      labelKey: 'nav.foiReleases',
+      href: '/government/transparency-documents/foi-releases',
+    },
+    { labelKey: 'nav.development', href: '/development-projects' },
+    { labelKey: 'contact.title', href: '/#contact' },
+  ];
+
+  const RESOURCES = [
+    { label: 'Open Data Philippines', href: 'https://data.gov.ph' },
+    { label: 'Freedom of Information', href: 'https://www.foi.gov.ph' },
+    {
+      label: 'Official Tanza Website',
+      href: 'https://www.tanza.gov.ph',
+    },
+    {
+      label: 'Tanza Public Service System',
+      href: 'https://tanzapublicservice.site',
+    },
+    { label: 'DILG FDP Portal', href: 'https://fdpp.blgs.gov.ph' },
+    { label: 'PhilGEPS', href: 'https://www.philgeps.gov.ph' },
+    { label: 'Official Gov.ph', href: 'https://www.gov.ph' },
+  ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gray-950 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+          {/* Brand */}
           <div>
-            <div className="flex items-center mb-4">
-              <CheckCircle2 className="h-12 w-12 mr-3" />
-              {/* <img
-                src="/ph-logo.webp"
-                alt="Philippines Coat of Arms"
-                className="h-12 w-12 mr-3"
-              /> */}
-
-              <div>
-                <div className="font-bold">{t('site_name')}</div>
-                <div className="text-xs text-gray-400">BetterGov.ph Portal</div>
-              </div>
+            <div className="mb-3 flex items-center gap-2">
+              <img
+                src="/tanza-seal.png"
+                alt="Tanza Municipal Seal"
+                className="h-9 w-auto"
+              />
+              <span className="text-white font-black text-lg">
+                betterTanza<span className="text-primary-200">.org</span>
+              </span>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
-              A community portal providing Philippine citizens, businesses, and
-              visitors with information and services.
+            <div className="inline-block bg-white rounded-lg px-3 py-2 mb-4">
+              <img
+                src="/images/tanza-logo.webp"
+                alt="Tanza — Serbisyo sa Mamamayan, Malasakit sa Bayan"
+                width={1200}
+                height={364}
+                className="h-10 w-auto"
+              />
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+              {t('footer.mission')}
             </p>
-            <div className="flex space-x-4">
-              {footerNavigation.socialLinks.map(link => (
-                <Link
-                  key={link.label}
-                  to={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {getSocialIcon(link.label)}
-                </Link>
-              ))}
+            <div className="flex gap-3 mb-6">
+              <a
+                href="https://www.facebook.com/ph.MunicipalityofTanza"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://github.com/manalilib/betterTanza"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-500 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
-          {footerNavigation.mainSections.map(section => (
-            <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2">
-                {section.links.map(link => (
-                  <li key={link.label}>
-                    <Link
-                      to={link.href}
-                      className="text-gray-400 hover:text-white text-sm transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+              {t('footer.quickLinks')}
+            </h3>
+            <ul className="space-y-2.5">
+              {QUICK_LINKS.map(link => (
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {t(link.labelKey)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+              {t('footer.resources')}
+            </h3>
+            <ul className="space-y-2.5">
+              {RESOURCES.map(link => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-400 hover:text-white text-sm transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Cost + CTAs */}
+          <div>
+            <div className="inline-flex items-center gap-2 bg-primary-900/40 text-primary-200 border border-primary-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
+              {t('footer.costLabel')}{' '}
+              <span className="text-yellow-300">₱0</span>
             </div>
-          ))}
+            <div className="flex flex-col gap-2">
+              <a
+                href="https://github.com/manalilib/betterTanza"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-sm font-semibold text-white bg-primary-700 hover:bg-primary-600 px-4 py-2.5 rounded-lg transition-colors"
+              >
+                <Heart className="h-4 w-4" />
+                {t('footer.volunteer')}
+              </a>
+              <a
+                href="https://github.com/manalilib/betterTanza"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-sm font-semibold text-gray-300 bg-gray-800 hover:bg-gray-700 px-4 py-2.5 rounded-lg transition-colors"
+              >
+                <Github className="h-4 w-4" />
+                {t('footer.contribute')}
+              </a>
+            </div>
+            <div className="mt-4">
+              <WebsiteCarbonBadge dark url="https://www.bettertanza.org" />
+            </div>
+          </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              {t('footer.copyright')}
-            </p>
-            <div className="flex space-x-6">
-              {/* <a
-                href="/privacy"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Terms of Use
-              </a> */}
-              <Link
-                to="https://github.com/bettergovph/bettergov"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Contribute at GitHub
-              </Link>
-              <Link
-                to="/sitemap"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Sitemap
-              </Link>
-              <a
-                href="/accessibility"
-                className="text-gray-400 hover:text-white text-sm transition-colors"
-              >
-                Accessibility
-              </a>
-            </div>
-          </div>
+        {/* Bottom bar */}
+        <div className="border-t border-gray-800 mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+          <span>
+            © {new Date().getFullYear()} betterTanza.org
+            <span className="mx-2 opacity-40">|</span>
+            MIT | CC BY 4.0
+            <span className="mx-2 opacity-40">|</span>
+            {t('footer.attribution')}
+          </span>
+          <span className="flex items-center gap-1.5 bg-gray-800 border border-gray-700 rounded-full px-3 py-1.5">
+            <Eye className="h-3 w-3 text-primary-400" />
+            <span className="text-gray-300 font-bold">
+              {visitCount !== null ? visitCount.toLocaleString() : '—'}
+            </span>
+            <span className="text-gray-500">visits</span>
+          </span>
+          <span className="text-gray-400 text-[11px]">
+            {t('footer.builtBy')}
+          </span>
+          <span className="flex items-center gap-2 text-[11px] text-gray-400">
+            {t('footer.poweredBy')}
+            <img
+              src="/images/sidedish-project.webp"
+              alt="Sidedish Project"
+              width={500}
+              height={269}
+              className="h-9 w-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
+          </span>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

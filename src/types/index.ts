@@ -1,19 +1,10 @@
 export type LanguageType =
   | 'en' // English
-  | 'fil' // Filipino (standardized Tagalog)
-  | 'ceb' // Cebuano/Bisaya
-  | 'ilo' // Ilocano
-  | 'hil' // Hiligaynon/Ilonggo
-  | 'war' // Waray
-  | 'pam' // Kapampangan
-  | 'bcl' // Bikol
-  | 'pag' // Pangasinan
-  | 'mag' // Maguindanao
-  | 'tsg' // Tausug
-  | 'mdh'; // Maranao
+  | 'fil'; // Filipino (standardized Tagalog)
 
 export interface NavigationItem {
   label: string;
   href: string;
+  translationKey?: string;
   children?: NavigationItem[];
 }

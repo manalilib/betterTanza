@@ -11,18 +11,209 @@
     "home": "Tahanan",
     "about": "Tungkol",
     "services": "Mga Serbisyo",
-    "contact": "Makipag-ugnayan",
-    "login": "Mag-login",
-    "register": "Magparehistro"
+    "contact": "Makipag-ugnayan"
+  },
+  "nav": {
+    "home": "Tahanan",
+    "services": "Mga Serbisyo",
+    "government": "Pamahalaan",
+    "departments": "Mga Kagawaran at Opisyal",
+    "localOfficials": "Mga Lokal na Opisyal",
+    "officials": "Mga Lokal na Opisyal",
+    "transparency": "Transparency",
+    "fullDisclosure": "Buong Pagsisiwalat",
+    "annualBudget": "Taunang Badyet",
+    "saln": "SALN",
+    "foiReleases": "Mga Dokumento ng FOI",
+    "downloads": "Mga Dokumento sa Pagpaplano",
+    "statistics": "Mga Istatistika",
+    "cityProfile": "Profil ng Munisipyo",
+    "annualReport": "Taunang Ulat",
+    "infrastructureProjects": "Mga Proyektong Imprastraktura",
+    "legislative": "Lehislatibo",
+    "development": "Pagpapaunlad",
+    "contact": "Makipag-ugnayan"
   },
   "hero": {
-    "title": "Mas Mabuting Pamahalaang Lokal",
-    "subtitle": "Binabago ang mga komunidad sa pamamagitan ng digital na inobasyon",
+    "title": "Better Tanza",
+    "subtitle": "Ang inyong portal ng transparency para sa Munisipyo ng Tanza, Cavite — ma-access ang mga serbisyo, opisyal, at impormasyon ng publiko.",
+    "browseServices": "Tingnan ang mga Serbisyo",
+    "contactUs": "Makipag-ugnayan",
+    "findService": "Hanapin ang Serbisyo",
+    "searchPlaceholder": "Maghanap ng serbisyo...",
+    "searchLabel": "Maghanap ng serbisyo",
+    "popular": "Mga Popular na Serbisyo",
     "cta": "Magsimula"
   },
+  "services": {
+    "title": "Mga Serbisyo ng Munisipyo",
+    "description": "I-access ang buong hanay ng mga serbisyong inaalok ng Munisipyo ng Tanza.",
+    "viewAll": "Tingnan Lahat ng Serbisyo",
+    "categories": {
+      "health-services": {
+        "name": "Mga Serbisyong Pangkalusugan",
+        "description": "Libreng check-up, gamot, bakuna, pangangalaga sa ina, at serbisyong ospital."
+      },
+      "education": {
+        "name": "Edukasyon",
+        "description": "Daycare, scholarship, at mga programang pang-edukasyon."
+      },
+      "business": {
+        "name": "Negosyo",
+        "description": "Permit sa negosyo, buwis, at suporta sa trade fair."
+      },
+      "social-welfare": {
+        "name": "Kapakanan ng Lipunan",
+        "description": "Tulong para sa matatanda, PWD, at mga pamilyang nangangailangan."
+      },
+      "agriculture-fisheries": {
+        "name": "Agrikultura at Pangisdaan",
+        "description": "Binhi, pagsasanay, beterinaryo, at suporta sa kagamitan."
+      },
+      "infrastructure-public-works": {
+        "name": "Imprastraktura",
+        "description": "Kalsada, sistema ng tubig, at mga pampublikong pasilidad."
+      },
+      "garbage-waste-disposal": {
+        "name": "Pagtatapon ng Basura",
+        "description": "Iskedyul ng koleksyon, paghihiwalay, at pag-uulat ng paglabag."
+      },
+      "environment": {
+        "name": "Kalikasan",
+        "description": "Paglilinis, pagtatanim ng puno, at pagpapatupad sa kalikasan."
+      },
+      "disaster-preparedness": {
+        "name": "Paghahanda sa Kalamidad",
+        "description": "MDRRMO, pagdidrill, ruta ng paglikas, at maagang babala."
+      },
+      "housing-land-use": {
+        "name": "Pabahay at Paggamit ng Lupa",
+        "description": "Zoning, programang pabahay, at mga permit."
+      },
+      "tourism": {
+        "name": "Turismo",
+        "description": "Mga turista spot, tirahan, produkto, at permit sa turismo."
+      }
+    }
+  },
+  "governmentActivity": {
+    "title": "Mga Aktibidad ng Pamahalaan",
+    "description": "I-navigate ang iba't ibang larangan ng inyong lokal na pamahalaan.",
+    "categories": {
+      "departments": {
+        "name": "Mga Kagawaran",
+        "description": "Mga kagawaran at opisina ng munisipyo."
+      },
+      "legislative": {
+        "name": "Lehislatibo",
+        "description": "Sangguniang Bayan, mga ordinansa, at resolusyon."
+      },
+      "transparency-documents": {
+        "name": "Transparency",
+        "description": "Buong pagsisiwalat, badyet, at mga dokumento ng FOI."
+      },
+      "reports-and-statistics": {
+        "name": "Mga Ulat at Istatistika",
+        "description": "Taunang ulat, profil ng munisipyo, at imprastraktura."
+      },
+      "guides-and-regulations": {
+        "name": "Mga Gabay at Regulasyon",
+        "description": "Citizens charter, mga form, at mga ordinansa."
+      }
+    }
+  },
+  "stats": {
+    "population": {
+      "label": "Mga Residente",
+      "desc": "Senso ng PSA 2024 (339,308)"
+    },
+    "barangays": {
+      "label": "Mga Barangay",
+      "desc": "Mga administratibong dibisyon"
+    },
+    "classification": {
+      "label": "Munisipyo",
+      "desc": "Lalawigan ng Cavite, Rehiyon IV-A"
+    },
+    "area": {
+      "label": "km² Lawak ng Lupa",
+      "desc": "7,833 ektarya kabuuan"
+    },
+    "viewProfile": "Tingnan ang Buong Profil ng Munisipyo"
+  },
+  "history": {
+    "title": "Kasaysayan ng Tanza",
+    "charteredYear": "Taon ng Pagkakatatag",
+    "charteredDesc": "Orihinal na kilala bilang Santa Cruz de Malabon, ang Tanza ay itinatag noong 1760 at pinalitan ng pangalan noong Pebrero 28, 1914.",
+    "populationLabel": "Lumalagong Munisipyo",
+    "populationDesc": "Lumago ang populasyon mula 226,188 (2015) tungo sa 339,308 (2024) sa 41 barangay.",
+    "events": {
+      "founded": {
+        "year": "1760",
+        "title": "Itinatag bilang Santa Cruz de Malabon",
+        "text": "Itinatag ang bayan ng Santa Cruz de Malabon sa baybayin ng Cavite."
+      },
+      "oath": {
+        "year": "1897",
+        "title": "Panunumpa ni Aguinaldo",
+        "text": "Matapos ang Tejeros Convention, nanumpa sa tungkulin sa Santa Cruz de Malabon, ngayon ay Tanza, si Emilio Aguinaldo at ang iba pang nahalal, maliban kay Andres Bonifacio."
+      },
+      "annexed": {
+        "year": "1903",
+        "title": "Isinanib sa San Francisco de Malabon",
+        "text": "Noong Oktubre 15, 1903, isinanib ng Batas Blg. 947 ang Santa Cruz de Malabon sa karatig na bayan ng San Francisco de Malabon, ngayon ay General Trias."
+      },
+      "renamed": {
+        "year": "1914",
+        "title": "Pinalitan ng Pangalang Tanza",
+        "text": "Pinalitan ng Santa Cruz de Malabon ang pangalan nito bilang Tanza noong Pebrero 28, 1914 sa bisa ng Batas Lehislatibo Blg. 2390, ang pangalang gamit nito hanggang ngayon."
+      },
+      "terminal": {
+        "year": "2018",
+        "title": "Binuksan ang Cavite Gateway Terminal",
+        "text": "Nasa Tanza ang Cavite Gateway Terminal, ang kauna-unahang roll-on, roll-off barge terminal sa Pilipinas."
+      },
+      "mall": {
+        "year": "2022",
+        "title": "Binuksan ang SM City Tanza",
+        "text": "Binuksan noong Oktubre 14, 2022 ang SM City Tanza sa Antero Soriano Highway, Barangay Daang Amaya 2, ang kauna-unahang SM Supermall sa Tanza."
+      },
+      "recognition": {
+        "year": "2011–2021",
+        "title": "Mga Seal ng DILG",
+        "text": "Ginawaran ng DILG ang Tanza ng Seal of Good Financial Housekeeping noong 2011, 2012, 2018, 2019 at 2021, at ng Seal of Good Local Governance noong 2016."
+      }
+    }
+  },
+  "leadership": {
+    "title": "Pamunuan ng Munisipyo",
+    "municipalMayor": "Alkalde ng Munisipyo",
+    "municipalViceMayor": "Bise-Alkalde ng Munisipyo",
+    "electedMayor": "Termino 2025–2028",
+    "electedViceMayor": "Termino 2025–2028",
+    "viewAll": "Tingnan Lahat ng Opisyal",
+    "viewProfile": "Tingnan ang Profil"
+  },
+  "contact": {
+    "title": "Makipag-ugnayan",
+    "phone": "Telepono",
+    "phoneHours": "Lunes–Biyernes, 8:00 AM – 5:00 PM",
+    "email": "Email",
+    "emailResponse": "Tugon sa loob ng 1–3 araw ng trabaho",
+    "address": "Tirahan",
+    "addressLine1": "Tanza Municipal Hall, Tanza, Cavite",
+    "addressLine2": "Poblacion III, Tanza, Cavite 4108",
+    "viewAll": "Lahat ng Impormasyon sa Pakikipag-ugnayan"
+  },
   "footer": {
-    "copyright": "© 2024 Mas Mabuting Pamahalaang Lokal. Lahat ng karapatan ay nakalaan.",
-    "privacy": "Patakaran sa Privacy",
-    "terms": "Mga Tuntunin ng Serbisyo"
+    "mission": "Isang community-built transparency portal para sa Munisipyo ng Tanza, Cavite. Hindi ito opisyal na website ng pamahalaan.",
+    "quickLinks": "Mabilis na Mga Link",
+    "resources": "Mga Mapagkukunan",
+    "costLabel": "Libreng website ito",
+    "volunteer": "Mag-volunteer",
+    "contribute": "Mag-ambag sa GitHub",
+    "attribution": "Gawa nang may pagmamahal para sa mga residente ng Tanza",
+    "builtBy": "Ang betterTanza.org ay hindi kaanib ng opisyal na LGU ng Tanza.",
+    "poweredBy": "Pinapagana ng"
   }
 }
