@@ -4,6 +4,7 @@ import { mainNavigation } from '../../data/navigation';
 import type { LanguageType } from '../../types/index';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import InfoBar from './InfoBar';
 
 const HOTLINES = [
   { label: 'MDRRMO', number: '0977-345-5035', tel: '09773455035' },
@@ -67,6 +68,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 w-full">
+      <InfoBar />
       {/* Emergency Hotlines Bar — always visible */}
       {/* < 1120px: marquee ticker */}
       <div className="min-[1120px]:hidden bg-[#001044] text-white text-[11px] h-7 overflow-hidden flex items-center">

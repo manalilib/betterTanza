@@ -230,7 +230,7 @@ export default function Hero() {
 
   return (
     <div
-      className="relative text-white overflow-x-hidden -mt-[116px] min-h-screen flex flex-col"
+      className="relative text-white overflow-x-hidden -mt-[144px] min-h-screen flex flex-col"
       style={{
         background: HERO_GRADIENT,
       }}
@@ -268,7 +268,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-10 md:pt-44 md:pb-14 flex-1 lg:flex lg:flex-col lg:justify-center lg:pt-[116px] lg:pb-0">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 pt-36 pb-10 md:pt-44 md:pb-14 flex-1 lg:flex lg:flex-col lg:justify-center lg:pt-[144px] lg:pb-0">
         <div className="lg:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
             {/* Left */}

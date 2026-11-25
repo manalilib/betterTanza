@@ -47,7 +47,7 @@ content/            ← All written content (markdown + YAML)
 
 ### 0 — Branch Setup
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete` — branch `develop` exists
 
 **Intent**
 Create the clean `develop` branch from `main` so all subsequent work has a
@@ -259,7 +259,7 @@ shared across the entire app.
 
 ### 5 — Layout: InfoBars + Footer upgrade
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete`
 
 **Intent**
 Upgrade the Footer to GeneralTrias's four-column layout with visit counter and
@@ -300,7 +300,7 @@ and a live forex/weather/datetime bar on the Home page).
 
 ### 6 — UI: DisclaimerBar component
 
-**Status:** `[ ] pending`
+**Status:** `[x] complete`
 
 **Intent**
 Add the `DisclaimerBar` UI component — a small reusable "Last updated" banner used

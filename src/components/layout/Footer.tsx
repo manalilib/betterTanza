@@ -1,9 +1,27 @@
-import { Facebook, Github, Heart } from 'lucide-react';
+import { Eye, Facebook, Github, Heart } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
+
+function useVisitCounter() {
+  const [count, setCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    fetch('/api/visits')
+      .then(r => r.json())
+      .then(d => {
+        if (typeof d?.count === 'number') setCount(d.count);
+      })
+      .catch(() => {});
+  }, []);
+
+  return count;
+}
 
 export default function Footer() {
   const { t } = useTranslation('common');
+  const visitCount = useVisitCounter();
 
   const QUICK_LINKS = [
     { labelKey: 'nav.services', href: '/services' },
@@ -152,6 +170,9 @@ export default function Footer() {
                 {t('footer.contribute')}
               </a>
             </div>
+            <div className="mt-4">
+              <WebsiteCarbonBadge dark url="https://www.bettertanza.org" />
+            </div>
           </div>
         </div>
 
@@ -163,6 +184,13 @@ export default function Footer() {
             MIT | CC BY 4.0
             <span className="mx-2 opacity-40">|</span>
             {t('footer.attribution')}
+          </span>
+          <span className="flex items-center gap-1.5 bg-gray-800 border border-gray-700 rounded-full px-3 py-1.5">
+            <Eye className="h-3 w-3 text-primary-400" />
+            <span className="text-gray-300 font-bold">
+              {visitCount !== null ? visitCount.toLocaleString() : '—'}
+            </span>
+            <span className="text-gray-500">visits</span>
           </span>
           <span className="text-gray-400 text-[11px]">
             {t('footer.builtBy')}

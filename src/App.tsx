@@ -38,7 +38,7 @@ function App() {
               <div className="min-h-screen flex flex-col">
                 <Navbar />
                 <ScrollToTop />
-                <div className="flex-1 flex flex-col pt-[116px]">
+                <div className="flex-1 flex flex-col pt-[144px]">
                   <Suspense
                     fallback={
                       <div
