@@ -64,7 +64,7 @@ export default function Footer() {
               <img
                 src="/tanza-seal.png"
                 alt="Tanza Municipal Seal"
-                className="h-9 w-auto brightness-0 invert"
+                className="h-9 w-auto"
               />
               <span className="text-white font-black text-lg">
                 betterTanza<span className="text-primary-400">.org</span>
@@ -197,15 +197,13 @@ export default function Footer() {
           </span>
           <span className="flex items-center gap-2 text-[11px] text-gray-500">
             {t('footer.poweredBy')}
-            <span className="bg-white rounded-md px-2 py-1">
-              <img
-                src="/images/sidedish-project.webp"
-                alt="Sidedish Project"
-                width={500}
-                height={269}
-                className="h-7 w-auto"
-              />
-            </span>
+            <img
+              src="/images/sidedish-project.webp"
+              alt="Sidedish Project"
+              width={500}
+              height={269}
+              className="h-9 w-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
           </span>
         </div>
       </div>
