@@ -8,16 +8,28 @@
 @theme {
   --font-serif: Georgia, 'Times New Roman', serif;
 
-  --color-primary-50: #e6f0fd;
-  --color-primary-100: #cce0fb;
-  --color-primary-200: #99c2f7;
-  --color-primary-300: #66a3f3;
-  --color-primary-400: #3385ef;
-  --color-primary-500: #0066eb;
-  --color-primary-600: #0052bc;
-  --color-primary-700: #003d8d;
-  --color-primary-800: #00295e;
-  --color-primary-900: #00142f;
+  /* Brand colours sampled from the official TANZA wordmark (navy #004C97, green #00B140) */
+  --color-primary-50: #ebf1f7;
+  --color-primary-100: #d6e2ee;
+  --color-primary-200: #adc6de;
+  --color-primary-300: #80a6cb;
+  --color-primary-400: #4079b1;
+  --color-primary-500: #004c97;
+  --color-primary-600: #004180;
+  --color-primary-700: #003467;
+  --color-primary-800: #00264c;
+  --color-primary-900: #001830;
+
+  --color-brand-50: #ebf9f0;
+  --color-brand-100: #d6f3e0;
+  --color-brand-200: #ade6c2;
+  --color-brand-300: #80d8a0;
+  --color-brand-400: #40c470;
+  --color-brand-500: #00b140;
+  --color-brand-600: #009636;
+  --color-brand-700: #00782c;
+  --color-brand-800: #005820;
+  --color-brand-900: #003914;
 
   --color-secondary-50: #ffede6;
   --color-secondary-100: #ffdbcc;
