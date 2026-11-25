@@ -146,42 +146,42 @@
     "charteredYear": "Year Founded",
     "charteredDesc": "Originally known as Santa Cruz de Malabon, Tanza was founded in 1760 and renamed on February 28, 1914.",
     "populationLabel": "Growing Municipality",
-    "populationDesc": "One of Cavite's fastest-growing municipalities with 41 barangays and a growing economy.",
+    "populationDesc": "Population grew from 226,188 (2015) to 339,308 (2024) across 41 barangays.",
     "events": {
       "founded": {
         "year": "1760",
         "title": "Founded as Santa Cruz de Malabon",
-        "text": "The town of Santa Cruz de Malabon is established, becoming one of the earliest settlements in the Cavite coast."
+        "text": "The town of Santa Cruz de Malabon is founded on the Cavite coast."
       },
-      "revolution": {
-        "year": "1896",
-        "title": "Role in the Philippine Revolution",
-        "text": "Tanza plays a significant role in the Philippine Revolution against Spanish colonial rule."
+      "oath": {
+        "year": "1897",
+        "title": "Aguinaldo takes his oath of office",
+        "text": "After the Tejeros Convention, Emilio Aguinaldo and the other elected officials, except Andres Bonifacio, take their oath of office in Santa Cruz de Malabon, now Tanza."
       },
-      "independence": {
-        "year": "1898",
-        "title": "Philippine Independence",
-        "text": "The Philippines declares independence; Tanza forms part of the newly established government."
+      "annexed": {
+        "year": "1903",
+        "title": "Annexed to San Francisco de Malabon",
+        "text": "On October 15, 1903, Act No. 947 annexes Santa Cruz de Malabon to the neighboring town of San Francisco de Malabon, now General Trias."
       },
       "renamed": {
         "year": "1914",
         "title": "Renamed to Tanza",
-        "text": "The municipality is officially renamed Tanza on February 28, 1914, the name it carries to this day."
+        "text": "Legislative Act No. 2390 renames Santa Cruz de Malabon to Tanza on February 28, 1914, the name it carries to this day."
       },
-      "growth": {
-        "year": "1970s–1990s",
-        "title": "Urban and Agricultural Growth",
-        "text": "Tanza experiences significant growth in agriculture and early industrialization, attracting more residents to the Cavite coast."
+      "terminal": {
+        "year": "2018",
+        "title": "Cavite Gateway Terminal opens",
+        "text": "Tanza hosts the Cavite Gateway Terminal, the first roll-on, roll-off barge terminal in the Philippines."
       },
-      "modernization": {
-        "year": "2000s",
-        "title": "Modernization and Rapid Urbanization",
-        "text": "Infrastructure investments and industrial zone expansions accelerate population growth and economic development."
+      "mall": {
+        "year": "2022",
+        "title": "SM City Tanza opens",
+        "text": "SM City Tanza opens in October 2022 along Antero Soriano Highway in Barangay Daang Amaya 2, the 80th SM mall in the country."
       },
       "recognition": {
-        "year": "2022–present",
-        "title": "Awards and Recognition",
-        "text": "Tanza receives national recognition for good governance, financial housekeeping, and local competitiveness under the current administration."
+        "year": "2011–2021",
+        "title": "DILG Seals of Good Governance",
+        "text": "The DILG awards Tanza the Seal of Good Financial Housekeeping in 2011, 2012, 2018, 2019 and 2021, and the Seal of Good Local Governance in 2016."
       }
     }
   },

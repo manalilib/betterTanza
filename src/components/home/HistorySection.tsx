@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 
 const EVENT_KEYS = [
   'founded',
-  'revolution',
-  'independence',
+  'oath',
+  'annexed',
   'renamed',
-  'growth',
-  'modernization',
+  'terminal',
+  'mall',
   'recognition',
 ] as const;
 
