@@ -58,7 +58,7 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
     statusLabel: 'Active Development',
     category: 'infrastructure',
     emoji: '🛤️',
-    accent: 'from-blue-700 to-blue-500',
+    accent: 'from-primary-700 to-primary-500',
     description:
       "Ongoing improvements to the coastal road network linking Tanza's Manila Bay barangays. These projects improve access for fishing communities, facilitate coastal trade, and open up the shoreline for eco-tourism and commerce.",
     highlights: [
@@ -78,7 +78,7 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
     statusLabel: 'Announced',
     category: 'commercial',
     emoji: '🏬',
-    accent: 'from-indigo-600 to-violet-700',
+    accent: 'from-primary-600 to-brand-700',
     description:
       "The Governor's Drive commercial corridor connecting Bacoor, Dasmariñas, General Trias, and Tanza is attracting commercial investment from major developers. Tanza's position along this corridor makes it a prime target for retail and mixed-use developments in the near term.",
     highlights: [
@@ -118,7 +118,7 @@ export const DEVELOPMENT_PROJECTS: Project[] = [
     statusLabel: 'Active Development',
     category: 'education',
     emoji: '🏫',
-    accent: 'from-blue-800 to-blue-600',
+    accent: 'from-primary-800 to-primary-600',
     description:
       'The municipality continues to invest in public school infrastructure through SEF (Special Education Fund) allocations and DepEd partnerships — constructing new classrooms, repairing existing facilities, and equipping schools to serve the growing student population.',
     highlights: [

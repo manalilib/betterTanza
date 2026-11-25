@@ -10,6 +10,7 @@ import {
   Users,
   ShieldCheck,
 } from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -38,7 +39,7 @@ const DEADLINES = [
   {
     type: 'Upon assumption of office',
     deadline: 'Within 30 days of taking office',
-    accent: 'from-blue-500 to-indigo-600',
+    accent: 'from-primary-500 to-primary-600',
   },
   {
     type: 'Upon separation from service',
@@ -51,7 +52,7 @@ const DISCLOSURES = [
   {
     label: 'Assets',
     desc: 'Real property (land, buildings), personal property (vehicles, bank accounts, investments, business interests)',
-    accent: 'from-blue-700 to-blue-500',
+    accent: 'from-primary-700 to-primary-500',
     emoji: '🏠',
   },
   {
@@ -63,13 +64,13 @@ const DISCLOSURES = [
   {
     label: 'Net Worth',
     desc: 'Total assets minus total liabilities',
-    accent: 'from-violet-600 to-purple-700',
+    accent: 'from-brand-600 to-brand-700',
     emoji: '📊',
   },
   {
     label: 'Business Interests',
     desc: 'Financial connections and business interests',
-    accent: 'from-indigo-600 to-blue-700',
+    accent: 'from-primary-600 to-primary-700',
     emoji: '🏢',
   },
   {
@@ -84,7 +85,7 @@ const LAWS = [
   {
     code: 'R.A. 6713',
     title: 'Code of Conduct and Ethical Standards for Public Officials',
-    color: 'bg-blue-50 text-blue-700 border-blue-200',
+    color: 'bg-primary-50 text-primary-700 border-primary-200',
   },
   {
     code: 'R.A. 3019',
@@ -94,12 +95,12 @@ const LAWS = [
   {
     code: 'CSC-COA-OMB Joint Circular',
     title: 'Joint rules on SALN filing',
-    color: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+    color: 'bg-primary-50 text-primary-700 border-primary-200',
   },
   {
     code: 'E.O. No. 2 (2016)',
     title: 'Freedom of Information in the Executive Branch',
-    color: 'bg-violet-50 text-violet-700 border-violet-200',
+    color: 'bg-brand-50 text-brand-700 border-brand-200',
   },
 ];
 
@@ -115,8 +116,7 @@ export default function SALN() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -128,7 +128,7 @@ export default function SALN() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <ShieldCheck className="h-3.5 w-3.5" />
             Transparency · SALN
           </div>
@@ -137,7 +137,7 @@ export default function SALN() {
             <br />
             Liabilities & Net Worth
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             Sworn annual declaration of financial interests required of all
             government officials and employees under R.A. 6713.
           </p>
@@ -153,7 +153,9 @@ export default function SALN() {
                 className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
               >
                 <span className="text-sm font-black text-white">{val}</span>
-                <span className="text-xs text-blue-300 font-medium">{lbl}</span>
+                <span className="text-xs text-primary-300 font-medium">
+                  {lbl}
+                </span>
               </div>
             ))}
           </div>
@@ -180,7 +182,7 @@ export default function SALN() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
             {/* Who must file */}
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
-              <div className="bg-gradient-to-r from-blue-700 to-indigo-700 p-5 flex items-start justify-between">
+              <div className="bg-gradient-to-r from-primary-700 to-primary-700 p-5 flex items-start justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full mb-2">
                     <Users className="h-3 w-3" />
@@ -195,7 +197,7 @@ export default function SALN() {
               <div className="p-5 space-y-2.5">
                 {FILERS.map(f => (
                   <div key={f} className="flex items-start gap-2.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-2 shrink-0" />
                     <span className="text-sm text-gray-700">{f}</span>
                   </div>
                 ))}

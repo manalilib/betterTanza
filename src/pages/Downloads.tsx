@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import Section from '../components/ui/Section';
 import DisclaimerBar from '../components/ui/DisclaimerBar';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -169,8 +170,7 @@ export default function Downloads() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -182,14 +182,14 @@ export default function Downloads() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <FolderOpen className="h-3.5 w-3.5" />
             Transparency · Planning Documents
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Planning Documents & Downloads
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             Official CLUP, CDP, ELA, and land use maps guiding Tanza's growth
             and development.
           </p>
@@ -204,7 +204,7 @@ export default function Downloads() {
                 className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-lg px-3 py-1.5"
               >
                 <span className="text-sm font-black text-white">{val}</span>
-                <span className="text-xs text-blue-300">{lbl}</span>
+                <span className="text-xs text-primary-300">{lbl}</span>
               </div>
             ))}
           </div>
@@ -257,7 +257,7 @@ export default function Downloads() {
           <DocSection
             title="Comprehensive Land Use Plan (CLUP)"
             subtitle="Primary land use policy document guiding how land is allocated across all zones in Tanza"
-            accent="from-blue-700 to-blue-500"
+            accent="from-primary-700 to-primary-500"
             emoji="🗺️"
             icon={Map}
             docs={CLUP_DOCS}
@@ -266,7 +266,7 @@ export default function Downloads() {
           <DocSection
             title="Comprehensive Development Plan (CDP)"
             subtitle="Municipality's development goals, strategies, and investment program across all sectors"
-            accent="from-indigo-600 to-violet-700"
+            accent="from-primary-600 to-brand-700"
             emoji="📘"
             icon={FileText}
             docs={CDP_DOCS}
@@ -275,7 +275,7 @@ export default function Downloads() {
           <DocSection
             title="Executive-Legislative Agenda (ELA) 2022–2025"
             subtitle="Joint program of work of the Mayor and Municipal Council for the previous (2022–2025) term"
-            accent="from-violet-600 to-purple-700"
+            accent="from-brand-600 to-brand-700"
             emoji="📜"
             icon={FileText}
             docs={ELA_DOCS}

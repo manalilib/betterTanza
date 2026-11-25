@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
+import { HERO_GRADIENT } from '../../lib/brand';
 
 export default function ContactSection() {
   const { t } = useTranslation('common');
@@ -36,8 +37,7 @@ export default function ContactSection() {
       id="contact"
       className="relative py-16 overflow-hidden"
       style={{
-        background:
-          'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+        background: HERO_GRADIENT,
       }}
     >
       {/* Decorative circles */}
@@ -47,17 +47,17 @@ export default function ContactSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-xs font-bold text-blue-400 uppercase tracking-widest mb-1">
+            <p className="text-xs font-bold text-primary-400 uppercase tracking-widest mb-1">
               Get In Touch
             </p>
             <h2 className="text-2xl font-black text-white">
               {t('contact.title')}
             </h2>
-            <div className="mt-2 h-1 w-12 bg-blue-400 rounded-full" />
+            <div className="mt-2 h-1 w-12 bg-primary-400 rounded-full" />
           </div>
           <Link
             to="/government/departments"
-            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-blue-300 hover:text-white transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-primary-300 hover:text-white transition-colors"
           >
             {t('contact.viewAll')}
             <ArrowRight className="h-4 w-4" />
@@ -80,18 +80,18 @@ export default function ContactSection() {
                 }}
               >
                 <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Icon className="h-5 w-5 text-blue-300" />
+                  <Icon className="h-5 w-5 text-primary-300" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1.5">
+                  <p className="text-[10px] font-bold text-primary-400 uppercase tracking-widest mb-1.5">
                     {t(labelKey)}
                   </p>
-                  <p className="font-bold text-white text-sm group-hover:text-blue-100 transition-colors">
+                  <p className="font-bold text-white text-sm group-hover:text-primary-100 transition-colors">
                     {labelKey === 'contact.address'
                       ? t('contact.addressLine1')
                       : primary}
                   </p>
-                  <p className="text-xs text-blue-300/80 mt-1">
+                  <p className="text-xs text-primary-300/80 mt-1">
                     {t(secondaryKey)}
                   </p>
                 </div>

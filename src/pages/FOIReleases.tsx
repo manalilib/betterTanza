@@ -11,6 +11,7 @@ import {
   XCircle,
   Eye,
 } from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -36,13 +37,13 @@ const TIMELINE = [
   {
     step: 'Acknowledgement',
     period: 'Within 3 working days',
-    accent: 'from-blue-600 to-blue-500',
+    accent: 'from-primary-600 to-primary-500',
     emoji: '📥',
   },
   {
     step: 'Initial response (grant or denial)',
     period: 'Within 15 working days',
-    accent: 'from-indigo-600 to-violet-600',
+    accent: 'from-primary-600 to-brand-600',
     emoji: '📋',
   },
   {
@@ -89,8 +90,7 @@ export default function FOIReleases() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -102,14 +102,14 @@ export default function FOIReleases() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <Eye className="h-3.5 w-3.5" />
             Transparency · Freedom of Information
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Freedom of Information (FOI)
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             Every Filipino has the right to request and receive information held
             by the government under Executive Order No. 2 (2016).
           </p>
@@ -125,7 +125,9 @@ export default function FOIReleases() {
                 className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
               >
                 <span className="text-sm font-black text-white">{val}</span>
-                <span className="text-xs text-blue-300 font-medium">{lbl}</span>
+                <span className="text-xs text-primary-300 font-medium">
+                  {lbl}
+                </span>
               </div>
             ))}
           </div>
@@ -192,7 +194,7 @@ export default function FOIReleases() {
 
               {/* Online */}
               <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300">
-                <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-5 flex items-start justify-between">
+                <div className="bg-gradient-to-r from-primary-600 to-primary-700 p-5 flex items-start justify-between">
                   <div>
                     <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full mb-2">
                       <Globe className="h-3 w-3" />
@@ -215,7 +217,7 @@ export default function FOIReleases() {
                     href="https://www.foi.gov.ph"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 px-4 py-2.5 rounded-xl transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-white bg-primary-600 hover:bg-primary-700 px-4 py-2.5 rounded-xl transition-colors"
                   >
                     <ExternalLink className="h-4 w-4" />
                     Open foi.gov.ph
@@ -261,7 +263,7 @@ export default function FOIReleases() {
           {/* What you can request + Exemptions */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-              <div className="bg-gradient-to-r from-blue-700 to-blue-500 p-5 flex items-start justify-between">
+              <div className="bg-gradient-to-r from-primary-700 to-primary-500 p-5 flex items-start justify-between">
                 <div>
                   <span className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full mb-2">
                     <FileText className="h-3 w-3" />
@@ -276,7 +278,7 @@ export default function FOIReleases() {
               <div className="p-5 space-y-2">
                 {REQUEST_TYPES.map(r => (
                   <div key={r} className="flex items-start gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary-500 mt-1.5 shrink-0" />
                     <span className="text-sm text-gray-700">{r}</span>
                   </div>
                 ))}

@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
 import { useState, useEffect } from 'react';
+import { HERO_GRADIENT } from '../../lib/brand';
 
 function weatherLabel(code: number): string {
   if (code === 0) return 'Clear Sky';
@@ -101,8 +102,7 @@ export default function StatsSection() {
     <section
       className="relative overflow-hidden"
       style={{
-        background:
-          'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+        background: HERO_GRADIENT,
       }}
     >
       {/* Dot pattern */}
@@ -121,7 +121,7 @@ export default function StatsSection() {
           <div className="bg-white/10 border border-white/20 rounded-2xl p-6 backdrop-blur-sm">
             <div className="flex items-center justify-center gap-1.5 mb-5">
               <CloudSun className="h-3.5 w-3.5 text-amber-300 shrink-0" />
-              <span className="text-xs font-bold text-blue-300 uppercase tracking-widest">
+              <span className="text-xs font-bold text-primary-300 uppercase tracking-widest">
                 Current Weather · Tanza, Cavite
               </span>
             </div>
@@ -129,11 +129,11 @@ export default function StatsSection() {
               <div className="flex items-center justify-center gap-6 sm:gap-12">
                 <div className="flex flex-col items-center gap-3">
                   <div className="flex flex-col items-center gap-1">
-                    <Droplets className="h-5 w-5 text-blue-300" />
+                    <Droplets className="h-5 w-5 text-primary-300" />
                     <span className="text-white font-black text-lg leading-none">
                       {weather.humidity}%
                     </span>
-                    <span className="text-blue-400 text-[10px] uppercase tracking-wide">
+                    <span className="text-primary-400 text-[10px] uppercase tracking-wide">
                       Humidity
                     </span>
                   </div>
@@ -145,17 +145,17 @@ export default function StatsSection() {
                   <span className="text-5xl sm:text-6xl font-black text-white leading-none">
                     {weather.temp}°C
                   </span>
-                  <span className="text-blue-200 text-sm mt-2 font-medium">
+                  <span className="text-primary-200 text-sm mt-2 font-medium">
                     {weatherLabel(weather.code)}
                   </span>
                 </div>
                 <div className="flex flex-col items-center gap-3">
                   <div className="flex flex-col items-center gap-1">
-                    <Wind className="h-5 w-5 text-blue-300" />
+                    <Wind className="h-5 w-5 text-primary-300" />
                     <span className="text-white font-black text-lg leading-none">
                       {weather.wind}
                     </span>
-                    <span className="text-blue-400 text-[10px] uppercase tracking-wide">
+                    <span className="text-primary-400 text-[10px] uppercase tracking-wide">
                       km/h Wind
                     </span>
                   </div>
@@ -185,17 +185,17 @@ export default function StatsSection() {
               }}
             >
               <div className="bg-white/10 rounded-xl p-2.5 mb-4">
-                <Icon className="h-5 w-5 text-blue-300" />
+                <Icon className="h-5 w-5 text-primary-300" />
               </div>
               <div className="text-3xl sm:text-4xl font-black text-white leading-none mb-1">
                 {value}
               </div>
               {label && (
-                <div className="text-sm font-bold text-blue-200 mb-1">
+                <div className="text-sm font-bold text-primary-200 mb-1">
                   {label}
                 </div>
               )}
-              <div className="text-xs text-blue-400 leading-relaxed">
+              <div className="text-xs text-primary-400 leading-relaxed">
                 {description}
               </div>
             </div>
@@ -205,7 +205,7 @@ export default function StatsSection() {
         <div className="border-t border-white/10 pt-4 pb-2 flex justify-center">
           <Link
             to="/government/reports-and-statistics/city-profile"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-300 hover:text-white transition-colors uppercase tracking-wide"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-300 hover:text-white transition-colors uppercase tracking-wide"
           >
             {t('stats.viewProfile')}
             <ArrowRight className="h-3.5 w-3.5" />

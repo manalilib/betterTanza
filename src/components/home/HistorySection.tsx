@@ -99,7 +99,7 @@ export default function HistorySection() {
             <div
               className="rounded-2xl p-7 text-white relative overflow-hidden"
               style={{
-                background: 'linear-gradient(135deg, #001044 0%, #003087 100%)',
+                background: 'linear-gradient(135deg, #001830 0%, #004c97 100%)',
               }}
             >
               <div
@@ -113,10 +113,10 @@ export default function HistorySection() {
               <div className="text-5xl font-black mb-2 tracking-tight">
                 1760
               </div>
-              <div className="text-blue-200 font-bold text-lg mb-2">
+              <div className="text-primary-200 font-bold text-lg mb-2">
                 {t('history.charteredYear')}
               </div>
-              <p className="text-blue-300 text-sm leading-relaxed">
+              <p className="text-primary-300 text-sm leading-relaxed">
                 {t('history.charteredDesc')}
               </p>
             </div>

@@ -2,6 +2,7 @@ import Section from '../components/ui/Section';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import SEO from '../components/SEO';
 import { Phone, ExternalLink, Hotel, Trees, AlertTriangle } from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 // ---------------------------------------------------------------------------
 // IMPORTANT — DATA INTEGRITY NOTICE
@@ -50,8 +51,7 @@ export default function WhereToStay() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -62,14 +62,14 @@ export default function WhereToStay() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <Hotel className="h-3.5 w-3.5" />
             Tourism · Municipality of Tanza
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Where to Stay
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed">
             Comfortable accommodations in Tanza — from transient houses and
             budget hotels to private resorts perfect for family getaways by the
             bay.

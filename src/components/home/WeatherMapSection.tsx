@@ -98,14 +98,14 @@ export default function WeatherMapSection() {
             <div
               className="p-6 text-white"
               style={{
-                background: 'linear-gradient(135deg, #001044 0%, #003087 100%)',
+                background: 'linear-gradient(135deg, #001830 0%, #004c97 100%)',
               }}
             >
               <div className="flex items-start justify-between mb-4">
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <MapPin className="h-3.5 w-3.5 text-blue-300" />
-                    <span className="text-xs font-bold text-blue-300 uppercase tracking-wide">
+                    <MapPin className="h-3.5 w-3.5 text-primary-300" />
+                    <span className="text-xs font-bold text-primary-300 uppercase tracking-wide">
                       Tanza, Cavite
                     </span>
                   </div>
@@ -113,7 +113,7 @@ export default function WeatherMapSection() {
                     <span className="text-7xl font-black leading-none">
                       {weather ? `${weather.temp}°` : '--°'}
                     </span>
-                    <span className="text-2xl font-semibold text-blue-200 pb-2">
+                    <span className="text-2xl font-semibold text-primary-200 pb-2">
                       C
                     </span>
                   </div>
@@ -122,7 +122,7 @@ export default function WeatherMapSection() {
                   {weather ? getWeatherEmoji(weather.weathercode) : '🌡️'}
                 </div>
               </div>
-              <p className="text-blue-100 font-semibold text-base mb-4">
+              <p className="text-primary-100 font-semibold text-base mb-4">
                 {weather
                   ? getWeatherLabel(weather.weathercode)
                   : 'Checking conditions…'}
@@ -133,26 +133,26 @@ export default function WeatherMapSection() {
               style={{ background: '#001044' }}
             >
               <div className="flex flex-col items-center gap-1 py-3">
-                <Wind className="h-4 w-4 text-blue-400 opacity-80" />
+                <Wind className="h-4 w-4 text-primary-400 opacity-80" />
                 <span className="text-xs font-bold text-white">
                   {weather ? `${weather.windspeed}` : '--'}
                 </span>
-                <span className="text-[10px] text-blue-400">km/h wind</span>
+                <span className="text-[10px] text-primary-400">km/h wind</span>
               </div>
               <div className="flex flex-col items-center gap-1 py-3">
-                <Thermometer className="h-4 w-4 text-blue-400 opacity-80" />
+                <Thermometer className="h-4 w-4 text-primary-400 opacity-80" />
                 <span className="text-xs font-bold text-white">Tropical</span>
-                <span className="text-[10px] text-blue-400">Climate</span>
+                <span className="text-[10px] text-primary-400">Climate</span>
               </div>
               <div className="flex flex-col items-center gap-1 py-3">
-                <Droplets className="h-4 w-4 text-blue-400 opacity-80" />
+                <Droplets className="h-4 w-4 text-primary-400 opacity-80" />
                 <span className="text-xs font-bold text-white">Humid</span>
-                <span className="text-[10px] text-blue-400">Coastal</span>
+                <span className="text-[10px] text-primary-400">Coastal</span>
               </div>
             </div>
             {!weather && (
               <div
-                className="px-4 py-2 flex items-center gap-2 text-blue-300 text-xs"
+                className="px-4 py-2 flex items-center gap-2 text-primary-300 text-xs"
                 style={{ background: '#001044' }}
               >
                 <Cloud className="h-3.5 w-3.5 animate-pulse" />

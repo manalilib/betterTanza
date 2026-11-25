@@ -68,7 +68,7 @@ export default function LeadershipSection() {
                 className="px-6 py-5 flex items-center gap-4"
                 style={{
                   background:
-                    'linear-gradient(135deg, #001044 0%, #003087 100%)',
+                    'linear-gradient(135deg, #001830 0%, #004c97 100%)',
                 }}
               >
                 <div className="w-16 h-16 rounded-2xl overflow-hidden border-2 border-white/25 shrink-0 bg-white/15 flex items-center justify-center">
@@ -89,13 +89,13 @@ export default function LeadershipSection() {
                   </span>
                 </div>
                 <div>
-                  <span className="inline-block text-[10px] font-bold text-blue-300 bg-white/15 px-2.5 py-1 rounded-full mb-1.5 uppercase tracking-wide">
+                  <span className="inline-block text-[10px] font-bold text-primary-300 bg-white/15 px-2.5 py-1 rounded-full mb-1.5 uppercase tracking-wide">
                     {t(official.badgeKey)}
                   </span>
                   <h3 className="font-black text-white text-base leading-snug">
                     {official.name}
                   </h3>
-                  <p className="text-blue-200 text-sm">
+                  <p className="text-primary-200 text-sm">
                     {t(official.titleKey)}
                   </p>
                 </div>

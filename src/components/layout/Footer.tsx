@@ -146,7 +146,7 @@ export default function Footer() {
 
           {/* Cost + CTAs */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-900/40 text-blue-400 border border-blue-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
+            <div className="inline-flex items-center gap-2 bg-primary-900/40 text-primary-400 border border-primary-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
               {t('footer.costLabel')}{' '}
               <span className="text-yellow-300">₱0</span>
             </div>

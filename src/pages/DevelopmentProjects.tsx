@@ -18,11 +18,12 @@ import type {
   ProjectStatus,
   ProjectCategory,
 } from '../data/developmentProjects';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const STATUS_STYLES: Record<ProjectStatus, string> = {
   announced: 'bg-amber-50 text-amber-700 border-amber-200',
   'under-construction': 'bg-orange-50 text-orange-700 border-orange-200',
-  ongoing: 'bg-blue-50 text-blue-700 border-blue-200',
+  ongoing: 'bg-primary-50 text-primary-700 border-primary-200',
   operational: 'bg-green-50 text-green-700 border-green-200',
 };
 
@@ -54,8 +55,7 @@ export default function DevelopmentProjects() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -67,14 +67,14 @@ export default function DevelopmentProjects() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <TrendingUp className="h-3.5 w-3.5" />
             Municipality of Tanza, Cavite
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Development Projects
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             Major investments and infrastructure projects shaping the future of
             Tanza — from expressway access and coastal roads to commercial
             growth and public school improvements.
@@ -244,16 +244,16 @@ export default function DevelopmentProjects() {
           </div>
 
           {/* Disclaimer footer */}
-          <div className="mt-12 bg-blue-50 border border-blue-200 rounded-2xl p-6">
+          <div className="mt-12 bg-primary-50 border border-primary-200 rounded-2xl p-6">
             <div className="flex items-start gap-3">
-              <div className="shrink-0 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
+              <div className="shrink-0 w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center">
                 <TrendingUp className="h-4 w-4 text-white" />
               </div>
               <div>
-                <p className="font-black text-blue-900 text-sm mb-1">
+                <p className="font-black text-primary-900 text-sm mb-1">
                   Note on Project Information
                 </p>
-                <p className="text-xs text-blue-700 leading-relaxed">
+                <p className="text-xs text-primary-700 leading-relaxed">
                   Project statuses, timelines, and details are compiled from
                   developer announcements, DPWH public records, and published
                   reports. This page is for informational purposes only. For

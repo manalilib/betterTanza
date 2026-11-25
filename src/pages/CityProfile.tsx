@@ -34,6 +34,7 @@ import {
   CloudSun,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -54,10 +55,10 @@ const POPULATION_DATA = [
 ];
 
 const ECONOMY_DATA = [
-  { name: 'Industry & Manufacturing', value: 38, color: '#0052e0' },
-  { name: 'Commerce & Services', value: 32, color: '#3b82f6' },
-  { name: 'Real Estate', value: 18, color: '#93c5fd' },
-  { name: 'Agriculture', value: 12, color: '#dbeafe' },
+  { name: 'Industry & Manufacturing', value: 38, color: '#004c97' },
+  { name: 'Commerce & Services', value: 32, color: '#00b140' },
+  { name: 'Real Estate', value: 18, color: '#80d8a0' },
+  { name: 'Agriculture', value: 12, color: '#adc6de' },
 ];
 
 // Source: Wikipedia — Tanza, Cavite (awards section, citing DILG / NCC)
@@ -122,24 +123,24 @@ const KEY_FACTS = [
     value: '339,308',
     label: 'Population',
     sub: '2024 PSA Census',
-    accent: 'from-blue-500 to-blue-400',
-    iconBg: 'bg-blue-50 text-blue-600',
+    accent: 'from-primary-500 to-primary-400',
+    iconBg: 'bg-primary-50 text-primary-600',
   },
   {
     icon: TrendingUp,
     value: '312,116',
     label: '2020 Census',
     sub: '+2.03% annual growth to 2024',
-    accent: 'from-indigo-500 to-blue-400',
-    iconBg: 'bg-indigo-50 text-indigo-700',
+    accent: 'from-primary-500 to-primary-400',
+    iconBg: 'bg-primary-50 text-primary-700',
   },
   {
     icon: MapPin,
     value: '41',
     label: 'Barangays',
     sub: 'Administrative divisions',
-    accent: 'from-violet-500 to-purple-400',
-    iconBg: 'bg-violet-50 text-violet-600',
+    accent: 'from-brand-500 to-brand-400',
+    iconBg: 'bg-brand-50 text-brand-600',
   },
   {
     icon: Map,
@@ -154,7 +155,7 @@ const KEY_FACTS = [
     value: 'Municipality',
     label: 'Classification',
     sub: 'Province of Cavite',
-    accent: 'from-sky-500 to-blue-400',
+    accent: 'from-sky-500 to-primary-400',
     iconBg: 'bg-sky-50 text-sky-600',
   },
   {
@@ -251,8 +252,7 @@ export default function CityProfile() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -267,14 +267,14 @@ export default function CityProfile() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left — title */}
             <div>
-              <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+              <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
                 <BarChart2 className="h-3.5 w-3.5" />
                 Reports &amp; Statistics
               </div>
               <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4">
                 Municipal Profile &amp; Statistics
               </h1>
-              <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+              <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
                 Demographic data, economic indicators, barangay directory, and
                 recognition for the Municipality of Tanza — one of Cavite's
                 fastest-growing localities.
@@ -291,7 +291,7 @@ export default function CityProfile() {
                     className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
                   >
                     <span className="text-sm font-black text-white">{val}</span>
-                    <span className="text-xs text-blue-300 font-medium">
+                    <span className="text-xs text-primary-300 font-medium">
                       {lbl}
                     </span>
                   </div>
@@ -307,7 +307,7 @@ export default function CityProfile() {
                   <p className="text-white font-black text-sm leading-none">
                     Current Weather
                   </p>
-                  <p className="text-blue-300 text-[10px] mt-0.5">
+                  <p className="text-primary-300 text-[10px] mt-0.5">
                     Tanza, Cavite · Live
                   </p>
                 </div>
@@ -322,7 +322,7 @@ export default function CityProfile() {
                       <span className="text-5xl font-black text-white leading-none">
                         {weather.temp}°C
                       </span>
-                      <p className="text-blue-200 text-sm mt-1">
+                      <p className="text-primary-200 text-sm mt-1">
                         {weatherLabel(weather.code)}
                       </p>
                     </div>
@@ -333,25 +333,25 @@ export default function CityProfile() {
                       <span className="text-white font-black text-sm">
                         {weather.temp}°C
                       </span>
-                      <span className="text-blue-300 text-[10px]">
+                      <span className="text-primary-300 text-[10px]">
                         Feels like
                       </span>
                     </div>
                     <div className="bg-white/10 rounded-xl p-3 flex flex-col items-center">
-                      <Droplets className="h-4 w-4 text-blue-300 mb-1" />
+                      <Droplets className="h-4 w-4 text-primary-300 mb-1" />
                       <span className="text-white font-black text-sm">
                         {weather.humidity}%
                       </span>
-                      <span className="text-blue-300 text-[10px]">
+                      <span className="text-primary-300 text-[10px]">
                         Humidity
                       </span>
                     </div>
                     <div className="bg-white/10 rounded-xl p-3 flex flex-col items-center">
-                      <Wind className="h-4 w-4 text-blue-200 mb-1" />
+                      <Wind className="h-4 w-4 text-primary-200 mb-1" />
                       <span className="text-white font-black text-sm">
                         {weather.wind}
                       </span>
-                      <span className="text-blue-300 text-[10px]">km/h</span>
+                      <span className="text-primary-300 text-[10px]">km/h</span>
                     </div>
                   </div>
                 </>
@@ -422,12 +422,12 @@ export default function CityProfile() {
 
           {/* Charts row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-blue-100">
-              <div className="bg-gradient-to-r from-blue-700 to-blue-500 px-5 py-4">
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-primary-100">
+              <div className="bg-gradient-to-r from-primary-700 to-primary-500 px-5 py-4">
                 <p className="text-white font-black text-sm">
                   Population Growth
                 </p>
-                <p className="text-blue-200 text-[10px] mt-0.5">
+                <p className="text-primary-200 text-[10px] mt-0.5">
                   PSA census results, 2010–2024
                 </p>
               </div>
@@ -463,7 +463,7 @@ export default function CityProfile() {
                     />
                     <Bar
                       dataKey="population"
-                      fill="#0052e0"
+                      fill="#004c97"
                       radius={[6, 6, 0, 0]}
                     />
                   </BarChart>
@@ -471,12 +471,12 @@ export default function CityProfile() {
               </div>
             </div>
 
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-indigo-100">
-              <div className="bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-4">
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-primary-100">
+              <div className="bg-gradient-to-r from-primary-600 to-brand-600 px-5 py-4">
                 <p className="text-white font-black text-sm">
                   Economic Sectors
                 </p>
-                <p className="text-indigo-200 text-[10px] mt-0.5">
+                <p className="text-primary-200 text-[10px] mt-0.5">
                   Approximate distribution based on CLUP data
                 </p>
               </div>
@@ -563,10 +563,10 @@ export default function CityProfile() {
                   <Line
                     type="monotone"
                     dataKey="population"
-                    stroke="#0052e0"
+                    stroke="#004c97"
                     strokeWidth={3}
                     dot={{
-                      fill: '#0052e0',
+                      fill: '#004c97',
                       r: 5,
                       strokeWidth: 2,
                       stroke: '#fff',
@@ -580,11 +580,11 @@ export default function CityProfile() {
 
           {/* Barangays + Awards row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-violet-100">
-              <div className="bg-gradient-to-r from-violet-600 to-purple-500 px-5 py-4 flex items-center justify-between">
+            <div className="rounded-2xl overflow-hidden shadow-sm border border-brand-100">
+              <div className="bg-gradient-to-r from-brand-600 to-brand-500 px-5 py-4 flex items-center justify-between">
                 <div>
                   <p className="text-white font-black text-sm">41 Barangays</p>
-                  <p className="text-violet-200 text-[10px] mt-0.5">
+                  <p className="text-brand-200 text-[10px] mt-0.5">
                     Administrative divisions of the Municipality of Tanza
                   </p>
                 </div>
@@ -597,7 +597,7 @@ export default function CityProfile() {
                       key={b}
                       className="flex items-center gap-2 py-1 border-b border-gray-50"
                     >
-                      <span className="text-[10px] font-black text-violet-400 w-5 shrink-0">
+                      <span className="text-[10px] font-black text-brand-400 w-5 shrink-0">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <span className="text-xs text-gray-700">{b}</span>
@@ -643,7 +643,7 @@ export default function CityProfile() {
               <MapPin className="h-5 w-5 text-white" />
               <div>
                 <p className="text-white font-black text-sm">Municipal Map</p>
-                <p className="text-blue-200 text-[10px] mt-0.5">
+                <p className="text-primary-200 text-[10px] mt-0.5">
                   Municipality of Tanza · 78.33 km² land area · Cavite Province
                 </p>
               </div>

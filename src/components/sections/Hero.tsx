@@ -26,6 +26,7 @@ import type {
   ProjectStatus,
 } from '../../data/developmentProjects';
 import { serviceCategories, loadCategoryIndex } from '../../data/yamlLoader';
+import { HERO_GRADIENT } from '../../lib/brand';
 
 interface ServicePage {
   name: string;
@@ -40,10 +41,10 @@ const POPULAR_CATEGORIES = [
     label: 'Business',
     slug: 'business',
     icon: Briefcase,
-    iconBg: 'bg-indigo-50',
-    iconText: 'text-indigo-600',
-    hoverBorder: 'hover:border-indigo-300',
-    hoverBg: 'hover:bg-indigo-50',
+    iconBg: 'bg-primary-50',
+    iconText: 'text-primary-600',
+    hoverBorder: 'hover:border-primary-300',
+    hoverBg: 'hover:bg-primary-50',
   },
   {
     labelKey: 'services.categories.health-services.name',
@@ -60,10 +61,10 @@ const POPULAR_CATEGORIES = [
     label: 'Education',
     slug: 'education',
     icon: GraduationCap,
-    iconBg: 'bg-blue-50',
-    iconText: 'text-blue-600',
-    hoverBorder: 'hover:border-blue-300',
-    hoverBg: 'hover:bg-blue-50',
+    iconBg: 'bg-primary-50',
+    iconText: 'text-primary-600',
+    hoverBorder: 'hover:border-primary-300',
+    hoverBg: 'hover:bg-primary-50',
   },
   {
     labelKey: 'services.categories.garbage-waste-disposal.name',
@@ -122,8 +123,8 @@ const CATEGORY_ICON: Record<ProjectCategory, LucideIcon> = {
 const STATUS_PILL: Record<ProjectStatus, string> = {
   'under-construction': 'bg-orange-500/20 border-orange-400/30',
   ongoing: 'bg-emerald-500/20 border-emerald-400/30',
-  announced: 'bg-indigo-500/20 border-indigo-400/30',
-  operational: 'bg-blue-500/20 border-blue-400/30',
+  announced: 'bg-primary-500/20 border-primary-400/30',
+  operational: 'bg-primary-500/20 border-primary-400/30',
 };
 
 export default function Hero() {
@@ -231,8 +232,7 @@ export default function Hero() {
     <div
       className="relative text-white overflow-x-hidden -mt-[116px] min-h-screen flex flex-col"
       style={{
-        background:
-          'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+        background: HERO_GRADIENT,
       }}
     >
       {/* Collage background */}
@@ -247,7 +247,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(90deg, rgba(0,16,68,0.75) 0%, rgba(0,16,68,0.35) 45%, rgba(0,16,68,0) 75%)',
+            'linear-gradient(90deg, rgba(0,24,48,0.75) 0%, rgba(0,24,48,0.35) 45%, rgba(0,24,48,0) 75%)',
         }}
       />
       {/* Decorative radial blobs */}
@@ -255,7 +255,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(ellipse at 10% 60%, rgba(0,82,224,0.18) 0%, transparent 55%), radial-gradient(ellipse at 85% 15%, rgba(31,162,74,0.25) 0%, transparent 50%), radial-gradient(ellipse at 60% 90%, rgba(0,16,68,0.3) 0%, transparent 45%)',
+            'radial-gradient(ellipse at 10% 60%, rgba(0,76,151,0.25) 0%, transparent 55%), radial-gradient(ellipse at 85% 15%, rgba(0,177,64,0.25) 0%, transparent 50%), radial-gradient(ellipse at 60% 90%, rgba(0,24,48,0.3) 0%, transparent 45%)',
         }}
       />
       {/* Subtle grid lines */}
@@ -282,8 +282,8 @@ export default function Hero() {
                   transition: 'opacity 0.5s ease 0ms, transform 0.5s ease 0ms',
                 }}
               >
-                <MapPin className="h-3.5 w-3.5 text-blue-300" />
-                <span className="text-xs font-bold text-blue-200 uppercase tracking-widest">
+                <MapPin className="h-3.5 w-3.5 text-primary-300" />
+                <span className="text-xs font-bold text-primary-200 uppercase tracking-widest">
                   Tanza, Cavite
                 </span>
               </div>
@@ -302,7 +302,7 @@ export default function Hero() {
                   className="block"
                   style={{
                     backgroundImage:
-                      'linear-gradient(90deg, #a5d8ff 0%, #86efac 100%)',
+                      'linear-gradient(90deg, #cfe3ff 0%, #7ff0a4 100%)',
                     WebkitBackgroundClip: 'text',
                     backgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -314,7 +314,7 @@ export default function Hero() {
               </h1>
 
               <p
-                className="text-blue-200 text-base md:text-lg leading-relaxed mb-8 max-w-md"
+                className="text-primary-200 text-base md:text-lg leading-relaxed mb-8 max-w-md"
                 style={{
                   opacity: mounted ? 1 : 0,
                   transform: mounted ? 'translateY(0)' : 'translateY(16px)',
@@ -336,7 +336,7 @@ export default function Hero() {
               >
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-800 font-bold text-sm rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:bg-blue-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg shadow-black/20"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-800 font-bold text-sm rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white hover:bg-primary-50 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg shadow-black/20"
                 >
                   <ArrowRight className="h-4 w-4" />
                   {t('hero.browseServices', 'Browse Services')}
@@ -368,7 +368,7 @@ export default function Hero() {
                     key={chip.label}
                     className={`flex flex-col px-4 py-3 ${i > 1 ? 'max-sm:border-t max-sm:border-white/15' : ''}`}
                   >
-                    <dt className="order-2 text-[11px] text-blue-100/80 font-medium mt-0.5">
+                    <dt className="order-2 text-[11px] text-primary-100/80 font-medium mt-0.5">
                       {chip.label}
                     </dt>
                     <dd className="order-1 text-base font-black text-white leading-tight">
@@ -395,7 +395,7 @@ export default function Hero() {
                   className="px-6 py-4 flex items-center gap-3"
                   style={{
                     background:
-                      'linear-gradient(135deg, #003087 0%, #0a6e5a 60%, #1fa24a 100%)',
+                      'linear-gradient(135deg, #004c97 0%, #00782c 70%, #00b140 100%)',
                   }}
                 >
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/25">
@@ -527,15 +527,15 @@ export default function Hero() {
           <div className="border-t border-white/10 pt-8">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <TrendingUp className="h-4 w-4 text-blue-300" />
-                <span className="text-xs font-bold text-blue-300 uppercase tracking-widest">
+                <TrendingUp className="h-4 w-4 text-primary-300" />
+                <span className="text-xs font-bold text-primary-300 uppercase tracking-widest">
                   Coming to Tanza
                 </span>
               </div>
               {/* View all — desktop only */}
               <Link
                 to="/development-projects"
-                className="hidden lg:flex items-center gap-1 text-xs font-semibold text-blue-300 hover:text-white transition-colors"
+                className="hidden lg:flex items-center gap-1 text-xs font-semibold text-primary-300 hover:text-white transition-colors"
               >
                 View all <ArrowRight className="h-3 w-3" />
               </Link>
@@ -564,7 +564,7 @@ export default function Hero() {
                         <p className="text-xs font-bold text-white mt-2 truncate">
                           {p.name}
                         </p>
-                        <span className="flex items-center gap-1 text-[10px] text-blue-300 font-medium mt-0.5">
+                        <span className="flex items-center gap-1 text-[10px] text-primary-300 font-medium mt-0.5">
                           <Zap className="h-2.5 w-2.5 shrink-0" />
                           {p.status}
                         </span>
@@ -574,7 +574,7 @@ export default function Hero() {
                   {/* Mobile: View all button below */}
                   <Link
                     to="/development-projects"
-                    className="mt-3 flex lg:hidden items-center justify-center gap-2 w-full border border-white/20 rounded-xl py-2.5 text-xs font-bold text-blue-300 hover:bg-white/10 transition-colors"
+                    className="mt-3 flex lg:hidden items-center justify-center gap-2 w-full border border-white/20 rounded-xl py-2.5 text-xs font-bold text-primary-300 hover:bg-white/10 transition-colors"
                   >
                     View all projects <ArrowRight className="h-3 w-3" />
                   </Link>
@@ -601,7 +601,7 @@ export default function Hero() {
                         <p className="text-xs font-bold text-white mt-2 leading-snug line-clamp-2 min-h-[2.25rem]">
                           {p.name}
                         </p>
-                        <span className="flex items-center gap-1 text-[10px] text-blue-300 font-medium mt-0.5">
+                        <span className="flex items-center gap-1 text-[10px] text-primary-300 font-medium mt-0.5">
                           <Zap className="h-2.5 w-2.5" />
                           {p.status}
                         </span>

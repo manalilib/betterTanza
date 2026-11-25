@@ -11,6 +11,7 @@ import {
   Shield,
   Star,
 } from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -28,10 +29,10 @@ const EXECUTIVES = [
     badge: '2025–2028 Term',
     initials: 'AM',
     photo: '/images/officials/mayor-matro.jpg',
-    accentFrom: 'from-blue-900',
-    accentTo: 'to-blue-700',
-    ring: 'ring-blue-200',
-    badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
+    accentFrom: 'from-primary-900',
+    accentTo: 'to-primary-700',
+    ring: 'ring-primary-200',
+    badgeColor: 'bg-primary-50 text-primary-700 border-primary-200',
     icon: Crown,
     iconColor: 'text-amber-400',
     description:
@@ -43,12 +44,12 @@ const EXECUTIVES = [
     badge: '2025–2028 Term',
     initials: 'RD',
     photo: '/images/officials/vm-del-rosario.jpg',
-    accentFrom: 'from-blue-700',
-    accentTo: 'to-indigo-600',
-    ring: 'ring-indigo-200',
-    badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-200',
+    accentFrom: 'from-primary-700',
+    accentTo: 'to-primary-600',
+    ring: 'ring-primary-200',
+    badgeColor: 'bg-primary-50 text-primary-700 border-primary-200',
     icon: Star,
-    iconColor: 'text-blue-300',
+    iconColor: 'text-primary-300',
     description:
       'Presides over the Sangguniang Bayan and assists the Mayor in municipal governance.',
   },
@@ -115,8 +116,7 @@ export default function Officials() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -128,14 +128,14 @@ export default function Officials() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <Users className="h-3.5 w-3.5" />
             Government · Departments
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Local Officials Directory
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             Elected officials and department contacts of the Municipality of
             Tanza — 2025–2028 term.
           </p>
@@ -151,7 +151,9 @@ export default function Officials() {
                 className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
               >
                 <span className="text-sm font-black text-white">{val}</span>
-                <span className="text-xs text-blue-300 font-medium">{lbl}</span>
+                <span className="text-xs text-primary-300 font-medium">
+                  {lbl}
+                </span>
               </div>
             ))}
           </div>
@@ -245,7 +247,7 @@ export default function Officials() {
           {/* Municipal Council */}
           <div className="mb-12">
             <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
-              <Users className="h-5 w-5 text-blue-500" /> Sangguniang Bayan
+              <Users className="h-5 w-5 text-primary-500" /> Sangguniang Bayan
               (Municipal Council)
             </h2>
             <div className="h-1 w-10 bg-primary-600 rounded-full mb-2" />
@@ -260,7 +262,7 @@ export default function Officials() {
                       key={name}
                       className="bg-white rounded-xl border border-gray-100 shadow-sm px-4 py-3 flex items-center gap-3"
                     >
-                      <span className="text-[10px] font-black text-blue-400 w-6 shrink-0">
+                      <span className="text-[10px] font-black text-primary-400 w-6 shrink-0">
                         {String(i + 1).padStart(2, '0')}
                       </span>
                       <span className="text-sm font-semibold text-gray-800">
@@ -312,7 +314,7 @@ export default function Officials() {
           {/* Ex-Officio */}
           <div className="mb-12">
             <h2 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-2">
-              <Shield className="h-5 w-5 text-violet-500" /> Ex-Officio Members
+              <Shield className="h-5 w-5 text-brand-500" /> Ex-Officio Members
             </h2>
             <div className="h-1 w-10 bg-primary-600 rounded-full mb-5" />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
@@ -324,7 +326,7 @@ export default function Officials() {
                   <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wide mb-0.5">
                     {m.full}
                   </div>
-                  <div className="text-xs font-bold text-violet-600 mb-1.5">
+                  <div className="text-xs font-bold text-brand-600 mb-1.5">
                     {m.position}
                   </div>
                   <div className="text-sm font-semibold text-gray-800">

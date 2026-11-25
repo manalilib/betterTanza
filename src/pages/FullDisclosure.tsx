@@ -11,6 +11,7 @@ import {
   MoreHorizontal,
   BookOpen,
 } from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -28,7 +29,7 @@ const BREADCRUMBS = [
 const SECTIONS = [
   {
     icon: DollarSign,
-    accent: 'from-blue-700 to-blue-500',
+    accent: 'from-primary-700 to-primary-500',
     emoji: '💰',
     title: 'Budget Documents',
     docs: [
@@ -56,7 +57,7 @@ const SECTIONS = [
   },
   {
     icon: BarChart2,
-    accent: 'from-indigo-600 to-violet-700',
+    accent: 'from-primary-600 to-brand-700',
     emoji: '📊',
     title: 'Financial Statements',
     docs: [
@@ -84,7 +85,7 @@ const SECTIONS = [
   },
   {
     icon: ShoppingCart,
-    accent: 'from-violet-600 to-purple-700',
+    accent: 'from-brand-600 to-brand-700',
     emoji: '🛒',
     title: 'Procurement Documents',
     docs: [
@@ -175,8 +176,7 @@ export default function FullDisclosure() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -188,14 +188,14 @@ export default function FullDisclosure() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <BookOpen className="h-3.5 w-3.5" />
             Transparency · Full Disclosure
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Full Disclosure Policy Documents
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             DILG-mandated fiscal and financial documents required under MC
             2013-140 and subsequent issuances.
           </p>
@@ -211,7 +211,9 @@ export default function FullDisclosure() {
                 className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
               >
                 <span className="text-sm font-black text-white">{val}</span>
-                <span className="text-xs text-blue-300 font-medium">{lbl}</span>
+                <span className="text-xs text-primary-300 font-medium">
+                  {lbl}
+                </span>
               </div>
             ))}
           </div>
@@ -235,15 +237,15 @@ export default function FullDisclosure() {
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
           {/* Transparency Seal badge */}
-          <div className="mb-8 flex items-center gap-3 bg-blue-50 border border-blue-200 rounded-xl px-5 py-3 w-fit">
-            <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shrink-0">
+          <div className="mb-8 flex items-center gap-3 bg-primary-50 border border-primary-200 rounded-xl px-5 py-3 w-fit">
+            <div className="w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center shrink-0">
               <FileText className="h-4 w-4 text-white" />
             </div>
             <div>
-              <div className="text-sm font-black text-blue-800">
+              <div className="text-sm font-black text-primary-800">
                 Transparency Seal Holder
               </div>
-              <div className="text-xs text-blue-600">
+              <div className="text-xs text-primary-600">
                 Municipality of Tanza complies with DILG Full Disclosure Policy
                 requirements
               </div>

@@ -22,18 +22,18 @@ const CATEGORY_COLORS: {
   desc: string;
 }[] = [
   {
-    card: 'bg-indigo-50 border-indigo-200 hover:bg-indigo-100',
-    icon: 'text-indigo-600',
-    iconBg: 'bg-indigo-100',
-    title: 'text-indigo-800',
-    desc: 'text-indigo-700/80',
+    card: 'bg-primary-50 border-primary-200 hover:bg-primary-100',
+    icon: 'text-primary-600',
+    iconBg: 'bg-primary-100',
+    title: 'text-primary-800',
+    desc: 'text-primary-700/80',
   },
   {
-    card: 'bg-blue-50 border-blue-200 hover:bg-blue-100',
-    icon: 'text-blue-600',
-    iconBg: 'bg-blue-100',
-    title: 'text-blue-800',
-    desc: 'text-blue-700/80',
+    card: 'bg-primary-50 border-primary-200 hover:bg-primary-100',
+    icon: 'text-primary-600',
+    iconBg: 'bg-primary-100',
+    title: 'text-primary-800',
+    desc: 'text-primary-700/80',
   },
   {
     card: 'bg-amber-50 border-amber-200 hover:bg-amber-100',
@@ -50,11 +50,11 @@ const CATEGORY_COLORS: {
     desc: 'text-green-700/80',
   },
   {
-    card: 'bg-purple-50 border-purple-200 hover:bg-purple-100',
-    icon: 'text-purple-600',
-    iconBg: 'bg-purple-100',
-    title: 'text-purple-800',
-    desc: 'text-purple-700/80',
+    card: 'bg-brand-50 border-brand-200 hover:bg-brand-100',
+    icon: 'text-brand-600',
+    iconBg: 'bg-brand-100',
+    title: 'text-brand-800',
+    desc: 'text-brand-700/80',
   },
   {
     card: 'bg-rose-50 border-rose-200 hover:bg-rose-100',

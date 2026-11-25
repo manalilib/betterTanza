@@ -9,6 +9,7 @@ import {
   Calendar,
   Banknote,
 } from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 const BREADCRUMBS = [
   { label: 'Home', href: '/' },
@@ -27,19 +28,19 @@ const SOURCES = [
   {
     name: 'Internal Revenue Allotment (IRA)',
     desc: 'Share of national taxes — primary funding source for most LGUs',
-    accent: 'from-blue-700 to-blue-500',
+    accent: 'from-primary-700 to-primary-500',
     emoji: '🏛️',
   },
   {
     name: 'Local Taxes',
     desc: 'Business taxes, real property tax, fees and charges',
-    accent: 'from-indigo-600 to-violet-700',
+    accent: 'from-primary-600 to-brand-700',
     emoji: '🏢',
   },
   {
     name: 'Non-Tax Revenue',
     desc: 'Permits, licenses, market fees, utility income',
-    accent: 'from-violet-600 to-purple-700',
+    accent: 'from-brand-600 to-brand-700',
     emoji: '📋',
   },
   {
@@ -110,8 +111,7 @@ export default function AnnualBudget() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -123,14 +123,14 @@ export default function AnnualBudget() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <Banknote className="h-3.5 w-3.5" />
             Transparency · Budget
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Annual Budget
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             The municipality's annual spending plan enacted by the Sangguniang
             Bayan and signed by the Mayor.
           </p>
@@ -146,7 +146,9 @@ export default function AnnualBudget() {
                 className="flex items-center gap-2 bg-white/8 border border-white/15 rounded-lg px-3 py-2"
               >
                 <span className="text-sm font-black text-white">{val}</span>
-                <span className="text-xs text-blue-300 font-medium">{lbl}</span>
+                <span className="text-xs text-primary-300 font-medium">
+                  {lbl}
+                </span>
               </div>
             ))}
           </div>
@@ -172,7 +174,7 @@ export default function AnnualBudget() {
           {/* Budget Sources */}
           <div className="mb-10">
             <div className="flex items-center gap-2 mb-1">
-              <DollarSign className="h-5 w-5 text-blue-600" />
+              <DollarSign className="h-5 w-5 text-primary-600" />
               <h2 className="text-lg font-black text-gray-900">
                 Budget Sources
               </h2>

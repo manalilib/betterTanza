@@ -9,6 +9,7 @@ import {
   Trees,
   Trophy,
 } from 'lucide-react';
+import { HERO_GRADIENT } from '../lib/brand';
 
 interface Spot {
   id: number;
@@ -34,7 +35,7 @@ const SPOTS: Spot[] = [
     location: 'Poblacion, Tanza, Cavite',
     image: '/images/places/tanza-church.jpg',
     category: 'religious',
-    accent: 'from-blue-700 to-indigo-700',
+    accent: 'from-primary-700 to-primary-700',
     emoji: '⛪',
   },
   {
@@ -78,7 +79,7 @@ const SPOTS: Spot[] = [
     location: 'Antero Soriano Highway, Daang Amaya 2, Tanza, Cavite',
     image: '/images/places/sm-city-tanza.jpg',
     category: 'recreation',
-    accent: 'from-indigo-600 to-violet-700',
+    accent: 'from-primary-600 to-brand-700',
     emoji: '🏬',
   },
 ];
@@ -113,8 +114,7 @@ export default function TouristSpots() {
       <div
         className="relative text-white overflow-hidden"
         style={{
-          background:
-            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
+          background: HERO_GRADIENT,
         }}
       >
         <div
@@ -125,14 +125,14 @@ export default function TouristSpots() {
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
-          <div className="flex items-center gap-2 mb-4 text-blue-300 text-xs font-bold uppercase tracking-widest">
+          <div className="flex items-center gap-2 mb-4 text-primary-300 text-xs font-bold uppercase tracking-widest">
             <MapPin className="h-3.5 w-3.5" />
             Municipality of Tanza, Cavite
           </div>
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-4 max-w-xl">
             Must-See Places
           </h1>
-          <p className="text-blue-100 text-base max-w-lg leading-relaxed mb-8">
+          <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
             Discover destinations in Tanza — a historic parish church and plaza,
             the site where Aguinaldo took his oath of office, the public market,
             and SM City Tanza.
@@ -180,9 +180,9 @@ export default function TouristSpots() {
           <Breadcrumbs className="mb-10" items={BREADCRUMBS} />
 
           {/* Community notice */}
-          <div className="mb-6 bg-blue-50 border border-blue-200 rounded-xl px-5 py-3 flex items-start gap-3">
-            <MapPin className="h-4 w-4 text-blue-500 mt-0.5 shrink-0" />
-            <p className="text-xs text-blue-700 leading-relaxed">
+          <div className="mb-6 bg-primary-50 border border-primary-200 rounded-xl px-5 py-3 flex items-start gap-3">
+            <MapPin className="h-4 w-4 text-primary-500 mt-0.5 shrink-0" />
+            <p className="text-xs text-primary-700 leading-relaxed">
               <strong>Know a spot we missed?</strong> This list is
               community-maintained. Contact us or open a pull request to add
               tourist destinations in Tanza.
@@ -285,7 +285,7 @@ export default function TouristSpots() {
                             href={spot.facebook}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 border border-blue-100 px-3 py-1.5 rounded-lg transition-colors"
+                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary-700 bg-primary-50 hover:bg-primary-100 border border-primary-100 px-3 py-1.5 rounded-lg transition-colors"
                           >
                             <ExternalLink className="h-3 w-3" />
                             Facebook Page
