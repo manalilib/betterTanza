@@ -247,7 +247,7 @@ export default function Hero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'linear-gradient(90deg, rgba(0,24,48,0.75) 0%, rgba(0,24,48,0.35) 45%, rgba(0,24,48,0) 75%)',
+            'linear-gradient(90deg, rgba(0,24,48,0.8) 0%, rgba(0,24,48,0.45) 50%, rgba(0,24,48,0) 80%), linear-gradient(0deg, rgba(0,24,48,0.55) 0%, rgba(0,24,48,0) 45%)',
         }}
       />
       {/* Decorative radial blobs */}
@@ -282,7 +282,7 @@ export default function Hero() {
                   transition: 'opacity 0.5s ease 0ms, transform 0.5s ease 0ms',
                 }}
               >
-                <MapPin className="h-3.5 w-3.5 text-primary-300" />
+                <MapPin className="h-3.5 w-3.5 text-primary-100" />
                 <span className="text-xs font-bold text-primary-200 uppercase tracking-widest">
                   Tanza, Cavite
                 </span>
@@ -389,7 +389,7 @@ export default function Hero() {
                   'opacity 0.7s ease 200ms, transform 0.7s ease 200ms',
               }}
             >
-              <div className="bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl shadow-black/30 ring-1 ring-white/40 overflow-hidden w-full max-w-full">
+              <div className="bg-white rounded-3xl shadow-2xl shadow-black/30 ring-1 ring-white/40 overflow-hidden w-full max-w-full">
                 {/* Card header */}
                 <div
                   className="px-6 py-4 flex items-center gap-3"
@@ -445,7 +445,7 @@ export default function Hero() {
                             'hero.searchPlaceholder',
                             'Search for a service...'
                           )}
-                          className="w-full border-2 border-gray-100 rounded-xl pl-9 pr-4 py-3 text-sm text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary-400 transition-colors"
+                          className="w-full border-2 border-gray-100 rounded-xl pl-9 pr-4 py-3 text-sm text-gray-800 placeholder-gray-500 focus:outline-none focus:border-primary-400 transition-colors"
                         />
                       </div>
                     </form>
@@ -470,7 +470,7 @@ export default function Hero() {
                             }}
                             className={`w-full text-left px-4 py-2.5 text-sm hover:bg-primary-50 transition-colors flex items-center gap-2 ${idx === activeIndex ? 'bg-primary-50' : ''}`}
                           >
-                            <Search className="h-3.5 w-3.5 text-primary-400 shrink-0" />
+                            <Search className="h-3.5 w-3.5 text-primary-200 shrink-0" />
                             <span className="text-gray-800 flex-1">
                               {highlight(page.name, query)}
                             </span>
@@ -484,7 +484,7 @@ export default function Hero() {
                   </div>
 
                   {/* Popular categories */}
-                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mb-3">
+                  <p className="text-[11px] font-bold text-gray-500 uppercase tracking-widest mb-3">
                     {t('hero.popular', 'Popular Services')}
                   </p>
                   <div className="flex flex-wrap gap-2">
@@ -527,15 +527,15 @@ export default function Hero() {
           <div className="border-t border-white/10 pt-8">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
-                <TrendingUp className="h-4 w-4 text-primary-300" />
-                <span className="text-xs font-bold text-primary-300 uppercase tracking-widest">
+                <TrendingUp className="h-4 w-4 text-primary-100" />
+                <span className="text-xs font-bold text-primary-100 uppercase tracking-widest">
                   Coming to Tanza
                 </span>
               </div>
               {/* View all — desktop only */}
               <Link
                 to="/development-projects"
-                className="hidden lg:flex items-center gap-1 text-xs font-semibold text-primary-300 hover:text-white transition-colors"
+                className="hidden lg:flex items-center gap-1 text-xs font-semibold text-primary-100 hover:text-white transition-colors"
               >
                 View all <ArrowRight className="h-3 w-3" />
               </Link>
@@ -564,7 +564,7 @@ export default function Hero() {
                         <p className="text-xs font-bold text-white mt-2 truncate">
                           {p.name}
                         </p>
-                        <span className="flex items-center gap-1 text-[10px] text-primary-300 font-medium mt-0.5">
+                        <span className="flex items-center gap-1 text-[10px] text-primary-100 font-medium mt-0.5">
                           <Zap className="h-2.5 w-2.5 shrink-0" />
                           {p.status}
                         </span>
@@ -574,7 +574,7 @@ export default function Hero() {
                   {/* Mobile: View all button below */}
                   <Link
                     to="/development-projects"
-                    className="mt-3 flex lg:hidden items-center justify-center gap-2 w-full border border-white/20 rounded-xl py-2.5 text-xs font-bold text-primary-300 hover:bg-white/10 transition-colors"
+                    className="mt-3 flex lg:hidden items-center justify-center gap-2 w-full border border-white/20 rounded-xl py-2.5 text-xs font-bold text-primary-100 hover:bg-white/10 transition-colors"
                   >
                     View all projects <ArrowRight className="h-3 w-3" />
                   </Link>
@@ -601,7 +601,7 @@ export default function Hero() {
                         <p className="text-xs font-bold text-white mt-2 leading-snug line-clamp-2 min-h-[2.25rem]">
                           {p.name}
                         </p>
-                        <span className="flex items-center gap-1 text-[10px] text-primary-300 font-medium mt-0.5">
+                        <span className="flex items-center gap-1 text-[10px] text-primary-100 font-medium mt-0.5">
                           <Zap className="h-2.5 w-2.5" />
                           {p.status}
                         </span>

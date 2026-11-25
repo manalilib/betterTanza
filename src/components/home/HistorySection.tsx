@@ -116,7 +116,7 @@ export default function HistorySection() {
               <div className="text-primary-200 font-bold text-lg mb-2">
                 {t('history.charteredYear')}
               </div>
-              <p className="text-primary-300 text-sm leading-relaxed">
+              <p className="text-primary-100 text-sm leading-relaxed">
                 {t('history.charteredDesc')}
               </p>
             </div>

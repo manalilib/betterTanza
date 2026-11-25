@@ -53,6 +53,7 @@ const Government: React.FC = () => {
           description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
           keywords="government services, public services, local government, civic services"
         />
+        <h1 className="sr-only">Government of the Municipality of Tanza</h1>
         <GovernmentActivitySection
           title={`All local government services`}
           description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}

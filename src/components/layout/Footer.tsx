@@ -1,27 +1,9 @@
-import { Facebook, Github, Heart, Eye } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { WebsiteCarbonBadge } from 'react-websitecarbon-badge';
+import { Facebook, Github, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-function useVisitCounter() {
-  const [count, setCount] = useState<number | null>(null);
-
-  useEffect(() => {
-    fetch('/api/visits')
-      .then(r => r.json())
-      .then(d => {
-        if (d?.count !== undefined && d.count !== null) setCount(d.count);
-      })
-      .catch(() => {});
-  }, []);
-
-  return count;
-}
-
 export default function Footer() {
   const { t } = useTranslation('common');
-  const visitCount = useVisitCounter();
 
   const QUICK_LINKS = [
     { labelKey: 'nav.services', href: '/services' },
@@ -67,7 +49,7 @@ export default function Footer() {
                 className="h-9 w-auto"
               />
               <span className="text-white font-black text-lg">
-                betterTanza<span className="text-primary-400">.org</span>
+                betterTanza<span className="text-primary-200">.org</span>
               </span>
             </div>
             <div className="inline-block bg-white rounded-lg px-3 py-2 mb-4">
@@ -146,7 +128,7 @@ export default function Footer() {
 
           {/* Cost + CTAs */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-primary-900/40 text-primary-400 border border-primary-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
+            <div className="inline-flex items-center gap-2 bg-primary-900/40 text-primary-200 border border-primary-800 rounded-full px-3 py-1.5 text-xs font-bold mb-5">
               {t('footer.costLabel')}{' '}
               <span className="text-yellow-300">₱0</span>
             </div>
@@ -170,9 +152,6 @@ export default function Footer() {
                 {t('footer.contribute')}
               </a>
             </div>
-            <div className="mt-4">
-              <WebsiteCarbonBadge dark url="https://www.bettertanza.org" />
-            </div>
           </div>
         </div>
 
@@ -185,17 +164,10 @@ export default function Footer() {
             <span className="mx-2 opacity-40">|</span>
             {t('footer.attribution')}
           </span>
-          <span className="flex items-center gap-1.5 bg-gray-800 border border-gray-700 rounded-full px-3 py-1.5">
-            <Eye className="h-3 w-3 text-primary-400" />
-            <span className="text-gray-300 font-bold">
-              {visitCount !== null ? visitCount.toLocaleString() : '—'}
-            </span>
-            <span className="text-gray-500">visits</span>
-          </span>
-          <span className="text-gray-600 text-[11px]">
+          <span className="text-gray-400 text-[11px]">
             {t('footer.builtBy')}
           </span>
-          <span className="flex items-center gap-2 text-[11px] text-gray-500">
+          <span className="flex items-center gap-2 text-[11px] text-gray-400">
             {t('footer.poweredBy')}
             <img
               src="/images/sidedish-project.webp"

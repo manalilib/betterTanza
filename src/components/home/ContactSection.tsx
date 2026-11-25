@@ -47,7 +47,7 @@ export default function ContactSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-end justify-between mb-10">
           <div>
-            <p className="text-xs font-bold text-primary-400 uppercase tracking-widest mb-1">
+            <p className="text-xs font-bold text-primary-200 uppercase tracking-widest mb-1">
               Get In Touch
             </p>
             <h2 className="text-2xl font-black text-white">
@@ -57,7 +57,7 @@ export default function ContactSection() {
           </div>
           <Link
             to="/government/departments"
-            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-primary-300 hover:text-white transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-primary-100 hover:text-white transition-colors"
           >
             {t('contact.viewAll')}
             <ArrowRight className="h-4 w-4" />
@@ -80,10 +80,10 @@ export default function ContactSection() {
                 }}
               >
                 <div className="w-12 h-12 rounded-2xl bg-white/10 border border-white/15 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <Icon className="h-5 w-5 text-primary-300" />
+                  <Icon className="h-5 w-5 text-primary-100" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-primary-400 uppercase tracking-widest mb-1.5">
+                  <p className="text-[10px] font-bold text-primary-200 uppercase tracking-widest mb-1.5">
                     {t(labelKey)}
                   </p>
                   <p className="font-bold text-white text-sm group-hover:text-primary-100 transition-colors">
@@ -91,7 +91,7 @@ export default function ContactSection() {
                       ? t('contact.addressLine1')
                       : primary}
                   </p>
-                  <p className="text-xs text-primary-300/80 mt-1">
+                  <p className="text-xs text-primary-100/80 mt-1">
                     {t(secondaryKey)}
                   </p>
                 </div>

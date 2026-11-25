@@ -20,15 +20,15 @@ export default function SEO({
   image,
   url,
   type = 'website',
-  siteName = import.meta.env.VITE_GOVERNMENT_NAME || 'Local Government Website',
+  siteName = import.meta.env.VITE_SITE_NAME || 'BetterTanza.org',
 }: SEOProps) {
-  const defaultTitle = `${siteName} - Official Government Website`;
+  const defaultTitle = `${siteName} | Community Portal for the Municipality of Tanza, Cavite`;
   const defaultDescription =
     import.meta.env.VITE_SITE_DESCRIPTION ||
-    `Official website of ${siteName}. Access government services, information, and resources.`;
+    'Community-built portal for the Municipality of Tanza, Cavite. Find local services, officials, transparency documents, and development projects. Not an official government website.';
   const defaultKeywords =
     import.meta.env.VITE_SITE_KEYWORDS ||
-    'government, local government, services, public services, civic services';
+    'Tanza, Cavite, Municipality of Tanza, LGU Tanza, local government, government services, CALABARZON';
 
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const fullDescription = description || defaultDescription;

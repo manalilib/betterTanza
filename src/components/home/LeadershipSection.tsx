@@ -89,7 +89,7 @@ export default function LeadershipSection() {
                   </span>
                 </div>
                 <div>
-                  <span className="inline-block text-[10px] font-bold text-primary-300 bg-white/15 px-2.5 py-1 rounded-full mb-1.5 uppercase tracking-wide">
+                  <span className="inline-block text-[10px] font-bold text-primary-100 bg-white/15 px-2.5 py-1 rounded-full mb-1.5 uppercase tracking-wide">
                     {t(official.badgeKey)}
                   </span>
                   <h3 className="font-black text-white text-base leading-snug">
