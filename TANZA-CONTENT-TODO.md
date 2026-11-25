@@ -34,21 +34,20 @@ These slugs appear in the category `index.yaml` files but have no `.md`, so the 
 
 Decision for you: write them, or remove the 20 entries from the `index.yaml` files until they are ready.
 
-## 3. Existing app data that conflicts with the official site
+## 3. Contact numbers
 
-`tanza.gov.ph` lists these numbers on its home page. The app shows different ones:
+Fact-check of 25 Nov 2026 against `tanza.gov.ph`:
 
-| Service                   | Official site | In the app (`Navbar.tsx`) |
-| ------------------------- | ------------- | ------------------------- |
-| MDRRMO                    | 0977-345-5035 | 0977-345-5035 (matches)   |
-| Police                    | 0905-330-0656 | (046) 437-6568            |
-| Bureau of Fire Protection | 0945-175-8625 | (046) 505-6084            |
-| Municipal Health Office   | 0945-175-8625 | (046) 484-1485            |
+| Service                   | tanza.gov.ph  | App (`Navbar.tsx`) |
+| ------------------------- | ------------- | ------------------ |
+| MDRRMO                    | 0977-345-5035 | 0977-345-5035      |
+| Police                    | 0905-330-0656 | 0905-330-0656      |
+| Bureau of Fire Protection | 0945-175-8625 | 0945-175-8625      |
+| Municipal Health Office   | 0945-175-8625 | 0945-175-8625      |
 
-- The official site gives the **same number** for BFP and the Municipal Health Office, which looks like an error on their side. Confirm before using either.
-- `(046) 432-0000` appears 22 times in 12 source files as the Municipal Hall number (Officials, Contact, InfoBar, SALN, FOI, and others). I could not confirm it anywhere. The official site publishes only Facebook as a contact channel.
-- `info@tanza.gov.ph` (Contact section) is also unconfirmed.
-- DSWD (046) 437-8601 and Coast Guard 0916-793-2511 are unconfirmed.
+- The navbar hotlines were corrected to match the official site. DSWD and Coast Guard were removed because no Tanza source lists them.
+- The official site gives the **same number** for BFP and the Municipal Health Office. That looks like an error on their side; confirm before relying on either.
+- `(046) 432-0000` is still used as the Municipal Hall number in 12 source files and `info@tanza.gov.ph` in the Contact section. Neither appears on `tanza.gov.ph`. A business directory (Infobel) lists `(046) 437-1076` for the Municipality of Tanza, but that is a third-party listing and unconfirmed. Confirm with the Municipal Hall.
 
 ## 4. Verified for Tanza (safe to reuse)
 
@@ -60,7 +59,15 @@ Decision for you: write them, or remove the 20 entries from the `index.yaml` fil
 - Bids and Awards notices are posted live at `tanza.gov.ph/bidsandawards`.
 - Social media: Facebook `ph.MunicipalityofTanza` (about 92K followers), YouTube `@MunicipalGovernmentofTanza`, TikTok `@matro.bros`.
 
-## 5. Not verified (left unchanged)
+## 5. Not verified
 
-- The councilor roster, Del Rosario's photo, and the Economy pie-chart percentages (see earlier notes).
-- The OWWA scholarship amounts: I removed them because I couldn't verify them.
+- The councilor roster in `Officials.tsx` matches the names on Wikipedia, but no official LGU or COMELEC source was found. Del Rosario's photo is still missing.
+- The OWWA scholarship amounts were removed because they could not be verified.
+
+## 6. Corrected on 25 Nov 2026
+
+- Map and weather coordinates: 14.3667, 120.8500 changed to 14.3944, 120.8531 (Wikidata Q63115).
+- History timeline: unsourced entries (1896/1898/1970s/2000s/"2022-present") replaced with dated facts from Wikipedia (1760, 1897, 1903, 1914, 2018, 2022, DILG seals).
+- Economic-sector pie chart removed (no source for the percentages).
+- Development projects reduced to the two that could be sourced (Cavite Gateway Terminal, SM City Tanza). The CALAX interchange, coastal road, Governor's Drive, industrial estate and school-program entries had no source; CALAX has no Tanza interchange in Wikipedia's article.
+- Land area of 78.33 km² was kept: Wikidata, PhilAtlas and the Wikipedia infobox agree. Wikipedia's article text says 95.59 km², so the sources conflict; confirm with the PSA/DILG if it matters.
