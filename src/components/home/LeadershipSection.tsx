@@ -8,7 +8,7 @@ export default function LeadershipSection() {
   const { ref, inView } = useInView<HTMLDivElement>();
 
   // Official photos: drop files into /public/images/officials/ to activate
-  // Sources: https://www.facebook.com/LGUTanzaCavite or https://www.tanza.gov.ph
+  // Sources: https://www.facebook.com/ph.MunicipalityofTanza or https://www.tanza.gov.ph
   const OFFICIALS = [
     {
       initials: 'AM',

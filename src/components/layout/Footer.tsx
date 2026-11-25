@@ -75,7 +75,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mb-6">
               <a
-                href="https://www.facebook.com/LGUTanzaCavite"
+                href="https://www.facebook.com/ph.MunicipalityofTanza"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-500 hover:text-white transition-colors"

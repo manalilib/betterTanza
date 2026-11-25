@@ -29,7 +29,7 @@ The code already references these paths — dropping in the files activates them
 
 **Where to source:**
 
-- https://www.facebook.com/LGUTanzaCavite (photos from official posts)
+- https://www.facebook.com/ph.MunicipalityofTanza (photos from official posts)
 - https://www.tanza.gov.ph
 - Official LGU press kits / DILG profile directory
 

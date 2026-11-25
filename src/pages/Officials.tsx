@@ -20,7 +20,7 @@ const BREADCRUMBS = [
 ];
 
 // Official photos: drop files into /public/images/officials/ to activate
-// Sources: https://www.facebook.com/LGUTanzaCavite or https://www.tanza.gov.ph
+// Sources: https://www.facebook.com/ph.MunicipalityofTanza or https://www.tanza.gov.ph
 const EXECUTIVES = [
   {
     name: 'Hon. Archangelo "SM" B. Matro',
@@ -116,7 +116,7 @@ export default function Officials() {
         className="relative text-white overflow-hidden"
         style={{
           background:
-            'linear-gradient(135deg, #001044 0%, #003087 50%, #0052e0 100%)',
+            'linear-gradient(135deg, #001044 0%, #003087 35%, #0a6e5a 70%, #1fa24a 100%)',
         }}
       >
         <div
@@ -295,7 +295,7 @@ export default function Officials() {
                     The 2022–2025 Sangguniang Bayan members are being verified
                     from official LGU sources. Visit{' '}
                     <a
-                      href="https://www.facebook.com/LGUTanzaCavite"
+                      href="https://www.facebook.com/ph.MunicipalityofTanza"
                       target="_blank"
                       rel="noreferrer"
                       className="underline hover:text-amber-800"

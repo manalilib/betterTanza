@@ -154,12 +154,27 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bettertanza.org/government/legislative</loc>
+    <loc>https://www.bettertanza.org/government/departments/legislative</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.bettertanza.org/government/guides-and-regulations</loc>
+    <loc>https://www.bettertanza.org/government/departments/executive</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bettertanza.org/services/education/apply-for-local-scholarships</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bettertanza.org/services/social-welfare/apply-for-financial-assistance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.bettertanza.org/services/social-welfare/use-the-tanza-public-service-portal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

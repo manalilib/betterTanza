@@ -1,4 +1,7 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+
+const DEFAULT_SITE_URL = 'https://www.bettertanza.org';
 
 interface SEOProps {
   title?: string;
@@ -30,9 +33,13 @@ export default function SEO({
   const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
   const fullDescription = description || defaultDescription;
   const fullKeywords = keywords || defaultKeywords;
-  const fullUrl = url || import.meta.env.VITE_WEBSITE_URL || '';
+  const { pathname } = useLocation();
+  const siteUrl = (
+    import.meta.env.VITE_WEBSITE_URL || DEFAULT_SITE_URL
+  ).replace(/\/$/, '');
+  const fullUrl = url || `${siteUrl}${pathname === '/' ? '' : pathname}`;
   const fullImage =
-    image || import.meta.env.VITE_OG_IMAGE_URL || `${fullUrl}/og-image.jpg`;
+    image || import.meta.env.VITE_OG_IMAGE_URL || `${siteUrl}/og-image.jpg`;
   const twitterHandle = import.meta.env.VITE_TWITTER_HANDLE || '';
 
   return (
