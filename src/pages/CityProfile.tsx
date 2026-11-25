@@ -191,7 +191,7 @@ function weatherEmoji(code: number): string {
   return '⛈️';
 }
 
-// Tanza, Cavite coordinates: 14.3667°N, 120.8500°E
+// Tanza, Cavite coordinates: 14.3944°N, 120.8531°E
 const WEATHER_CACHE_KEY = 'tz_weather_profile';
 const WEATHER_CACHE_TIME_KEY = 'tz_weather_profile_time';
 const THIRTY_MIN = 1_800_000;
@@ -217,7 +217,7 @@ function useWeather() {
     }
 
     fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=14.3667&longitude=120.8500&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
+      'https://api.open-meteo.com/v1/forecast?latitude=14.3944&longitude=120.8531&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
     )
       .then(r => r.json())
       .then(d => {
@@ -651,14 +651,14 @@ export default function CityProfile() {
             <div className="min-h-[320px]">
               <iframe
                 title="Tanza Municipality Map"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=120.8000%2C14.3333%2C120.9000%2C14.4500&layer=mapnik&marker=14.3667%2C120.8500"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=120.8100%2C14.3600%2C120.9000%2C14.4300&layer=mapnik&marker=14.3944%2C120.8531"
                 className="w-full min-h-[320px] border-0"
                 loading="lazy"
               />
             </div>
             <div className="bg-white px-5 py-3 border-t border-gray-100">
               <a
-                href="https://www.openstreetmap.org/?mlat=14.3667&mlon=120.8500#map=13/14.3667/120.8500"
+                href="https://www.openstreetmap.org/?mlat=14.3944&mlon=120.8531#map=13/14.3944/120.8531"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-primary-700 hover:text-primary-800 transition-colors"

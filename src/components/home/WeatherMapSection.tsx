@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { Wind, Droplets, Thermometer, Cloud, MapPin } from 'lucide-react';
 import { useInView } from '../../hooks/useInView';
 
-// Tanza, Cavite coordinates: 14.3667°N, 120.8500°E
-const LAT = '14.3667';
-const LON = '120.8500';
+// Tanza, Cavite coordinates: 14.3944°N, 120.8531°E
+const LAT = '14.3944';
+const LON = '120.8531';
 const CACHE_KEY = 'tz_weather';
 const CACHE_TIME_KEY = 'tz_weather_time';
 const THIRTY_MIN = 1_800_000;
@@ -172,7 +172,7 @@ export default function WeatherMapSection() {
           >
             <iframe
               title="Map of Tanza, Cavite"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=120.8000%2C14.3333%2C120.9000%2C14.4000&layer=mapnik&marker=14.3667%2C120.8500"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=120.8100%2C14.3600%2C120.9000%2C14.4300&layer=mapnik&marker=14.3944%2C120.8531"
               className="w-full h-full min-h-[280px]"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -73,7 +73,7 @@ export default function HomeInfoBar() {
       setInfo(prev => ({ ...prev, temp: cachedTemp }));
     } else {
       fetch(
-        'https://api.open-meteo.com/v1/forecast?latitude=14.3667&longitude=120.8500&current_weather=true'
+        'https://api.open-meteo.com/v1/forecast?latitude=14.3944&longitude=120.8531&current_weather=true'
       )
         .then(r => r.json())
         .then(data => {
