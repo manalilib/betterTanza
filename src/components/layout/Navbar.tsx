@@ -6,13 +6,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import InfoBar from './InfoBar';
 
+// Source: tanza.gov.ph home page (checked 25 Nov 2026).
 const HOTLINES = [
   { label: 'MDRRMO', number: '0977-345-5035', tel: '09773455035' },
-  { label: 'Police (PNP)', number: '(046) 437-6568', tel: '0464376568' },
-  { label: 'Fire (BFP)', number: '(046) 505-6084', tel: '0465056084' },
-  { label: 'Health Center', number: '(046) 484-1485', tel: '0464841485' },
-  { label: 'DSWD', number: '(046) 437-8601', tel: '0464378601' },
-  { label: 'Coast Guard', number: '0916-793-2511', tel: '09167932511' },
+  { label: 'Police (PNP)', number: '0905-330-0656', tel: '09053300656' },
+  { label: 'Fire (BFP)', number: '0945-175-8625', tel: '09451758625' },
+  { label: 'Health Office', number: '0945-175-8625', tel: '09451758625' },
 ];
 
 const Navbar: React.FC = () => {
@@ -78,7 +77,7 @@ const Navbar: React.FC = () => {
         `}</style>
         <div className="hotline-track">
           {[...HOTLINES, ...HOTLINES].map((h, i) => (
-            <React.Fragment key={`${h.tel}-${i}`}>
+            <React.Fragment key={`${h.label}-${i}`}>
               {i === 0 && (
                 <span className="flex items-center gap-1.5 shrink-0">
                   <Phone className="h-2.5 w-2.5 text-red-400" />
@@ -114,7 +113,7 @@ const Navbar: React.FC = () => {
             </span>
           </span>
           {HOTLINES.map((h, i) => (
-            <React.Fragment key={h.tel}>
+            <React.Fragment key={h.label}>
               {i > 0 && <span className="text-white/15">·</span>}
               <a
                 href={`tel:${h.tel}`}
