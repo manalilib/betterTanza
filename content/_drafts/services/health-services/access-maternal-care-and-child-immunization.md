@@ -1,6 +1,6 @@
-# Access Maternal Care & Child Immunization — Lapu-Lapu City
+# Access Maternal Care & Child Immunization — Tanza
 
-The City Health Office (CHO) and barangay health centers provide **prenatal care**, **family planning**, and **free routine child immunization** for residents.
+The Municipal Health Office (MHO) and barangay health centers provide **prenatal care**, **family planning**, and **free routine child immunization** for residents.
 
 ---
 
@@ -29,7 +29,6 @@ Routine childhood vaccines are provided **free** under the Expanded Program on I
 
 ## How to Avail (Quick Steps)
 
-1. **Go to your Barangay Health Center** during clinic hours (or the posted EPI day for vaccines).
 2. **Register/Update your record:** Prenatal record for mothers, **ECCD card** for children (issued if first time).
 3. **Receive service:** Prenatal assessment, counseling (and TT vaccine/supplements per program), or child vaccination per EPI schedule.
 4. **Book your return date** for follow-ups and next vaccine doses as advised by the health staff.
@@ -39,11 +38,10 @@ Routine childhood vaccines are provided **free** under the Expanded Program on I
 ## Notes & Extras
 
 - **Medical consultations** at health centers are **free** (Mon–Fri, 8:00 AM–5:00 PM; center schedules apply). Useful if you need a doctor’s assessment alongside prenatal care.
-- The CHO and health centers also run **mother’s classes** and promote **facility-based delivery**; ask your midwife for schedules.
+- The MHO and health centers also run **mother’s classes** and promote **facility-based delivery**; ask your midwife for schedules.
 
 ---
 
 **References**
 
-- [Lapu-Lapu City Government – Services](https://lapulapucity.gov.ph)
 - [Department of Health – Expanded Program on Immunization](https://doh.gov.ph)

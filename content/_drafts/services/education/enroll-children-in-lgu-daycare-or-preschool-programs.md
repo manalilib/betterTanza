@@ -1,6 +1,6 @@
-# Enroll Children in LGU Daycare or Preschool Programs — Lapu-Lapu City
+# Enroll Children in LGU Daycare or Preschool Programs — Tanza
 
-The Lapu-Lapu City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
+The Municipal Government of Tanza, through the **Municipal Social Welfare and Development Office (MSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
 
 ---
 
@@ -66,8 +66,8 @@ The Lapu-Lapu City Government, through the **City Social Welfare and Development
 ## Contact & Updates
 
 - **Barangay Daycare Centers** — Enrollment schedules and requirements are usually announced by barangay officials.
-- **City Social Welfare and Development Office (CSWDO)** — Oversees daycare programs.
-- **DepEd Lapu-Lapu City Division** — Manages public kindergarten enrollment.
+- **Municipal Social Welfare and Development Office (MSWDO)** — Oversees daycare programs.
+- **DepEd Schools District Office (Tanza)** — Manages public kindergarten enrollment.
 
 ---
 

@@ -1,6 +1,6 @@
-# Participate in Local Trade Fairs, Business Expos, and Tourism Promotion Activities — Lapu-Lapu City
+# Participate in Local Trade Fairs, Business Expos, and Tourism Promotion Activities — Tanza
 
-Showcase your products and services, meet buyers, and boost your brand by joining **city- and region-led trade fairs, business expos, and tourism promotions**.
+Showcase your products and services, meet buyers, and boost your brand by joining **municipality- and region-led trade fairs, business expos, and tourism promotions**.
 
 ---
 
@@ -11,13 +11,13 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 - **Cultural creators** (handicrafts, fashion, food, wellness, creative tech)
 - **LGU-accredited community groups** (livelihood associations, women/youth groups)
 
-**Priority is often given** to registered local businesses, OTOP-branded products, startups with export potential, and tourism enterprises aligned with the city’s events calendar.
+**Priority is often given** to registered local businesses, OTOP-branded products, startups with export potential, and tourism enterprises aligned with the municipality’s events calendar.
 
 ---
 
 ## Event Types You’ll See
 
-- **City/Barangay Trade Fairs** – usually tied to festivals, holidays, and civic celebrations
+- **Municipal/Barangay Trade Fairs** – usually tied to festivals, holidays, and civic celebrations
 - **Business Expos & Startup Showcases** – buyers’ meets, B2B networking, product launches
 - **Tourism Promotion Activities** – travel marts, familiarization (Fam) tours, festivals, MICE activations
 - **Sector-Specific Bazaars** – food & beverage, fashion & crafts, wellness & health, marine/leisure
@@ -60,7 +60,7 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 
 - [ ] Government IDs of owner/representative
 - [ ] DTI/SEC/CDA, BIR 2303, current **Mayor’s/Business Permit**
-- [ ] Barangay/City clearance (if requested)
+- [ ] Barangay/Municipal clearance (if requested)
 - [ ] **Product compliance** (FDA for food/cosmetics; HALAL/organic if claimed)
 - [ ] Tourism accreditation/registration (if a tourism enterprise)
 - [ ] Public liability insurance (recommended for large expos)
@@ -110,33 +110,32 @@ Showcase your products and services, meet buyers, and boost your brand by joinin
 
 ---
 
-## Where to Watch for Calls & Schedules (Lapu-Lapu / Cebu)
+## Where to Watch for Calls & Schedules
 
-- **Lapu-Lapu City**: City Information Office, Business Permits & Licensing Office (BOSS announcements), City Tourism & Cultural Affairs
+- **Tanza**: Municipal Information Office, Business Permits & Licensing Office (BOSS announcements), Municipal Tourism Office
 - **Negosyo Center / MSME Office**: product dev, fairs, OTOP activities
-- **Tourism Bodies**: city/regional tourism offices for travel marts, festivals, Fam tours, MICE events
+- **Tourism Bodies**: municipal/regional tourism offices for travel marts, festivals, Fam tours, MICE events
 - **Chambers & Associations**: local chamber of commerce, hotel/resort associations, exporters’ groups
 - **Schools & Malls**: seasonal bazaars, startup fairs, internship & career expos
 
 ---
 
-# Key Local Contacts — Lapu-Lapu City
+# Key Local Contacts — Tanza
 
 Use these offices when coordinating for **trade fairs, business expos, permits, and tourism promotion activities**.
 
 ---
 
-| Office / Role                                                                 | Address / Location                                    | Contact Number  | Email / Other Contact Info                                                                                                                                   |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Business Permit & Licensing Office (BPLO)**                                 | City Hall Main Building, Lapu-Lapu Government Complex | (032) 340-0004  | —                                                                                                                                                            |
-| **PESO Lapu-Lapu City** (Student Employment, Local Promotions)                | Pajo, Lapu-Lapu City, Cebu 6015                       | (032) 340-8264  | Facebook: [PESO Lapu-Lapu City](https://ph.locale.online/peso-lapu-lapu-city-47947610.html)                                                                  |
-| **City Information Office / Treasurer’s Office**                              | Lapu-Lapu City Hall / Hoops Dome during events        | (032) 340-1615  | Updates: [Official Facebook Page](https://www.facebook.com/photo.php?fbid=122128211810564979&id=61566949391179&set=a.122105111324564979)                     |
-| **Lapu-Lapu City Tourism Office**                                             | City Government / Tourism Department                  | +63 32 495-5593 | Email: llctourism.inquiry@gmail.com • [Instagram Location Page](https://www.instagram.com/explore/locations/2149053888682923/lapu-lapu-city-tourism-office/) |
-| **City-Wide Trade Fair / Renewal Venue** (used for permit renewals and expos) | Hoops Dome, Barangay Gun-ob                           | —               | News: [SunStar — Biz Permit Renewals at Hoops Dome](https://www.sunstar.com.ph/cebu/lapu-launches-new-system-for-biz-permit-renewals)                        |
+| Office / Role                                         | Address / Location   | Contact Number    | Email / Other Contact Info                                                         |
+| ----------------------------------------------------- | -------------------- | ----------------- | ---------------------------------------------------------------------------------- |
+| **Business Permit & Licensing Office (BPLO)**         | Tanza Municipal Hall | [to be confirmed] | —                                                                                  |
+| **PESO Tanza** (Student Employment, Local Promotions) | Tanza, Cavite        | [to be confirmed] | —                                                                                  |
+| **Municipal Information Office / Treasurer’s Office** | Tanza Municipal Hall | [to be confirmed] | Facebook: [Municipality of Tanza](https://www.facebook.com/ph.MunicipalityofTanza) |
+| **Tanza Municipal Tourism Office**                    | Tanza Municipal Hall | [to be confirmed] | —                                                                                  |
 
 ---
 
-✅ Tip: Save these contacts and follow their **Facebook pages** — most trade fair and expo announcements in Lapu-Lapu are posted there first.
+✅ Tip: Save these contacts and follow their **Facebook pages** — most trade fair and expo announcements in Tanza are posted there first.
 
 ---
 
@@ -144,10 +143,10 @@ Use these offices when coordinating for **trade fairs, business expos, permits, 
 
 > **Subject:** Participation Inquiry – [Your Brand] for [Event Name/Date]  
 > Hello [Organizer Name],  
-> We’re a Lapu-Lapu–based [business type] offering [brief product/service]. We’d like to apply for a booth at **[Event Name]** on **[Date]**.  
+> We’re a Tanza–based [business type] offering [brief product/service]. We’d like to apply for a booth at **[Event Name]** on **[Date]**.  
 > **Attachments:** Business registration, product list/prices, photos, compliance (FDA/accreditation).  
 > **Needs:** [table + 1 outlet + 500W], ingress day-before preferred.  
-> Thank you and we look forward to promoting Lapu-Lapu products/tourism at your event.  
+> Thank you and we look forward to promoting Tanza products/tourism at your event.  
 > **Contact:** [Name, Mobile, Email, Links]
 
 ---

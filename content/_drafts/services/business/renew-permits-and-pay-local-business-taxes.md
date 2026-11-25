@@ -1,12 +1,12 @@
-# Renew Permits and Pay Local Business Taxes — Lapu-Lapu City
+# Renew Permits and Pay Local Business Taxes — Tanza
 
-Use this guide to renew your **Mayor’s/Business Permit** and **Local Business Taxes (LBT)** with the City Government.
+Use this guide to renew your **Mayor’s/Business Permit** and **Local Business Taxes (LBT)** with the Municipal Government.
 
 ---
 
 ## Who Must Renew
 
-- All businesses operating in Lapu-Lapu City: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
+- All businesses operating in Tanza: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
 - Renewal applies to **main office and each branch**.
 
 ---
@@ -36,7 +36,7 @@ Use this guide to renew your **Mayor’s/Business Permit** and **Local Business 
 - **Sworn Declaration of Gross Sales/Receipts** for the **preceding year** (or **Audited FS**/**Accountant-certified** FS if applicable).
 - **Inventory list** (selected industries) and **machine/equipment list** (if applicable).
 
-**Regulatory Clearances** (city/BPLO may route you during assessment)
+**Regulatory Clearances** (BPLO may route you during assessment)
 
 - **Barangay Clearance** (for business).
 - **Sanitary Permit** (Health).
@@ -77,7 +77,7 @@ Use this guide to renew your **Mayor’s/Business Permit** and **Local Business 
 
 ## (If Available) Online / Hybrid Filing
 
-- Some transactions may be done via the city’s **online business portal** or **pre-assessment** channels (if announced).
+- Some transactions may be done via the municipality’s **online business portal** or **pre-assessment** channels (if announced).
 - Prepare **scanned PDFs** of your documents (clear, legible; 1 file per requirement).
 - After online assessment, proceed to **payment** (e-payment or onsite) and **permit releasing** per instructions.
 
@@ -95,7 +95,7 @@ Use this guide to renew your **Mayor’s/Business Permit** and **Local Business 
 
 ## Penalties for Late Renewal
 
-- **Surcharge** (commonly up to **25%** of the tax due) **plus** **monthly interest** (commonly up to **2% per month**) until fully paid, subject to the city’s ordinance caps.
+- **Surcharge** (commonly up to **25%** of the tax due) **plus** **monthly interest** (commonly up to **2% per month**) until fully paid, subject to the municipality’s ordinance caps.
 - Possible **closure/tagging** and **inspection findings** if you continue operations without a valid permit.
 
 ---

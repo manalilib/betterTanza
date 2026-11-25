@@ -1,14 +1,16 @@
-# Go to the Local Hospital for Treatment or Confinement — Lapu-Lapu City
+# Go to the Local Hospital for Treatment or Confinement — Tanza
 
-This guide covers **where to go**, **what to bring**, and **how admission works** at local hospitals in Lapu-Lapu City, including the city-run facility and nearby private hospitals.
+This guide covers **where to go**, **what to bring**, and **how admission works** at local hospitals in Tanza, including the municipality-run facility and nearby private hospitals.
 
 ---
 
-## A) Government Hospital (City-Run)
+## A) Government Hospital (Municipal)
 
-### Sta. Rosa Community Hospital (Lapu-Lapu City)
+> **Content needed:** Tanza's government hospital name, address, hours and phone must be confirmed with the Municipal Health Office. The general process below applies to most government hospitals.
 
-**Services & Hours**
+### Government hospital in Tanza (name to be confirmed)
+
+**Services & Hours (typical, confirm locally)**
 
 - **Emergency (Medical & Medico-legal):** 24/7
 - **Ward (In-patient confinement):** 24/7
@@ -34,12 +36,9 @@ This guide covers **where to go**, **what to bring**, and **how admission works*
 
 ## B) Private Hospitals Nearby
 
-| Hospital                                     | Where                 | Beds/Notes                            | Admissions basics                                                                                                                     |
-| -------------------------------------------- | --------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mactan Doctors’ Hospital (CebuDoc Group)** | Basak, Lapu-Lapu City | **151-bed tertiary** private hospital | Bring valid ID; company/HMO authorization if applicable; PhilHealth forms; fill out admission forms and submit to Admissions/Billing. |
-| **ARC Hospitals**                            | Lapu-Lapu City        | **~100-bed** private hospital         | Standard private-hospital admission flow; coordinate with Admissions/HMO/PhilHealth desk.                                             |
+> **Content needed:** list of private hospitals in and around Tanza, with address and phone, to be confirmed.
 
-> Private hospitals typically require **initial deposits** (varies by case/room) unless fully covered by HMO/PhilHealth arrangements. Confirm at the **Billing/Admissions** desk.
+Private hospitals typically require **initial deposits** (varies by case/room) unless fully covered by HMO/PhilHealth arrangements. Bring a valid ID, company/HMO authorization if applicable, and PhilHealth forms, then submit admission forms to Admissions/Billing. Confirm at the **Billing/Admissions** desk.
 
 ---
 
@@ -55,7 +54,7 @@ This guide covers **where to go**, **what to bring**, and **how admission works*
 
 ## D) Costs & PhilHealth Coverage
 
-- **City hospital:** Fees are posted at **Billing**; **PhilHealth** benefits may apply at admission/discharge processing.
+- **Government hospital:** Fees are posted at **Billing**; **PhilHealth** benefits may apply at admission/discharge processing.
 - **No Balance Billing (NBB):** For **indigent/sponsored**, **senior citizens**, and certain categories in **government hospitals**, no other fees beyond PhilHealth package should be charged during confinement (subject to policy and facility capacity).
 
 ---
@@ -78,17 +77,10 @@ This guide covers **where to go**, **what to bring**, and **how admission works*
 
 ## F) Useful Contacts
 
-- **Lapu-Lapu City Hospital / District Hospital (Gov’t)**
-  - A. Tumulak St., Gun-ob, Lapu-Lapu City
-  - **Tel:** (032) 340-0249 / 340-0248
-  - **Email:** lapulapucityhospital@yahoo.com
-
-- **Mactan Doctors’ Hospital (Private, CebuDoc Group)**
-  - Basak, Lapu-Lapu City
-  - **Trunkline:** +63 (32) 239-7002 to 7016
-
-- **ARC Hospitals (Private)**
-  - Lapu-Lapu City (100-bed facility)
+- **Municipal Health Office (MHO), Tanza**
+  - **Tel:** [number to be confirmed]
+- **Government hospital in Tanza**
+  - **Address / Tel:** [to be confirmed]
 
 ---
 

@@ -1,6 +1,6 @@
-# Join Health Programs — Lapu-Lapu City (Nutrition, Dengue Control, TB Treatment)
+# Join Health Programs — Tanza (Nutrition, Dengue Control, TB Treatment)
 
-Below are city-led and national programs you can join through your **Barangay Health Center** and the **City Health Office (CHO)**.
+Below are municipality-led and national programs you can join through your **Barangay Health Center** and the **Municipal Health Office (MHO)**.
 
 ---
 
@@ -10,17 +10,17 @@ Below are city-led and national programs you can join through your **Barangay He
 
 - Supplementary feeding for day-care children.
 - Community nutrition activities such as breastfeeding promotion, growth monitoring, and health education.
-- Special events during Nutrition Month (July) and city-wide wellness programs.
+- Special events during Nutrition Month (July) and municipality-wide wellness programs.
 
 **Who can join**
 
 - Day-care children and families identified by barangays or CSWD.
-- Residents may also take part in open city nutrition events.
+- Residents may also take part in open municipal nutrition events.
 
 **How to join**
 
 1. Visit your **Barangay Health Center** or ask the **Barangay Nutrition Scholar (BNS)** about ongoing feeding programs.
-2. Join community activities and city-wide nutrition events announced by the **City Health Office (CHO)** or City Information Office.
+2. Join community activities and municipality-wide nutrition events announced by the **Municipal Health Office (MHO)** or Municipal Information Office.
 
 **Cost:** Free for eligible beneficiaries.
 
@@ -32,13 +32,13 @@ Below are city-led and national programs you can join through your **Barangay He
 
 - Community clean-up drives under the **ABKD (Aksyon Barangay Kontra Dengue)** program.
 - Daily “4 o’clock habit” — searching and destroying mosquito breeding sites.
-- Misting, fogging, and entomological surveys led by the CHO.
+- Misting, fogging, and entomological surveys led by the MHO.
 - Information campaigns during Dengue Awareness Month and rainy season.
 
 **How to join**
 
 1. Take part in barangay clean-up drives and follow the **4S strategy** (Search & Destroy, Self-protection, Seek early consultation, Support fogging/misting).
-2. Cooperate when CHO teams conduct **misting** or **house-to-house larval checks**.
+2. Cooperate when MHO teams conduct **misting** or **house-to-house larval checks**.
 
 **Cost:** Free; no registration needed.
 
@@ -53,11 +53,11 @@ Below are city-led and national programs you can join through your **Barangay He
 
 **Where**
 
-- Lapu-Lapu City Health Office (DOTS facility) and affiliated barangay health centers.
+- Tanza Municipal Health Office (DOTS facility) and affiliated barangay health centers.
 
 **How to join**
 
-1. Go to your **Barangay Health Center** or the **CHO DOTS Clinic** for TB screening.
+1. Go to your **Barangay Health Center** or the **MHO DOTS Clinic** for TB screening.
 2. If diagnosed, you will be enrolled in DOTS — treatment and medicines are given for free.
 3. Regular follow-up visits will be scheduled to monitor your recovery.
 
@@ -68,8 +68,8 @@ Below are city-led and national programs you can join through your **Barangay He
 ## Contact & Updates
 
 - **Barangay Health Centers** — First point of contact for nutrition, dengue, and TB programs.
-- **Lapu-Lapu City Health Office (CHO)** — Main office for program schedules and services.
-- **City Information Office** — Posts updates on city-wide campaigns and health events.
+- **Tanza Municipal Health Office (MHO)** — Main office for program schedules and services.
+- **Municipal Information Office** — Posts updates on municipality-wide campaigns and health events.
 
 ---
 
