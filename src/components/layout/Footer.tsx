@@ -195,6 +195,18 @@ export default function Footer() {
           <span className="text-gray-600 text-[11px]">
             {t('footer.builtBy')}
           </span>
+          <span className="flex items-center gap-2 text-[11px] text-gray-500">
+            {t('footer.poweredBy')}
+            <span className="bg-white rounded-md px-2 py-1">
+              <img
+                src="/images/sidedish-project.webp"
+                alt="Sidedish Project"
+                width={500}
+                height={269}
+                className="h-7 w-auto"
+              />
+            </span>
+          </span>
         </div>
       </div>
     </footer>

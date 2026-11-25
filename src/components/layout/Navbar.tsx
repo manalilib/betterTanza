@@ -135,9 +135,11 @@ const Navbar: React.FC = () => {
             {/* Logo + Wordmark */}
             <Link to="/" className="flex items-center gap-3 shrink-0">
               <img
-                src="/tanza-seal.png"
-                alt="Tanza Municipal Seal"
-                style={{ height: '48px', width: 'auto' }}
+                src="/images/tanza-logo.webp"
+                alt="Tanza — Serbisyo sa Mamamayan, Malasakit sa Bayan"
+                width={1200}
+                height={364}
+                className="h-10 sm:h-11 w-auto"
               />
               <div className="flex flex-col leading-none">
                 <span className="text-[9px] sm:text-[10px] font-black text-primary-600 uppercase tracking-widest">

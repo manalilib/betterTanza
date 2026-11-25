@@ -265,24 +265,6 @@ export default function Hero() {
                 </span>
               </div>
 
-              <div
-                className="inline-block bg-white rounded-2xl px-5 py-3 mb-6 shadow-lg"
-                style={{
-                  opacity: mounted ? 1 : 0,
-                  transform: mounted ? 'translateY(0)' : 'translateY(-8px)',
-                  transition:
-                    'opacity 0.5s ease 40ms, transform 0.5s ease 40ms',
-                }}
-              >
-                <img
-                  src="/images/tanza-logo.webp"
-                  alt="Tanza — Serbisyo sa Mamamayan, Malasakit sa Bayan"
-                  width={1200}
-                  height={364}
-                  className="h-14 sm:h-16 w-auto"
-                />
-              </div>
-
               <h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-none mb-2"
                 style={{
