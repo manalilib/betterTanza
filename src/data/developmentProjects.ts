@@ -12,7 +12,7 @@ export type ProjectCategory =
 export interface Project {
   id: number;
   name: string;
-  developer: string;
+  developer?: string;
   location: string;
   status: ProjectStatus;
   statusLabel: string;
@@ -29,104 +29,42 @@ export interface Project {
 export const DEVELOPMENT_PROJECTS: Project[] = [
   {
     id: 1,
-    name: 'CALAX — Tanza Interchange',
-    developer: 'MPCALA Holdings, Inc. / Metro Pacific Tollways (MPTC)',
-    location: 'Tanza, Cavite — along CALAX corridor',
-    status: 'under-construction',
-    statusLabel: 'Under Construction',
+    name: 'Cavite Gateway Terminal',
+    location: 'Tanza, Cavite',
+    status: 'operational',
+    statusLabel: 'Operational',
     category: 'infrastructure',
-    emoji: '🛣️',
+    emoji: '🚢',
     accent: 'from-orange-500 to-amber-600',
     description:
-      "The Cavite-Laguna Expressway (CALAX) passes through Cavite, and a planned interchange serving Tanza will dramatically cut travel time to Metro Manila via CAVITEX and southward to SLEX in Laguna. This infrastructure upgrade is a major catalyst for Tanza's economic growth.",
+      'The Cavite Gateway Terminal is located in Tanza and is the first roll-on, roll-off (RoRo) barge terminal in the Philippines. The Philippine News Agency reported its opening in November 2018.',
     highlights: [
-      'Direct expressway access for Tanza residents',
-      'Connects to CAVITEX (Manila) and SLEX (Laguna/Batangas)',
-      'Expected to reduce Metro Manila–Tanza travel to under 40 minutes',
-      'Stimulates commercial and industrial investment along the corridor',
+      'First roll-on, roll-off barge terminal in the Philippines',
+      'Opening reported by the Philippine News Agency in November 2018',
     ],
-    source: 'https://mptc.com.ph',
-    sourceLabel: 'MPTC Official',
-    estimatedCompletion: '2025–2026 (full CALAX)',
+    source: 'https://www.pna.gov.ph/articles/1054308',
+    sourceLabel: 'Philippine News Agency',
+    estimatedCompletion: 'Opened 2018',
   },
   {
     id: 2,
-    name: 'Tanza Coastal Road Development',
-    developer: 'DPWH Region IV-A / Municipal Government of Tanza',
-    location: 'Coastal barangays along Manila Bay, Tanza, Cavite',
-    status: 'ongoing',
-    statusLabel: 'Active Development',
-    category: 'infrastructure',
-    emoji: '🛤️',
-    accent: 'from-primary-700 to-primary-500',
-    description:
-      "Ongoing improvements to the coastal road network linking Tanza's Manila Bay barangays. These projects improve access for fishing communities, facilitate coastal trade, and open up the shoreline for eco-tourism and commerce.",
-    highlights: [
-      'Road widening and concreting in coastal barangays',
-      'Improved access for fishermen and coastal communities',
-      'Supports eco-tourism development along Manila Bay',
-      'Funded through IRA 20% Development Fund + DPWH',
-    ],
-    estimatedCompletion: 'Multi-phase (ongoing)',
-  },
-  {
-    id: 3,
-    name: "Governor's Drive Commercial Corridor",
-    developer: 'Multiple private developers',
-    location: "Governor's Drive / Molino–Paliparan–Tanza corridor, Cavite",
-    status: 'announced',
-    statusLabel: 'Announced',
+    name: 'SM City Tanza',
+    developer: 'SM Prime Holdings',
+    location: 'Antero Soriano Highway corner Dr. Solis St., Daang Amaya 2',
+    status: 'operational',
+    statusLabel: 'Operational',
     category: 'commercial',
     emoji: '🏬',
     accent: 'from-primary-600 to-brand-700',
     description:
-      "The Governor's Drive commercial corridor connecting Bacoor, Dasmariñas, General Trias, and Tanza is attracting commercial investment from major developers. Tanza's position along this corridor makes it a prime target for retail and mixed-use developments in the near term.",
+      'SM City Tanza is the first SM Supermall in Tanza. It sits on an 8.67-hectare site with a gross floor area of about 60,029 m², and opened on October 14, 2022.',
     highlights: [
-      "Prime location along the high-traffic Governor's Drive corridor",
-      'Growing residential base (339K+ per PSA 2024) driving retail demand',
-      'Multiple commercial lots along the national road being developed',
-      'Proximity to planned CALAX interchange increases commercial viability',
+      'First SM Supermall in Tanza',
+      '8.67-hectare site, about 60,029 m² gross floor area',
+      'Opened with 89% of the available space leased',
     ],
-    estimatedCompletion: 'TBA',
-  },
-  {
-    id: 4,
-    name: 'Tanza Industrial Estate Expansion',
-    developer: 'Various industrial estate operators',
-    location: 'Biga and adjacent barangays, Tanza, Cavite',
-    status: 'ongoing',
-    statusLabel: 'Active Development',
-    category: 'township',
-    emoji: '🏭',
-    accent: 'from-slate-600 to-gray-700',
-    description:
-      "Tanza hosts industrial estates and light manufacturing zones that are expanding to accommodate growing demand from CALABARZON's industrial boom. These developments generate employment for thousands of Tanza residents and contribute to the local economy.",
-    highlights: [
-      'Existing industrial zones expanding their footprint',
-      'Light manufacturing, logistics, and warehousing tenants',
-      'Direct employment generation for local residents',
-      "Aligned with CALABARZON's status as the Philippines' top industrial region",
-    ],
-    estimatedCompletion: 'Ongoing',
-  },
-  {
-    id: 5,
-    name: 'Public School Infrastructure Program',
-    developer: 'DepEd Region IV-A / Municipal Government of Tanza',
-    location: 'Various barangays, Municipality of Tanza',
-    status: 'ongoing',
-    statusLabel: 'Active Development',
-    category: 'education',
-    emoji: '🏫',
-    accent: 'from-primary-800 to-primary-600',
-    description:
-      'The municipality continues to invest in public school infrastructure through SEF (Special Education Fund) allocations and DepEd partnerships — constructing new classrooms, repairing existing facilities, and equipping schools to serve the growing student population.',
-    highlights: [
-      'Funded by SEF (1% of real property tax)',
-      'New classroom construction in fast-growing barangays',
-      'Rehabilitation of aging school facilities',
-      "Supports DepEd's goal of zero classroom backlog",
-    ],
-    estimatedCompletion: 'Multi-phase (ongoing)',
+    source: 'https://en.wikipedia.org/wiki/SM_City_Tanza',
+    sourceLabel: 'Wikipedia — SM City Tanza',
+    estimatedCompletion: 'Opened October 14, 2022',
   },
 ];

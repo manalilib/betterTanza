@@ -47,8 +47,8 @@ export default function DevelopmentProjects() {
     <>
       <SEO
         title="Development Projects — Municipality of Tanza"
-        description="Major development projects shaping the Municipality of Tanza — CALAX interchange, coastal road development, commercial corridor, and school infrastructure."
-        keywords="Tanza development projects, CALAX Tanza, Tanza commercial development, Tanza Cavite infrastructure"
+        description="Landmark development projects in the Municipality of Tanza, including the Cavite Gateway Terminal and SM City Tanza."
+        keywords="Tanza development projects, Cavite Gateway Terminal, SM City Tanza, Tanza Cavite infrastructure"
       />
 
       {/* Hero */}
@@ -75,9 +75,8 @@ export default function DevelopmentProjects() {
             Development Projects
           </h1>
           <p className="text-primary-100 text-base max-w-lg leading-relaxed mb-8">
-            Major investments and infrastructure projects shaping the future of
-            Tanza — from expressway access and coastal roads to commercial
-            growth and public school improvements.
+            Landmark investments and infrastructure in Tanza, from the Cavite
+            Gateway Terminal to SM City Tanza.
           </p>
 
           {/* Category pills */}
@@ -125,12 +124,11 @@ export default function DevelopmentProjects() {
           {/* Count badge + disclaimer */}
           <div className="flex items-start justify-between mb-8 gap-4 flex-wrap">
             <h2 className="text-lg font-black text-gray-900">
-              {DEVELOPMENT_PROJECTS.length} Major Development Projects
+              {DEVELOPMENT_PROJECTS.length} Development Projects
             </h2>
             <span className="text-xs text-gray-400 font-medium text-right leading-relaxed max-w-xs">
-              Information sourced from developer announcements, DPWH, and public
-              records. Status may change — visit official channels for latest
-              updates.
+              Information sourced from the Philippine News Agency and Wikipedia.
+              Visit official channels for the latest updates.
             </span>
           </div>
 
@@ -211,10 +209,12 @@ export default function DevelopmentProjects() {
                     </a>
 
                     {/* Developer */}
-                    <div className="flex items-start gap-2 text-xs text-gray-400">
-                      <Building2 className="h-3.5 w-3.5 mt-0.5 shrink-0" />
-                      <span>{project.developer}</span>
-                    </div>
+                    {project.developer && (
+                      <div className="flex items-start gap-2 text-xs text-gray-400">
+                        <Building2 className="h-3.5 w-3.5 mt-0.5 shrink-0" />
+                        <span>{project.developer}</span>
+                      </div>
+                    )}
 
                     {/* Source link */}
                     {project.source && (
@@ -254,11 +254,11 @@ export default function DevelopmentProjects() {
                   Note on Project Information
                 </p>
                 <p className="text-xs text-primary-700 leading-relaxed">
-                  Project statuses, timelines, and details are compiled from
-                  developer announcements, DPWH public records, and published
-                  reports. This page is for informational purposes only. For
-                  official and current information, please visit each project's
-                  official channels or the Municipal Government of Tanza.
+                  Project details are compiled from the Philippine News Agency
+                  and Wikipedia. This page is for informational purposes only.
+                  For official and current information, please visit each
+                  project's official channels or the Municipal Government of
+                  Tanza.
                 </p>
               </div>
             </div>
