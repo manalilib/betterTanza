@@ -13,10 +13,6 @@ import {
   ResponsiveContainer,
   LineChart,
   Line,
-  PieChart,
-  Pie,
-  Cell,
-  Legend,
 } from 'recharts';
 import {
   Users,
@@ -52,13 +48,6 @@ const POPULATION_DATA = [
   { year: '2015', population: 226188 },
   { year: '2020', population: 312116 },
   { year: '2024', population: 339308 },
-];
-
-const ECONOMY_DATA = [
-  { name: 'Industry & Manufacturing', value: 38, color: '#004c97' },
-  { name: 'Commerce & Services', value: 32, color: '#00b140' },
-  { name: 'Real Estate', value: 18, color: '#80d8a0' },
-  { name: 'Agriculture', value: 12, color: '#adc6de' },
 ];
 
 // Source: Wikipedia — Tanza, Cavite (awards section, citing DILG / NCC)
@@ -244,8 +233,8 @@ export default function CityProfile() {
     <>
       <SEO
         title="Municipal Profile & Statistics — Municipality of Tanza"
-        description="Demographic data, population charts, barangay directory, economy breakdown, and awards for the Municipality of Tanza, Cavite."
-        keywords="Tanza Cavite profile, population statistics, barangays, economy, Municipality of Tanza"
+        description="Demographic data, population charts, barangay directory, and awards for the Municipality of Tanza, Cavite."
+        keywords="Tanza Cavite profile, population statistics, barangays, Municipality of Tanza"
       />
 
       {/* Hero — left: title/stats, right: weather widget */}
@@ -421,7 +410,7 @@ export default function CityProfile() {
           </div>
 
           {/* Charts row */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <div className="grid grid-cols-1 gap-6 mb-6">
             <div className="rounded-2xl overflow-hidden shadow-sm border border-primary-100">
               <div className="bg-gradient-to-r from-primary-700 to-primary-500 px-5 py-4">
                 <p className="text-white font-black text-sm">
@@ -470,53 +459,6 @@ export default function CityProfile() {
                 </ResponsiveContainer>
               </div>
             </div>
-
-            <div className="rounded-2xl overflow-hidden shadow-sm border border-primary-100">
-              <div className="bg-gradient-to-r from-primary-600 to-brand-600 px-5 py-4">
-                <p className="text-white font-black text-sm">
-                  Economic Sectors
-                </p>
-                <p className="text-primary-200 text-[10px] mt-0.5">
-                  Approximate distribution based on CLUP data
-                </p>
-              </div>
-              <div className="bg-white p-5">
-                <ResponsiveContainer width="100%" height={220}>
-                  <PieChart>
-                    <Pie
-                      data={ECONOMY_DATA}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={55}
-                      outerRadius={85}
-                      paddingAngle={3}
-                      dataKey="value"
-                    >
-                      {ECONOMY_DATA.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <Legend
-                      iconType="circle"
-                      iconSize={8}
-                      formatter={(value: string) => (
-                        <span style={{ fontSize: 11, color: '#374151' }}>
-                          {value}
-                        </span>
-                      )}
-                    />
-                    <Tooltip
-                      formatter={v => [`${v ?? 0}%`, 'Share']}
-                      contentStyle={{
-                        borderRadius: '12px',
-                        border: '1px solid #e9ecef',
-                        fontSize: 12,
-                      }}
-                    />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
           </div>
 
           {/* Population trend line */}
@@ -526,8 +468,7 @@ export default function CityProfile() {
                 Population Trend (2010–2024)
               </p>
               <p className="text-teal-100 text-[10px] mt-0.5">
-                Growth driven by industrial, commercial, and residential
-                development
+                PSA census results
               </p>
             </div>
             <div className="bg-white p-5">
