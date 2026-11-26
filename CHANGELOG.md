@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.0] - 2026-11-26
+
+First public release of betterTanza.org for the Municipality of Tanza, Cavite. Full notes: [RELEASE-NOTES-v1.0.0.md](RELEASE-NOTES-v1.0.0.md).
+
+### Added
+
+- Tanza-branded home page: hero collage, accessible search combobox, project cards, stat strip, and weather and map at verified coordinates
+- Mayor and Vice Mayor page, Officials page with councilor roster, and Tourism, Tourist Spots and Where to Stay pages
+- Transparency pages: Full Disclosure, Annual Budget, SALN, FOI Releases, Planning Docs & Downloads
+- Transparency menu link to the Budget Transparency Portal; `NavigationItem.external` renders menu items as new-tab links
+- Municipal Profile (sourced history), Annual Report, Infrastructure Projects and Development Projects pages
+- Published service pages: local scholarships, financial assistance, Tanza Public Service Portal
+- Quick-access info bar, footer visit counter (`api/visits.ts`) and carbon badge
+- Official TANZA wordmark and seal, brand palette (navy `#004c97`, green `#00b140`) and shared hero gradient
+- Tanza SEO: page titles, favicon set, Open Graph image, canonical URLs, `robots.txt`, `sitemap.xml`
+
+### Changed
+
+- Municipal data updated from verified sources (2024 census, coordinates, 2025–2028 term, barangays, officials)
+- Navbar hotlines match the numbers published on tanza.gov.ph
+- i18n reduced to English and Filipino, loaded from bundled locale files
+- README and guides rewritten for Tanza
+- Improved text contrast on white backgrounds
+
+### Removed
+
+- Unverifiable content: economic-sector pie chart, unsourced history entries, speculative development projects, hotel listings, placeholder councilors, DSWD and Coast Guard hotlines
+- Lapu-Lapu City references and other-LGU examples; non-Tanza drafts moved to `content/_drafts/`
+- Links to PDFs that are not uploaded and menu entries for pages that do not exist
+- Generic starter-kit docs, setup script, unused language registry, switcher and backend
+
+### Known limitations
+
+- 14 draft service pages are unpublished and 20 menu entries have no page yet. See [TANZA-CONTENT-TODO.md](TANZA-CONTENT-TODO.md).
+- Municipal Hall phone and email, the councilor roster and the BFP/Health Office hotline are unconfirmed.
+
 ## [0.2.0] - 2026-03-07
 
 ### Added
@@ -57,5 +93,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `src/components/ui/Card.tsx` — superseded by Kapwa primitives
 - `src/components/ui/ListItem.tsx` — superseded by Kapwa cards and banners
 
+[1.0.0]: https://github.com/manalilib/betterTanza/releases/tag/v1.0.0
 [0.2.0]: https://github.com/iyanski/betterlocalgov/releases/tag/v0.2.0
 [0.1.0]: https://github.com/iyanski/betterlocalgov/releases/tag/v0.1.0
