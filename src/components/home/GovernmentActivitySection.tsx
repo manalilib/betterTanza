@@ -1,7 +1,4 @@
-import Section from '../ui/Section';
 import * as LucideIcons from 'lucide-react';
-import { Heading } from '../ui/Heading';
-import { Text } from '../ui/Text';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Link } from 'react-router-dom';
 import { useInView } from '../../hooks/useInView';
@@ -94,50 +91,58 @@ export default function GovernmentActivitySection({
   const displayedCategories = governmentCategories.categories as Category[];
 
   return (
-    <Section id="#government">
-      <Heading level={2}>{title || t('governmentActivity.title')}</Heading>
-      <Text className="text-gray-600 mb-6">
-        {description || t('governmentActivity.description')}
-      </Text>
+    <section id="government" className="bg-white py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <p className="text-xs font-bold text-primary-600 uppercase tracking-widest mb-1">
+          Your Local Government
+        </p>
+        <h2 className="text-2xl font-black text-gray-900">
+          {title || t('governmentActivity.title')}
+        </h2>
+        <div className="mt-2 mb-4 h-1 w-12 bg-primary-600 rounded-full" />
+        <p className="text-gray-600 text-sm mb-8">
+          {description || t('governmentActivity.description')}
+        </p>
 
-      <div
-        ref={ref}
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
-      >
-        {displayedCategories.map((category, idx) => {
-          const colors = CATEGORY_COLORS[idx % CATEGORY_COLORS.length];
-          return (
-            <Link
-              key={category.slug}
-              to={`/government/${category.slug}`}
-              className={`group block rounded-xl border ${colors.card} shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 p-5`}
-              style={{
-                opacity: inView ? 1 : 0,
-                transform: inView ? 'translateY(0)' : 'translateY(24px)',
-                transition: `opacity 0.5s ease ${idx * 60}ms, transform 0.5s ease ${idx * 60}ms, box-shadow 0.2s, translate 0.2s`,
-              }}
-            >
-              <div
-                className={`${colors.iconBg} ${colors.icon} w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}
+        <div
+          ref={ref}
+          className={`grid grid-cols-1 sm:grid-cols-2 gap-4 ${displayedCategories.length % 3 === 0 ? 'lg:grid-cols-3' : 'md:grid-cols-3 lg:grid-cols-4'}`}
+        >
+          {displayedCategories.map((category, idx) => {
+            const colors = CATEGORY_COLORS[idx % CATEGORY_COLORS.length];
+            return (
+              <Link
+                key={category.slug}
+                to={`/government/${category.slug}`}
+                className={`group block rounded-2xl border ${colors.card} shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200 p-5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600`}
+                style={{
+                  opacity: inView ? 1 : 0,
+                  transform: inView ? 'translateY(0)' : 'translateY(24px)',
+                  transition: `opacity 0.5s ease ${idx * 60}ms, transform 0.5s ease ${idx * 60}ms, box-shadow 0.2s, translate 0.2s`,
+                }}
               >
-                {getIcon(category.icon)}
-              </div>
-              <h3 className={`text-sm font-bold mb-2 ${colors.title}`}>
-                {t(
-                  `governmentActivity.categories.${category.slug}.name`,
-                  category.category
-                )}
-              </h3>
-              <p className={`text-xs leading-relaxed ${colors.desc}`}>
-                {t(
-                  `governmentActivity.categories.${category.slug}.description`,
-                  category.description
-                )}
-              </p>
-            </Link>
-          );
-        })}
+                <div
+                  className={`${colors.iconBg} ${colors.icon} w-10 h-10 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}
+                >
+                  {getIcon(category.icon)}
+                </div>
+                <h3 className={`text-sm font-bold mb-2 ${colors.title}`}>
+                  {t(
+                    `governmentActivity.categories.${category.slug}.name`,
+                    category.category
+                  )}
+                </h3>
+                <p className={`text-xs leading-relaxed ${colors.desc}`}>
+                  {t(
+                    `governmentActivity.categories.${category.slug}.description`,
+                    category.description
+                  )}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 }
