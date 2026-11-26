@@ -6,5 +6,6 @@ export interface NavigationItem {
   label: string;
   href: string;
   translationKey?: string;
+  external?: boolean;
   children?: NavigationItem[];
 }
