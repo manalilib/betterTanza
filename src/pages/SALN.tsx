@@ -298,7 +298,7 @@ export default function SALN() {
                 Visit the <strong>Office of the HRMO</strong> at Municipal Hall,
                 or file online via the FOI portal.
               </p>
-              <p className="text-sm text-gray-400">
+              <p className="text-sm text-gray-500">
                 (046) 432-0000 · Municipal Hall, Poblacion III, Tanza, Cavite
                 4108
               </p>

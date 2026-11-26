@@ -220,7 +220,7 @@ export default function AnnualBudget() {
                     <div className="text-sm font-bold text-gray-900">
                       {a.type}
                     </div>
-                    <div className="text-xs text-gray-400 mt-0.5">{a.desc}</div>
+                    <div className="text-xs text-gray-500 mt-0.5">{a.desc}</div>
                   </div>
                 ))}
               </div>
@@ -253,7 +253,7 @@ export default function AnnualBudget() {
                       </div>
                     </div>
                     {i < CYCLE.length - 1 && (
-                      <ArrowRight className="h-4 w-4 text-gray-300 shrink-0 mt-1" />
+                      <ArrowRight className="h-4 w-4 text-gray-500 shrink-0 mt-1" />
                     )}
                   </div>
                 ))}
@@ -271,7 +271,7 @@ export default function AnnualBudget() {
                 DILG FDP Portal · Official Municipal Website · Municipal Budget
                 Officer (Municipal Hall)
               </p>
-              <p className="text-sm text-gray-400">(046) 432-0000</p>
+              <p className="text-sm text-gray-500">(046) 432-0000</p>
             </div>
             <div className="flex flex-wrap gap-2 shrink-0">
               <a

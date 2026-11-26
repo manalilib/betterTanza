@@ -126,7 +126,7 @@ export default function DevelopmentProjects() {
             <h2 className="text-lg font-black text-gray-900">
               {DEVELOPMENT_PROJECTS.length} Development Projects
             </h2>
-            <span className="text-xs text-gray-400 font-medium text-right leading-relaxed max-w-xs">
+            <span className="text-xs text-gray-500 font-medium text-right leading-relaxed max-w-xs">
               Information sourced from the Philippine News Agency and Wikipedia.
               Visit official channels for the latest updates.
             </span>
@@ -200,7 +200,7 @@ export default function DevelopmentProjects() {
                       href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(project.location)}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-start gap-2 text-xs text-gray-400 hover:text-primary-700 transition-colors group/map mb-1"
+                      className="flex items-start gap-2 text-xs text-gray-500 hover:text-primary-700 transition-colors group/map mb-1"
                     >
                       <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0 group-hover/map:text-primary-600 transition-colors" />
                       <span className="group-hover/map:underline">
@@ -210,7 +210,7 @@ export default function DevelopmentProjects() {
 
                     {/* Developer */}
                     {project.developer && (
-                      <div className="flex items-start gap-2 text-xs text-gray-400">
+                      <div className="flex items-start gap-2 text-xs text-gray-500">
                         <Building2 className="h-3.5 w-3.5 mt-0.5 shrink-0" />
                         <span>{project.developer}</span>
                       </div>
@@ -234,7 +234,7 @@ export default function DevelopmentProjects() {
 
                   {/* Bottom index */}
                   <div className="px-5 pb-4 flex items-center justify-between">
-                    <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest">
+                    <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">
                       Project #{String(idx + 1).padStart(2, '0')}
                     </span>
                   </div>

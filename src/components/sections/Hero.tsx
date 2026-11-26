@@ -474,7 +474,7 @@ export default function Hero() {
                             <span className="text-gray-800 flex-1">
                               {highlight(page.name, query)}
                             </span>
-                            <span className="text-xs text-gray-400 shrink-0">
+                            <span className="text-xs text-gray-500 shrink-0">
                               {page.categoryName}
                             </span>
                           </button>

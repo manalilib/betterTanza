@@ -87,7 +87,7 @@ export default function Footer() {
                 href="https://www.facebook.com/ph.MunicipalityofTanza"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
@@ -96,7 +96,7 @@ export default function Footer() {
                 href="https://github.com/manalilib/betterTanza"
                 target="_blank"
                 rel="noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors"
                 aria-label="GitHub"
               >
                 <Github className="h-5 w-5" />
@@ -106,7 +106,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
               {t('footer.quickLinks')}
             </h3>
             <ul className="space-y-2.5">
@@ -125,7 +125,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">
+            <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
               {t('footer.resources')}
             </h3>
             <ul className="space-y-2.5">
@@ -177,7 +177,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-gray-800 mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-500">
+        <div className="border-t border-gray-800 mt-2 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-400">
           <span>
             © {new Date().getFullYear()} betterTanza.org
             <span className="mx-2 opacity-40">|</span>
@@ -190,7 +190,7 @@ export default function Footer() {
             <span className="text-gray-300 font-bold">
               {visitCount !== null ? visitCount.toLocaleString() : '—'}
             </span>
-            <span className="text-gray-500">visits</span>
+            <span className="text-gray-400">visits</span>
           </span>
           <span className="text-gray-400 text-[11px]">
             {t('footer.builtBy')}

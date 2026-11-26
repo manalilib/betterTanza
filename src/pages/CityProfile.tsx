@@ -398,7 +398,7 @@ export default function CityProfile() {
                         <div className="text-xs font-bold text-gray-700 mb-0.5">
                           {label}
                         </div>
-                        <div className="text-[10px] text-gray-400 leading-snug">
+                        <div className="text-[10px] text-gray-500 leading-snug">
                           {sub}
                         </div>
                       </div>
