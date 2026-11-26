@@ -1,76 +1,12 @@
-import {
-  Users,
-  MapPin,
-  Building2,
-  Map,
-  ArrowRight,
-  Wind,
-  Droplets,
-  CloudSun,
-} from 'lucide-react';
+import { Users, MapPin, Building2, Map, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
-import { useState, useEffect } from 'react';
 import { HERO_GRADIENT } from '../../lib/brand';
-
-function weatherLabel(code: number): string {
-  if (code === 0) return 'Clear Sky';
-  if (code <= 2) return 'Partly Cloudy';
-  if (code === 3) return 'Overcast';
-  if (code <= 49) return 'Foggy';
-  if (code <= 59) return 'Drizzle';
-  if (code <= 69) return 'Rain';
-  if (code <= 84) return 'Rain Showers';
-  if (code <= 99) return 'Thunderstorm';
-  return 'Unknown';
-}
-
-function weatherEmoji(code: number): string {
-  if (code === 0) return '☀️';
-  if (code <= 2) return '⛅';
-  if (code === 3) return '☁️';
-  if (code <= 49) return '🌫️';
-  if (code <= 69) return '🌧️';
-  if (code <= 84) return '🌦️';
-  return '⛈️';
-}
 
 export default function StatsSection() {
   const { t } = useTranslation('common');
   const { ref, inView } = useInView<HTMLDivElement>();
-  const [weather, setWeather] = useState<{
-    temp: number;
-    humidity: number;
-    wind: number;
-    code: number;
-  } | null>(null);
-
-  useEffect(() => {
-    const cached = localStorage.getItem('tz_weather_home');
-    const cachedTime = localStorage.getItem('tz_weather_home_time');
-    if (cached && cachedTime && Date.now() - parseInt(cachedTime) < 1_800_000) {
-      setWeather(JSON.parse(cached));
-      return;
-    }
-    fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=14.3944&longitude=120.8531&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=Asia%2FManila'
-    )
-      .then(r => r.json())
-      .then(d => {
-        const w = {
-          temp: d.current.temperature_2m,
-          humidity: d.current.relative_humidity_2m,
-          wind: d.current.wind_speed_10m,
-          code: d.current.weather_code,
-        };
-        localStorage.setItem('tz_weather_home', JSON.stringify(w));
-        localStorage.setItem('tz_weather_home_time', String(Date.now()));
-        setWeather(w);
-      })
-      .catch(() => {});
-  }, []);
-
   const STATS = [
     {
       icon: Users,
@@ -116,59 +52,6 @@ export default function StatsSection() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-10">
-        {/* Weather */}
-        <div className="mb-8">
-          <div className="bg-white/10 border border-white/20 rounded-2xl p-6 backdrop-blur-sm">
-            <div className="flex items-center justify-center gap-1.5 mb-5">
-              <CloudSun className="h-3.5 w-3.5 text-amber-300 shrink-0" />
-              <span className="text-xs font-bold text-primary-100 uppercase tracking-widest">
-                Current Weather · Tanza, Cavite
-              </span>
-            </div>
-            {weather ? (
-              <div className="flex items-center justify-center gap-6 sm:gap-12">
-                <div className="flex flex-col items-center gap-3">
-                  <div className="flex flex-col items-center gap-1">
-                    <Droplets className="h-5 w-5 text-primary-100" />
-                    <span className="text-white font-black text-lg leading-none">
-                      {weather.humidity}%
-                    </span>
-                    <span className="text-primary-200 text-[10px] uppercase tracking-wide">
-                      Humidity
-                    </span>
-                  </div>
-                </div>
-                <div className="flex flex-col items-center">
-                  <span className="text-6xl sm:text-7xl leading-none mb-2">
-                    {weatherEmoji(weather.code)}
-                  </span>
-                  <span className="text-5xl sm:text-6xl font-black text-white leading-none">
-                    {weather.temp}°C
-                  </span>
-                  <span className="text-primary-200 text-sm mt-2 font-medium">
-                    {weatherLabel(weather.code)}
-                  </span>
-                </div>
-                <div className="flex flex-col items-center gap-3">
-                  <div className="flex flex-col items-center gap-1">
-                    <Wind className="h-5 w-5 text-primary-100" />
-                    <span className="text-white font-black text-lg leading-none">
-                      {weather.wind}
-                    </span>
-                    <span className="text-primary-200 text-[10px] uppercase tracking-wide">
-                      km/h Wind
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <div className="flex items-center justify-center h-24">
-                <div className="w-6 h-6 rounded-full border-2 border-white/20 border-t-white/80 animate-spin" />
-              </div>
-            )}
-          </div>
-        </div>
-
         {/* Numbers */}
         <div
           ref={ref}

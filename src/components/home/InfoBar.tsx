@@ -98,13 +98,13 @@ export default function HomeInfoBar() {
           <span className="text-gray-300">1 USD =</span>
           <span className="font-semibold">{info.forex}</span>
         </span>
-        <span className="text-gray-600 hidden sm:inline">|</span>
+        <span className="text-gray-400 hidden sm:inline">|</span>
         <span className="hidden sm:flex items-center gap-1.5 opacity-90">
           <Thermometer className="h-3 w-3 opacity-70" />
           <span className="text-gray-300">Tanza</span>
           <span className="font-semibold">{info.temp}</span>
         </span>
-        <span className="text-gray-600 hidden sm:inline">|</span>
+        <span className="text-gray-400 hidden sm:inline">|</span>
         <span className="hidden md:flex items-center gap-1.5 opacity-90">
           <Clock className="h-3 w-3 opacity-70" />
           <span className="font-semibold">{info.datetime}</span>

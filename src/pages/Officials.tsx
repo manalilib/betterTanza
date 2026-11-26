@@ -271,7 +271,7 @@ export default function Officials() {
                     </div>
                   ))}
                 </div>
-                <p className="text-xs text-gray-400 mt-3">
+                <p className="text-xs text-gray-500 mt-3">
                   Roster compiled from public sources; confirm against the{' '}
                   <a
                     href="https://www.facebook.com/ph.MunicipalityofTanza"
@@ -323,7 +323,7 @@ export default function Officials() {
                   key={m.position}
                   className="bg-white rounded-xl border border-gray-100 shadow-sm p-4"
                 >
-                  <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wide mb-0.5">
+                  <div className="text-[10px] font-bold text-gray-500 uppercase tracking-wide mb-0.5">
                     {m.full}
                   </div>
                   <div className="text-xs font-bold text-brand-600 mb-1.5">
@@ -344,7 +344,7 @@ export default function Officials() {
               Government Offices
             </h2>
             <div className="h-1 w-10 bg-primary-600 rounded-full mb-3" />
-            <p className="text-xs text-gray-400 mb-5">
+            <p className="text-xs text-gray-500 mb-5">
               All offices reachable via Municipal Hall switchboard. Direct-line
               numbers pending official confirmation.
             </p>

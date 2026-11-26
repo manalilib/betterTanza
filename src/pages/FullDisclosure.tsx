@@ -287,7 +287,7 @@ export default function FullDisclosure() {
                           <div className="text-sm font-semibold text-gray-800">
                             {doc.name}
                           </div>
-                          <div className="text-xs text-gray-400 mt-0.5">
+                          <div className="text-xs text-gray-500 mt-0.5">
                             {doc.desc}
                           </div>
                         </div>
@@ -323,7 +323,7 @@ export default function FullDisclosure() {
                     </span>
                     <ExternalLink className="h-3 w-3 text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <p className="text-xs text-gray-400">{p.desc}</p>
+                  <p className="text-xs text-gray-500">{p.desc}</p>
                 </a>
               ))}
             </div>

@@ -57,6 +57,12 @@ export const mainNavigation: NavigationItem[] = [
         translationKey: 'nav.annualBudget',
       },
       {
+        label: 'Budget Transparency Portal',
+        href: 'https://tanza-cavite-transparency-portal.vercel.app',
+        translationKey: 'nav.budgetPortal',
+        external: true,
+      },
+      {
         label: 'SALN',
         href: '/government/transparency-documents/saln',
         translationKey: 'nav.saln',

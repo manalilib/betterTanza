@@ -235,7 +235,7 @@ export default function InfrastructureProjects() {
                   41 barangays, enhancing connectivity and flood resilience for
                   residents of Tanza.
                 </p>
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-500">
                   Funded by: 20% Development Fund (IRA) + DPWH Assistance
                 </p>
               </div>
@@ -295,7 +295,7 @@ export default function InfrastructureProjects() {
                       <div className="text-sm font-bold text-gray-800">
                         {s.step}
                       </div>
-                      <div className="text-xs text-gray-400 mt-0.5">
+                      <div className="text-xs text-gray-500 mt-0.5">
                         {s.desc}
                       </div>
                     </div>
@@ -326,7 +326,7 @@ export default function InfrastructureProjects() {
                     </span>
                     <ExternalLink className="h-3 w-3 text-primary-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <p className="text-xs text-gray-400">{p.desc}</p>
+                  <p className="text-xs text-gray-500">{p.desc}</p>
                 </a>
               ))}
             </div>

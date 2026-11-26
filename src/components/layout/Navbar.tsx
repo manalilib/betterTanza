@@ -166,17 +166,31 @@ const Navbar: React.FC = () => {
                       </button>
                       <div className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-50">
                         <div className="py-1.5">
-                          {item.children.map(child => (
-                            <Link
-                              key={child.label}
-                              to={child.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
-                            >
-                              {child.translationKey
-                                ? t(child.translationKey, child.label)
-                                : child.label}
-                            </Link>
-                          ))}
+                          {item.children.map(child =>
+                            child.external ? (
+                              <a
+                                key={child.label}
+                                href={child.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                              >
+                                {child.translationKey
+                                  ? t(child.translationKey, child.label)
+                                  : child.label}
+                              </a>
+                            ) : (
+                              <Link
+                                key={child.label}
+                                to={child.href}
+                                className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-700 transition-colors"
+                              >
+                                {child.translationKey
+                                  ? t(child.translationKey, child.label)
+                                  : child.label}
+                              </Link>
+                            )
+                          )}
                         </div>
                       </div>
                     </>
@@ -252,18 +266,33 @@ const Navbar: React.FC = () => {
                       </button>
                       {activeMenu === item.label && (
                         <div className="ml-4 mt-1 space-y-0.5">
-                          {item.children.map(child => (
-                            <Link
-                              key={child.label}
-                              to={child.href}
-                              onClick={closeMenu}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
-                            >
-                              {child.translationKey
-                                ? t(child.translationKey, child.label)
-                                : child.label}
-                            </Link>
-                          ))}
+                          {item.children.map(child =>
+                            child.external ? (
+                              <a
+                                key={child.label}
+                                href={child.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={closeMenu}
+                                className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
+                              >
+                                {child.translationKey
+                                  ? t(child.translationKey, child.label)
+                                  : child.label}
+                              </a>
+                            ) : (
+                              <Link
+                                key={child.label}
+                                to={child.href}
+                                onClick={closeMenu}
+                                className="block px-3 py-2 text-sm text-gray-600 hover:text-primary-700 hover:bg-primary-50 rounded-md"
+                              >
+                                {child.translationKey
+                                  ? t(child.translationKey, child.label)
+                                  : child.label}
+                              </Link>
+                            )
+                          )}
                         </div>
                       )}
                     </>

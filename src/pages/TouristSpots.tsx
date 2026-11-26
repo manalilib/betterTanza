@@ -194,7 +194,7 @@ export default function TouristSpots() {
             <h2 className="text-lg font-black text-gray-900">
               {SPOTS.length} Destinations
             </h2>
-            <span className="text-xs text-gray-400 font-medium">
+            <span className="text-xs text-gray-500 font-medium">
               Photos: Wikimedia Commons, CC BY-SA 4.0 (Ralffralff)
             </span>
           </div>
@@ -250,7 +250,7 @@ export default function TouristSpots() {
                         rel="noreferrer"
                         className="flex items-start gap-2 text-gray-500 hover:text-primary-700 transition-colors group/map"
                       >
-                        <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-400 group-hover/map:text-primary-600 transition-colors" />
+                        <MapPin className="h-3.5 w-3.5 mt-0.5 shrink-0 text-gray-500 group-hover/map:text-primary-600 transition-colors" />
                         <span className="group-hover/map:underline">
                           {spot.location}
                         </span>
@@ -260,7 +260,7 @@ export default function TouristSpots() {
                           href={`tel:${spot.contact.replace(/[^0-9]/g, '')}`}
                           className="flex items-center gap-2 text-gray-500 hover:text-primary-700 transition-colors"
                         >
-                          <Phone className="h-3.5 w-3.5 shrink-0 text-gray-400" />
+                          <Phone className="h-3.5 w-3.5 shrink-0 text-gray-500" />
                           <span>{spot.contact}</span>
                         </a>
                       )}
@@ -297,7 +297,7 @@ export default function TouristSpots() {
 
                   {/* Bottom index */}
                   <div className="px-5 pb-4 flex items-center justify-between">
-                    <span className="text-[10px] font-black text-gray-300 uppercase tracking-widest">
+                    <span className="text-[10px] font-black text-gray-500 uppercase tracking-widest">
                       Spot #{String(idx + 1).padStart(2, '0')}
                     </span>
                   </div>

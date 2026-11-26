@@ -219,7 +219,7 @@ export default function Executive() {
                     <p className="mb-4 text-sm leading-relaxed text-gray-600">
                       {l.summary}
                     </p>
-                    <h3 className="mb-2 text-xs font-bold uppercase tracking-widest text-gray-400">
+                    <h3 className="mb-2 text-xs font-bold uppercase tracking-widest text-gray-500">
                       Key responsibilities
                     </h3>
                     <ul className="space-y-2">
@@ -309,7 +309,7 @@ export default function Executive() {
                       <Icon className="h-5 w-5" />
                     </span>
                     <span className="min-w-0">
-                      <span className="block text-[11px] font-bold uppercase tracking-widest text-gray-400">
+                      <span className="block text-[11px] font-bold uppercase tracking-widest text-gray-500">
                         {c.label}
                       </span>
                       <span className="block truncate text-sm font-bold text-gray-900">
